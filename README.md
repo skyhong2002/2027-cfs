@@ -18,20 +18,24 @@ pnpm i
 pnpm dev
 ```
 
-## Build and publication
+## 建置與發布
 
-This repository builds the CFS site for <https://sitcon.org/2027/cfs/>. The design and static content are copied from 2026; sponsorship data comes from [the 2027 Google Sheet](https://docs.google.com/spreadsheets/d/1VCkTOO8Jb1EilClyu3acL9NXixV0-euB1kSoPPod2Bk/edit).
+網站設計與靜態內容沿用 2026 年版本，贊助資料來自 [2027 年 Google 試算表](https://docs.google.com/spreadsheets/d/1VCkTOO8Jb1EilClyu3acL9NXixV0-euB1kSoPPod2Bk/edit)。
 
-Pushes to `main` and manual runs of **Build CFS site** fetch the published Sheet and its images, check the project, and publish generated files to this repository's `build` branch. Fetched data is not committed back to `main`. There is no scheduled refresh and no cross-repository write access. A failed build leaves the previous successful output intact.
+推送至 `main` 或手動執行 **Build CFS site**，會下載試算表資料與圖片、檢查專案，並將建置結果發布至 `build` 分支。建置失敗時會保留上次成功的結果。
 
-To publish Sheet-only changes:
+資料不會回寫至 `main`，也不會定時更新。此流程沒有其他儲存庫的寫入權限。
 
-1. Run **Build CFS site** on `main` and wait for success.
-2. Run **Deploy website** on `main` in `sitcon-tw/2027`.
+只修改試算表時，請手動發布：
 
-The main website downloads the finished CFS files into `dist/cfs/` and deploys both sites together. A normal main-site deployment also picks up the latest CFS build. This repository does not publish its own GitHub Pages site.
+1. 在 `main` 執行 **Build CFS site**，等待成功。
+2. 在 `sitcon-tw/2027` 的 `main` 執行 **Deploy website**。
 
-To build locally with current Sheet data (Node.js 22):
+主網站每次部署都會下載最新建置至 `dist/cfs/`，一併發布。此儲存庫不單獨發布 GitHub Pages。
+
+### 本機建置
+
+使用 Node.js 22，執行：
 
 ```bash
 pnpm install --frozen-lockfile
@@ -40,4 +44,4 @@ pnpm test
 pnpm build
 ```
 
-The fetch command updates local JSON and images. Ordinary builds and pull-request checks can use the checked-in data without fetching the Sheet.
+`pnpm fetch-data` 會更新本機 JSON 與圖片。一般建置與 PR 檢查可使用儲存庫內的資料，省略此步驟。
