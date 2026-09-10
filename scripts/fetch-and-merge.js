@@ -441,7 +441,9 @@ async function downloadAllImages(itemsData) {
 					imageIdToFileName[imageId] = webpFileName;
 					console.log(`✓ Converted to WebP: ${webpFileName}`);
 				})
-				.catch(err => console.error(`✗ Failed to download ${imageId}:`, err.message))
+				.catch(err => {
+					throw new Error(`Failed to download or process image ${imageId}: ${err.message}`);
+				})
 		);
 	}
 

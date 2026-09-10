@@ -1,15 +1,23 @@
-name: Deploy CFS site
+name: Build CFS site
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: cfs-build
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build-and-publish:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout source
         uses: actions/checkout@v4
 
       - name: Setup pnpm
@@ -19,18 +27,26 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install & Build
+      - name: Fetch sponsorship data and images
+        run: pnpm fetch-data
+
+      - name: Check Astro project
+        run: pnpm test
+
+      - name: Build CFS
         run: pnpm build
 
-      - name: Deploy to 2026 repo
+      - name: Publish generated files
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.DEPLOY_KEY_2026 }}
-          external_repository: sitcon-tw/2026
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: build
           publish_dir: ./dist
-          destination_dir: cfs
+
+      - name: Record source revision
+        run: echo "Built CFS source $GITHUB_SHA. Run the sitcon-tw/2027 deployment to publish this output." >> "$GITHUB_STEP_SUMMARY"

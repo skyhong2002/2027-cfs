@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://sitcon.org",
-	base: "/2026/cfs",
+	base: "/2027/cfs",
 	output: "static",
 	trailingSlash: "ignore",
 	build: {
