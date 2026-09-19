@@ -74,7 +74,7 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 								<div class="carousel-images">
 									{/* Main item image as first slide */}
 									<div class="carousel-slide active" data-slide-index={0} data-description={item.image_description || ""}>
-										<img src={`/2027/cfs/items/${item.image}`} alt={item.image_description || item.name} />
+										<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/items/${item.image}`} alt={item.image_description || item.name} />
 									</div>
 									{/* Sub-item images */}
 									{subItemsWithImages.map((subItem: SubItem, index: number) => {
@@ -83,7 +83,7 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 
 										return (
 											<div class="carousel-slide" data-slide-index={slideIndex} data-description={subImageDescription || ""}>
-												<img src={`/2027/cfs/items/${subItem.image}`} alt={subImageDescription || subItem.name} />
+												<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/items/${subItem.image}`} alt={subImageDescription || subItem.name} />
 											</div>
 										);
 									})}
@@ -99,7 +99,7 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 						);
 					} else {
 						// Show only main item image (no carousel needed)
-						return <img src={`/2027/cfs/items/${item.image}`} alt={item.image_description || item.name} />;
+						return <img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/items/${item.image}`} alt={item.image_description || item.name} />;
 					}
 				})()
 			}

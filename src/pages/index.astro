@@ -31,14 +31,14 @@ const defaultSchema = {
 			name: "SITCON 學生計算機年會",
 			alternateName: "SITCON",
 			url: "https://sitcon.org",
-			logo: "https://sitcon.org/2027/cfs/SITCON.svg",
+			logo: new URL(`${import.meta.env.BASE_URL.replace(/\/$/, "")}/SITCON.svg`, Astro.site).href,
 			description: description,
 			sameAs: ["https://www.facebook.com/SITCONtw", "https://twitter.com/sitcontw"]
 		},
 		{
 			"@type": "WebSite",
 			name: title,
-			url: "https://sitcon.org/2027/cfs/",
+			url: new URL(`${import.meta.env.BASE_URL.replace(/\/$/, "")}/`, Astro.site).href,
 			description: description,
 			inLanguage: lang
 		}
@@ -64,12 +64,12 @@ const defaultSchema = {
 		<slot name="schema">
 			<script type="application/ld+json" set:html={JSON.stringify(defaultSchema)} is:inline />
 		</slot>
-		<link rel="icon" type="image/png" href="/2027/cfs/favicon/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/2027/cfs/SITCON.svg" />
-		<link rel="shortcut icon" href="/2027/cfs/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/2027/cfs/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/favicon/favicon-96x96.png`} sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/SITCON.svg`} />
+		<link rel="shortcut icon" href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/favicon/favicon.ico`} />
+		<link rel="apple-touch-icon" sizes="180x180" href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/favicon/apple-touch-icon.png`} />
 		<meta name="apple-mobile-web-app-title" content="SITCON" />
-		<link rel="manifest" href="/2027/cfs/favicon/site.webmanifest" />
+		<link rel="manifest" href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/favicon/site.webmanifest`} />
 		<meta name="theme-color" content="#77B55A" />
 		<script is:inline>
 			(function (w, d, s, l, i) {
@@ -155,7 +155,7 @@ const defaultSchema = {
 							const itemId = id.replace("item-popup-", "");
 							const itemName = popupBg.querySelector(".title-row h3")?.textContent || "";
 							document.title = itemName + originalSite;
-							history.pushState({ popupId: id, type: "item" }, "", `/2027/cfs/item/${itemId}/`);
+							history.pushState({ popupId: id, type: "item" }, "", `${import.meta.env.BASE_URL.replace(/\/$/, "")}/item/${itemId}/`);
 							const price = parseInt(popupBg.querySelector(".sub-item-price")?.textContent || "0");
 							window.dataLayer.push({
 								event: "view_item",
@@ -181,7 +181,7 @@ const defaultSchema = {
 						document.dispatchEvent(new CustomEvent("popupClosed", { detail: { id: closingId } }));
 					}, 300);
 					if (updateUrl) {
-						history.pushState(null, "", window.location.origin + "/2027/cfs/");
+						history.pushState(null, "", window.location.origin + `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`);
 						document.title = originalTitle;
 					}
 				}

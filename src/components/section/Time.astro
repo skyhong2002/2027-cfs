@@ -68,7 +68,7 @@ interface TeamItem {
 								<p>{item.description}</p>
 							</div>
 						</div>
-						<img src={`/2027/cfs/venue/${item.code}.webp`} alt={item.name} />
+						<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/venue/${item.code}.webp`} alt={item.name} />
 					</div>
 				))
 			}

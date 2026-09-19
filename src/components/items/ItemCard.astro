@@ -57,7 +57,7 @@ const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub:
 	<div class="card-image">
 		{
 			card.image ? (
-				<img src={`/2027/cfs/items/${card.image}`} alt={card.image_description || card.name} />
+				<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/items/${card.image}`} alt={card.image_description || card.name} />
 			) : (
 				<div class="placeholder-image">
 					<img src={Stone.src} alt="No Image" />
