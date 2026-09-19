@@ -1,0 +1,36 @@
+{
+	"status": "prototype-pending",
+	"pending": [
+		"planNames",
+		"prices",
+		"benefitQuantities",
+		"standaloneEligibility",
+		"deadlines",
+		"availability",
+		"audienceStats",
+		"reachStats",
+		"artworkSpecifications",
+		"dreamPricing",
+		"dreamEligibility",
+		"dreamBenefits"
+	],
+	"notes": "Plan A–D are prototype placeholders, not official tiers. All catalog descriptions are candidate discussions, not confirmed 2027 deliverables.",
+	"year": 2027,
+	"sources": {
+		"official2027": {
+			"title": "SITCON 2027 official website",
+			"reference": "https://sitcon.org/2027/"
+		},
+		"organizing2027": {
+			"title": "SITCON 2027 organizing work item",
+			"reference": "https://gitlab.com/sitcon-tw/2027/-/work_items/236"
+		}
+	},
+	"claims": {},
+	"event": {
+		"date": "2027-03-13",
+		"contact": "contact@sitcon.org",
+		"venue": "中央研究院人文社會科學館",
+		"source": "official2027"
+	}
+}

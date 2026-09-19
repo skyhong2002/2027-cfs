@@ -36,6 +36,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Validate sponsorship data
+        run: pnpm validate-data
+
+      - name: Test catalog validation
+        run: pnpm test:data
+
+      - name: Test proposal calculations
+        run: pnpm test:proposal
+
       - name: Check Astro project
         run: pnpm test
 
@@ -45,6 +54,16 @@ jobs:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
           CFS_PREVIEW: "1"
+
+      - name: Install browser for smoke tests
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Test complete preview flows
+        run: |
+          pnpm preview --host 127.0.0.1 --port 4321 > /tmp/cfs-preview.log 2>&1 &
+          CFS_TEST_URL="http://127.0.0.1:4321${BASE_PATH}/" pnpm test:e2e
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

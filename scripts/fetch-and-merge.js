@@ -3,6 +3,7 @@ import https from "https";
 import path from "path";
 import { parse } from "csv-parse";
 import sharp from "sharp";
+import { validateCatalog, readProvenance } from "./validate-data.mjs";
 
 // Read configuration from sheet.json with error handling
 let sheetConfig;
@@ -474,7 +475,11 @@ async function main() {
 		// Merge data
 		const mergedData = mergeSheetData(sheets);
 
-		// Download images
+		// Validate the complete candidate before images or either JSON file can change.
+		const candidatePlans = processPlanData(sheets.sponsorship_plans, mergedData);
+		validateCatalog({ items: mergedData, plans: candidatePlans, provenance: readProvenance() });
+
+		// Download images only after all data and provenance checks pass.
 		await downloadAllImages(mergedData);
 
 		// Write to file
@@ -640,6 +645,8 @@ async function fetchAndSavePlans(sheets, itemsData) {
 
 		// Process plans data with items data for dynamic mapping
 		const plansData = processPlanData(planSheet, itemsData);
+
+		validateCatalog({ items: itemsData, plans: plansData, provenance: readProvenance() });
 
 		// Write plans to file
 		const outputPath = "./src/data/plan.json";

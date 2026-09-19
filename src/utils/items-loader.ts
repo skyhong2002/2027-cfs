@@ -1,5 +1,5 @@
 /**
- * Utility functions for loading items data from individual markdown folders
+ * Localize the structured 2027 candidate catalog.
  */
 
 export interface SubItemRaw {
