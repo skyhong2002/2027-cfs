@@ -1,0 +1,93 @@
+---
+const { t } = Astro.props;
+import IntroImg from "@assets/img/intro.webp";
+---
+
+<section id="intro">
+	<div class="anchor aos"></div>
+	<div class="anchor2 aos"></div>
+	<h2>{t.sentence1}<span class="line2">{t.sentence2}</span></h2>
+</section>
+
+<style define:vars={{ backgroundUrl: `url(${IntroImg.src})` }}>
+	section {
+		min-height: 100svh;
+		display: flex;
+		align-items: center;
+		background: var(--backgroundUrl);
+		background-size: cover;
+		position: relative;
+	}
+
+	section::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: rgba(255, 255, 255, 0.75);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	section:has(.anchor2.appeared)::after,
+	section:has(.anchor2.over)::after {
+		opacity: 1;
+	}
+
+	h2 {
+		max-width: 1200px;
+		padding: 2rem;
+		position: relative;
+		z-index: 1;
+		margin: auto;
+		transition-delay: 0.5s;
+	}
+
+	.anchor,
+	.anchor2 {
+		position: absolute;
+		top: 75%;
+	}
+
+	.anchor2 {
+		top: 55%;
+	}
+
+	.anchor2.appeared + h2 .line2 {
+		color: #1d1d1f1a;
+	}
+
+	.anchor.appeared ~ h2 .line2,
+	.anchor2.appeared + h2 {
+		color: #1d1d1f;
+	}
+
+	h2,
+	.line2 {
+		color: transparent;
+		transition: color 0.5s ease-in-out;
+	}
+
+	@media print {
+		section {
+			min-height: unset;
+			background: none;
+		}
+
+		section::after {
+			display: none;
+		}
+
+		h2 {
+			margin-bottom: 32pt;
+			font-size: 18pt;
+			text-align: left;
+		}
+
+		h2,
+		h2 span {
+			color: #1d1d1f !important;
+		}
+	}
+</style>

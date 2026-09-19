@@ -1,0 +1,311 @@
+---
+import Popup from "@components/Popup.astro";
+import youratorNews from "@assets/img/news/youratorNews.webp";
+import ettodayNews from "@assets/img/news/ettodayNews.webp";
+import yahooNews from "@assets/img/news/yahooNews.webp";
+import moneyUdnNews from "@assets/img/news/moneyUdnNews.webp";
+import newstaiwan from "@assets/img/news/newstaiwan.webp";
+import hk from "@assets/img/sitcon_hk.webp";
+import groups from "@assets/img/groups.webp";
+import edu from "@assets/img/edu.webp";
+import hackathon from "@assets/img/hackathon.webp";
+import camp from "@assets/img/camp.webp";
+import type { ImageMetadata } from "astro";
+import { ChevronLeft, ChevronRight } from "@lucide/astro";
+
+const { t } = Astro.props;
+type News = {
+	img: ImageMetadata;
+	title: string;
+	description: string;
+};
+const news: News[] = [
+	{
+		img: hk,
+		title: t.things[0].title,
+		description: t.things[0].description
+	},
+	{
+		img: groups,
+		title: t.things[1].title,
+		description: t.things[1].description
+	},
+	{
+		img: edu,
+		title: t.things[2].title,
+		description: t.things[2].description
+	},
+	{
+		img: hackathon,
+		title: t.things[3].title,
+		description: t.things[3].description
+	},
+	{
+		img: camp,
+		title: t.things[4].title,
+		description: t.things[4].description
+	}
+];
+---
+
+<section id="news">
+	<div class="news-content">
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.ettoday.net/news/20200813/1784111.htm"><img src={ettodayNews.src} alt="news.owlting.com" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://newstaiwan.net/2024/03/09/155739/">
+			<img src={newstaiwan.src} alt="newstaiwan.net" class="news-img" />
+		</a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.yourator.co/articles/215"><img src={youratorNews.src} alt="yourator.co" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/5723/9018057"><img src={moneyUdnNews.src} alt="money.udn.com" class="news-img" /></a>
+		<a
+			target="_blank"
+			class="aos aos-fadeInBottom"
+			href="https://tw.news.yahoo.com/1300-%E9%9D%92%E5%B9%B4%E5%BC%95%E7%88%86ai-%E5%89%B5%E6%96%B0%E8%88%87%E8%B7%A8%E7%95%8C%E5%A4%A7%E9%9D%A9%E5%91%BD-020635586.html"
+		>
+			<img src={yahooNews.src} alt="yahoo.com" class="news-img" />
+		</a>
+		<div class="spacing"></div>
+	</div>
+	<Popup hero={false} btnText={t.title} id="news-popup">
+		<h3>{t.title}</h3>
+		<div class="things-container">
+			<button class="scroll-arrow scroll-left" aria-label="Scroll left">
+				<ChevronLeft />
+			</button>
+			<div class="things-area">
+				{
+					news.map(item => (
+						<div class="things-item">
+							<img src={item.img.src} alt={item.title} class="things-img" />
+							<div class="content">
+								<h4>{item.title}</h4>
+								<p class="things-description">{item.description}</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+			<button class="scroll-arrow scroll-right" aria-label="Scroll right">
+				<ChevronRight />
+			</button>
+		</div>
+	</Popup>
+</section>
+
+<style>
+	h3 {
+		font-size: 2.5rem;
+		padding: 3rem 3rem 1rem;
+	}
+
+	.news-content {
+		--unit: max(-100vw, -800px);
+		max-width: 900px;
+		margin: auto;
+		padding: 2rem;
+	}
+
+	.news-img {
+		width: 60%;
+		display: block;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		transition: transform 0.3s;
+		margin-inline: auto 0;
+		position: relative;
+	}
+
+	.news-content a:nth-child(odd) .news-img {
+		margin-inline: 0 auto;
+	}
+
+	.news-content a {
+		display: block;
+	}
+
+	.news-content a:nth-child(2) {
+		margin-top: calc(var(--unit) / 3);
+	}
+
+	.news-content a:nth-child(3) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+
+	.news-content a:nth-child(4) {
+		margin-top: calc(var(--unit) / 7);
+	}
+
+	.news-content a:nth-child(5) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+
+	.news-img:hover {
+		transform: scale(1.05);
+	}
+
+	.spacing {
+		height: 2rem;
+	}
+
+	.things-container {
+		position: relative;
+		padding: 0 3rem 3.5rem;
+	}
+
+	.things-area {
+		display: flex;
+		overflow-x: scroll;
+		gap: 1.5rem;
+		scroll-behavior: smooth;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+	}
+
+	.things-area::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
+	}
+
+	.scroll-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid #ddd;
+		border-radius: 50%;
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		z-index: 10;
+		transition: all 0.3s;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.scroll-arrow:hover {
+		background: white;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.scroll-arrow:active {
+		transform: translateY(-50%) scale(0.95);
+	}
+
+	.scroll-left {
+		left: 0.8rem;
+	}
+
+	.scroll-right {
+		right: 0.8rem;
+	}
+
+	.things-item {
+		background: var(--white);
+		border-radius: 1.5rem;
+		width: 30rem;
+		max-width: 100%;
+		overflow: hidden;
+		flex-shrink: 0;
+	}
+
+	.things-item .content {
+		padding: 2rem;
+	}
+
+	.things-img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+		line-height: 1.4;
+		margin-bottom: 1rem;
+	}
+
+	.things-description {
+		line-height: 134%;
+	}
+
+	@media screen and (max-width: 40rem) {
+		.things-container {
+			padding-inline: 2rem;
+		}
+
+		.things-area {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.content {
+			padding-top: 1.2rem;
+		}
+
+		h3 {
+			padding-inline: 2rem;
+		}
+
+		.scroll-arrow {
+			display: none;
+		}
+	}
+
+	@media print {
+		#news :global(.popup) {
+			page-break-inside: avoid;
+		}
+
+		.scroll-arrow {
+			display: none;
+		}
+
+		.things-item {
+			display: flex;
+		}
+
+		.things-area {
+			flex-direction: column;
+		}
+
+		.news-content {
+			max-width: 800px;
+		}
+
+		.things-item {
+			width: unset;
+		}
+
+		.things-img {
+			width: 150pt;
+		}
+
+		.things-item .content {
+			padding: 12pt 24pt;
+		}
+
+		h4 {
+			font-size: 14pt;
+			margin-bottom: 6pt;
+		}
+	}
+</style>
+
+<script>
+	const scrollLeft = document.querySelector("#news-popup + .popup-bg .scroll-left") as HTMLButtonElement;
+	const scrollRight = document.querySelector("#news-popup + .popup-bg .scroll-right") as HTMLButtonElement;
+	const thingsArea = document.querySelector("#news-popup + .popup-bg .things-area") as HTMLElement;
+
+	scrollLeft.addEventListener("click", () => {
+		thingsArea.scrollBy({
+			left: -350,
+			behavior: "smooth"
+		});
+	});
+
+	scrollRight.addEventListener("click", () => {
+		thingsArea.scrollBy({
+			left: 350,
+			behavior: "smooth"
+		});
+	});
+</script>

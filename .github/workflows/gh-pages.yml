@@ -35,12 +35,6 @@ jobs:
       - name: Fetch sponsorship data and images
         run: pnpm fetch-data
 
-      - name: Validate sponsorship data
-        run: pnpm validate-data
-
-      - name: Test proposal calculations
-        run: pnpm test:proposal
-
       - name: Check Astro project
         run: pnpm test
 

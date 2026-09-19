@@ -26,15 +26,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Validate sponsorship data
-        run: pnpm validate-data
-
-      - name: Test catalog validation
-        run: pnpm test:data
-
-      - name: Test proposal calculations
-        run: pnpm test:proposal
-
       - name: Run tests
         run: pnpm test
 
@@ -79,4 +70,4 @@ jobs:
 
       - name: Run Prettier
 
-        run: pnpm format:check
+        run: pnpm format . --check

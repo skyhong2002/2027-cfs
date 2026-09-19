@@ -1,0 +1,272 @@
+---
+const { t } = Astro.props;
+import Popup from "@components/Popup.astro";
+import { Check } from "@lucide/astro";
+import volunteer from "@assets/img/sitcon-volunteer.webp";
+
+interface OpenDreamPlan {
+	id: string;
+	name: string;
+	price: string;
+}
+
+interface PopupSection {
+	title: string;
+	content: string;
+}
+
+const colors = ["#77B55A", "#537FF1"];
+---
+
+<section id="opendream">
+	<h2><span>{t.subtitle}</span>{t.title}</h2>
+	<div class="container">
+		<p class="description">{t.description}</p>
+		<div class="plans">
+			{
+				t.plans.map((plan: OpenDreamPlan, index: number) => (
+					<div class="tier-column">
+						<div class="tier-name" style={`color: ${colors[index % colors.length]}`}>
+							{plan.name}
+						</div>
+						<div class="tier-price">{plan.price}</div>
+						<button class="tier-interest-button" data-tier-name={plan.id} data-tier-title={`${t.title}｜${plan.name}`} data-tier-price={plan.price}>
+							{t.interested}
+						</button>
+					</div>
+				))
+			}
+		</div>
+		<h3>{t.benefits_title}</h3>
+		<ul class="benefits">
+			{
+				t.benefits.map((benefit: string) => (
+					<li>
+						<Check size={20} />
+						{benefit}
+					</li>
+				))
+			}
+		</ul>
+		<p class="note">{t.exclusive_note}</p>
+		<p class="note">{t.price_note}</p>
+	</div>
+	<div class="aos spacer"></div>
+	<Popup btnText={t.popup_label} title={t.popup.title} hero={true} id="opendream-popup" background={volunteer.src}>
+		<div class="popup-body">
+			{
+				t.popup.sections.map((section: PopupSection) => (
+					<div class="popup-section">
+						<h3>{section.title}</h3>
+						<p set:html={section.content.replace(/\n/g, "<br />")} />
+					</div>
+				))
+			}
+		</div>
+	</Popup>
+</section>
+
+<script>
+	import { isItemInterested, addInterestedItem, removeInterestedItem, getInterestedItems } from "../../utils/local-storage.ts";
+
+	const PREFIX = "opendream-";
+
+	function updateButtonStates() {
+		document.querySelectorAll<HTMLButtonElement>("#opendream .tier-interest-button").forEach(button => {
+			const id = button.getAttribute("data-tier-name") || "";
+			button.classList.toggle("interested", isItemInterested(id));
+		});
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll<HTMLButtonElement>("#opendream .tier-interest-button").forEach(button => {
+			button.addEventListener("click", e => {
+				e.stopPropagation();
+				const id = button.getAttribute("data-tier-name") || "";
+				const title = button.getAttribute("data-tier-title") || "";
+				const price = button.getAttribute("data-tier-price") || "";
+
+				if (isItemInterested(id)) {
+					removeInterestedItem(id);
+				} else {
+					// Only one Open Dream option at a time
+					getInterestedItems()
+						.filter(item => item.id.startsWith(PREFIX))
+						.forEach(item => removeInterestedItem(item.id));
+					addInterestedItem({ id, title, category: "opendream", image: "", deadline: "", price });
+				}
+			});
+		});
+		updateButtonStates();
+	});
+
+	window.addEventListener("itemsChange", updateButtonStates);
+	document.addEventListener("interested-items-changed", updateButtonStates);
+</script>
+
+<style>
+	section {
+		background-color: var(--items-bg);
+		padding: 5rem 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	h2 span {
+		display: block;
+		font-size: 1.25rem;
+		color: var(--gray);
+		margin-bottom: 0.5rem;
+	}
+
+	.container {
+		max-width: min(1200px, 100%);
+		width: 100%;
+		border-radius: 2rem;
+		background-color: var(--white);
+		margin: 0 auto;
+		padding: 3rem;
+	}
+
+	.description {
+		max-width: 50rem;
+		margin: 0 auto 3rem;
+		text-align: center;
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+
+	.plans {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		max-width: 40rem;
+		margin: 0 auto 3rem;
+	}
+
+	.tier-column {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 1.5rem;
+		border-radius: 1rem;
+		background-color: var(--container);
+	}
+
+	.tier-name {
+		font-size: 1.75rem;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.tier-price {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--black);
+		margin-bottom: 0.5rem;
+	}
+
+	.tier-interest-button {
+		background: transparent;
+		border: 1px solid var(--black);
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+		border-radius: 25px;
+		transition: all 0.2s ease;
+		font-size: 0.9rem;
+		color: var(--black);
+		white-space: nowrap;
+	}
+
+	.tier-interest-button:hover {
+		background-color: var(--gray-container);
+		transform: scale(1.02);
+	}
+
+	.tier-interest-button.interested {
+		background-color: var(--items-green);
+		border-color: var(--items-green);
+		color: var(--white);
+	}
+
+	h3 {
+		text-align: center;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.benefits {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.75rem 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.benefits li {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 1.1rem;
+	}
+
+	.benefits svg {
+		color: var(--items-green);
+	}
+
+	.note {
+		text-align: center;
+		color: var(--gray);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	.spacer {
+		height: 2rem;
+	}
+
+	.popup-body {
+		padding: 2rem 3rem;
+		display: grid;
+		gap: 2rem;
+	}
+
+	.popup-section h3 {
+		text-align: left;
+		font-size: 1.4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.popup-section p {
+		line-height: 1.8;
+		font-size: 1.05rem;
+	}
+
+	@media screen and (max-width: 45rem) {
+		.container {
+			padding: 2rem 1.5rem;
+		}
+
+		.plans {
+			grid-template-columns: 1fr;
+		}
+
+		.popup-body {
+			padding: 1.5rem;
+		}
+	}
+
+	@media print {
+		section {
+			padding: 2rem;
+			break-inside: avoid;
+		}
+
+		.tier-interest-button {
+			display: none;
+		}
+	}
+</style>

@@ -1,0 +1,327 @@
+---
+import { Plus, Check } from "@lucide/astro";
+import { getItemDescription } from "../../utils/items-loader";
+import Stone from "@assets/img/小石.svg";
+import { marked } from "marked";
+import { isItemInAnyPlan } from "../../utils/plan-helper";
+
+const { t, card, lang = "zh-Hant", selectedCategory = "all" } = Astro.props;
+
+// Price shown directly on the card: own price, lowest sub-item price, or plan inclusion
+const subPrices: number[] = (card.sub || []).map((sub: any) => parseInt((sub.price || "").replace(/[^0-9]/g, ""), 10)).filter((n: number) => n > 0);
+const minSubPrice = subPrices.length > 0 ? Math.min(...subPrices) : 0;
+let displayPrice = card.price || "";
+if (!displayPrice && minSubPrice > 0) {
+	displayPrice = lang === "en" ? `From $${minSubPrice.toLocaleString("en-US")}` : `$${minSubPrice.toLocaleString("en-US")} 起`;
+}
+if (!displayPrice && isItemInAnyPlan(card.id)) {
+	displayPrice = lang === "en" ? "Plan Included Item" : "方案包含項目";
+}
+
+// Get current description based on selected category
+const currentDescription = getItemDescription(card, selectedCategory);
+
+// Prepare description data for client-side updates with all variants
+const descriptionData = JSON.stringify({
+	all: card.global_description,
+	talent_recruitment: card.talent_recruitment,
+	brand_exposure: card.brand_exposure,
+	product_promotion: card.product_promotion
+});
+
+// Prepare sub-items data for remaining calculation
+const hasSubItems = card.sub && card.sub.length > 0;
+const subItemsData = hasSubItems
+	? JSON.stringify(
+			card.sub.map((sub: any, index: number) => ({
+				id: `${card.id}-sub-${index}`,
+				remaining: sub.remaining || "0"
+			}))
+		)
+	: "[]";
+
+// Calculate total remaining for items with sub-items
+const totalRemaining = hasSubItems
+	? card.sub.reduce((sum: number, sub: any) => {
+			const remaining = sub.remaining === "" ? null : parseInt(sub.remaining, 10);
+			return sum + (remaining === null || isNaN(remaining) ? 0 : remaining);
+		}, 0)
+	: parseInt(card.remaining, 10) || 0;
+
+// Check if item is sold out - only when remaining is explicitly "0"
+// Empty string ("") or null should NOT be treated as sold out
+const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub: any) => sub.remaining === "0") && card.sub.length > 0);
+---
+
+<div
+	class={`card ${card.quantity === "打包專屬" ? "package-exclusive-item" : ""} ${isSoldOut ? "sold-out" : ""}`}
+	data-card-id={card.id}
+	data-descriptions={descriptionData}
+	data-order={card.order}
+	data-talent-recruitment-order={card.talent_recruitment_order}
+	data-brand-exposure-order={card.brand_exposure_order}
+	data-product-promotion-order={card.product_promotion_order}
+	data-has-sub-items={hasSubItems ? "true" : "false"}
+	data-sub-items={subItemsData}
+	data-is-sold-out={isSoldOut ? "true" : "false"}
+	data-deadline={card.deadline || ""}
+>
+	<div class="card-image">
+		{
+			card.image ? (
+				<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/items/${card.image}`} alt={card.image_description || card.name} />
+			) : (
+				<div class="placeholder-image">
+					<img src={Stone.src} alt="No Image" />
+				</div>
+			)
+		}
+		<div class="tag">
+			{isSoldOut && <div class="sold-out-tag">{t.sold_out}</div>}
+			{!isSoldOut && card.quantity === "獨家" && <div class="exclusive-tag">{t.exclusive}</div>}
+			{!isSoldOut && card.quantity === "打包專屬" && <div class="package-exclusive-tag">{t.package_exclusive}</div>}
+			{
+				!isSoldOut && card.quantity !== "獨家" && card.quantity !== "打包專屬" && card.quantity !== "不限" && totalRemaining > 0 && (
+					<div class="remaining-tag" data-initial-remaining={totalRemaining} data-unit={t.unit[card.unit] || card.unit}>
+						{t.remaining} {totalRemaining} {t.unit[card.unit] || card.unit}
+					</div>
+				)
+			}
+			<div class="deadline-tag">{`${new Date(card.deadline).getMonth() + 1}/${new Date(card.deadline).getDate()}`} {t.deadline}</div>
+		</div>
+	</div>
+	<div class="card-content">
+		<div class="title-row">
+			<h3>{card.name}</h3>
+			{
+				!isSoldOut && (
+					<button
+						type="button"
+						class="add-button"
+						data-item-id={card.id}
+						data-item-title={card.name}
+						data-item-image={card.image || ""}
+						data-item-price={card.price || ""}
+						data-item-deadline={card.deadline || ""}
+					>
+						<span class="add-icon">
+							<Plus />
+						</span>
+						<span class="added-icon">
+							<Check />
+						</span>
+					</button>
+				)
+			}
+		</div>
+		{displayPrice && <div class="price">{displayPrice}</div>}
+		<div class="description" set:html={marked.parse(currentDescription)} />
+	</div>
+</div>
+
+<style>
+	.card {
+		position: relative;
+		background-color: var(--white);
+		border-radius: 0.75rem;
+		overflow: hidden;
+	}
+
+	.card-image {
+		position: relative;
+		width: 100%;
+		height: 10rem;
+		overflow: hidden;
+	}
+
+	.card-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		background-color: var(--gray-container);
+	}
+
+	.tag {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		color: var(--black);
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		max-width: calc(100% - 2rem);
+	}
+
+	.exclusive-tag {
+		background-color: #ff9999;
+		padding: 0.1rem 0.7rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.package-exclusive-tag {
+		background-color: #9999ff;
+		padding: 0.1rem 0.7rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.remaining-tag {
+		background-color: var(--items-remaining-tag);
+		padding: 0.1rem 0.7rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.deadline-tag {
+		background-color: var(--items-deadline-tag);
+		padding: 0.1rem 0.7rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.sold-out-tag {
+		background-color: #999;
+		color: var(--white);
+		padding: 0.1rem 0.7rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.card.sold-out {
+		opacity: 0.6;
+		filter: grayscale(0.5);
+	}
+
+	.card.sold-out .card-image {
+		opacity: 0.7;
+	}
+
+	.card.sold-out .card-content h3,
+	.card.sold-out .description {
+		color: #666;
+	}
+
+	.card-content {
+		padding: 1.5rem;
+	}
+
+	.title-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.card-content h3 {
+		color: var(--black);
+		font-size: 1.1rem;
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.add-button {
+		width: 2rem;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+		background-color: var(--black);
+		color: var(--white);
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.2s ease;
+	}
+
+	.add-button svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.add-icon,
+	.added-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
+	}
+
+	.add-button .added-icon {
+		display: none;
+	}
+	.add-button.added .added-icon {
+		display: flex;
+	}
+	.add-button.added .add-icon {
+		display: none;
+	}
+
+	.add-button:hover {
+		transform: scale(1.1);
+	}
+
+	.add-button.added {
+		background-color: var(--items-progress);
+	}
+
+	.add-button.added:hover {
+		background-color: var(--items-progress);
+	}
+
+	.add-button:disabled,
+	.add-button.disabled {
+		background-color: var(--gray);
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+	.add-button:disabled:hover,
+	.add-button.disabled:hover {
+		transform: none;
+		background-color: var(--gray);
+	}
+
+	.price {
+		color: #0171e3;
+		font-weight: 600;
+		margin: -0.5rem 0 0.75rem;
+	}
+
+	.description {
+		color: var(--black);
+		font-size: 0.9rem;
+		line-height: 1.4;
+		margin-bottom: 1rem;
+		opacity: 0.8;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.description :global(strong) {
+		font-weight: normal;
+	}
+
+	.placeholder-image {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--gray-container);
+		color: var(--gray);
+		font-size: 0.9rem;
+	}
+
+	.placeholder-image img {
+		width: 3rem;
+		height: unset;
+	}
+</style>

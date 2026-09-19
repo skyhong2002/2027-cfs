@@ -1,0 +1,695 @@
+---
+const { t, lang } = Astro.props;
+import { Container } from "@lucide/astro";
+import planData from "@data/plan.json";
+import { loadItemsData } from "../../utils/items-loader";
+import { getBenefitLocalizedName } from "../../utils/plan-helper";
+const itemsData = await loadItemsData(lang);
+
+// Create a lookup map for quick item access by ID
+const itemsMap = new Map(itemsData.map(item => [item.id, item]));
+
+// Helper function to get earliest deadline from plan benefits
+const getEarliestDeadline = (benefits: any[]) => {
+	const deadlines = benefits.map(b => (b.item_id ? itemsMap.get(b.item_id)?.deadline : null)).filter((d): d is string => d !== null && d !== undefined && d !== "");
+
+	if (deadlines.length === 0) return "";
+
+	// Sort deadlines and return the earliest one
+	return deadlines.sort((a, b) => new Date(a).getTime() - new Date(b).getTime())[0];
+};
+
+// Transform plan.json data to match the table structure
+const tiers = [
+	{
+		id: "navigator",
+		name: lang === "en" ? planData.navigator.name_en : planData.navigator.name_zh,
+		price: planData.navigator.price,
+		textColor: "#FF928A",
+		deadline: getEarliestDeadline(planData.navigator.benefits)
+	},
+	{
+		id: "deep_cultivation",
+		name: lang === "en" ? planData.deep_cultivation.name_en : planData.deep_cultivation.name_zh,
+		price: planData.deep_cultivation.price,
+		textColor: "#537FF1",
+		deadline: getEarliestDeadline(planData.deep_cultivation.benefits)
+	},
+	{
+		id: "visionary",
+		name: lang === "en" ? planData.visionary.name_en : planData.visionary.name_zh,
+		price: planData.visionary.price,
+		textColor: "#6FD195",
+		deadline: getEarliestDeadline(planData.visionary.benefits)
+	},
+	{
+		id: "new_sprout",
+		name: lang === "en" ? planData.new_sprout.name_en : planData.new_sprout.name_zh,
+		price: planData.new_sprout.price,
+		textColor: "#77B55A",
+		deadline: getEarliestDeadline(planData.new_sprout.benefits)
+	}
+];
+
+// Create rows from benefits (assuming all tiers have the same items in same order)
+const maxBenefits = Math.max(planData.navigator.benefits.length, planData.deep_cultivation.benefits.length, planData.visionary.benefits.length, planData.new_sprout.benefits.length);
+
+// Helper function to generate fallback row IDs
+const getFallbackRowId = (index: number) => `row-${index}`;
+
+const rows = [];
+for (let i = 0; i < maxBenefits; i++) {
+	const navBenefit = planData.navigator.benefits[i];
+	const deepBenefit = planData.deep_cultivation.benefits[i];
+	const visBenefit = planData.visionary.benefits[i];
+	const sproutBenefit = planData.new_sprout.benefits[i];
+
+	// Use the first available item_id as the row id
+	const rowId = navBenefit?.item_id || deepBenefit?.item_id || visBenefit?.item_id || sproutBenefit?.item_id || getFallbackRowId(i);
+
+	// Check if the item exists in the items data
+	const itemExists = rowId && rowId !== getFallbackRowId(i) && itemsMap.has(rowId);
+
+	// Check if any tier has a non-empty quantity AND the item exists in items data
+	const hasAnyAvailableItem =
+		itemExists &&
+		!!(
+			(navBenefit?.quantity && navBenefit.quantity !== "") ||
+			(deepBenefit?.quantity && deepBenefit.quantity !== "") ||
+			(visBenefit?.quantity && visBenefit.quantity !== "") ||
+			(sproutBenefit?.quantity && sproutBenefit.quantity !== "")
+		);
+
+	// Get localized names for each benefit
+	const navName = navBenefit ? getBenefitLocalizedName(navBenefit, lang) : "";
+	const deepName = deepBenefit ? getBenefitLocalizedName(deepBenefit, lang) : "";
+	const visName = visBenefit ? getBenefitLocalizedName(visBenefit, lang) : "";
+	const sproutName = sproutBenefit ? getBenefitLocalizedName(sproutBenefit, lang) : "";
+
+	rows.push({
+		id: rowId,
+		name: navName || deepName || visName || sproutName || "",
+		isAvailable: hasAnyAvailableItem,
+		values: [
+			{ itemId: navBenefit?.item_id || "", quantity: navBenefit?.quantity || "", name: navName },
+			{ itemId: deepBenefit?.item_id || "", quantity: deepBenefit?.quantity || "", name: deepName },
+			{ itemId: visBenefit?.item_id || "", quantity: visBenefit?.quantity || "", name: visName },
+			{ itemId: sproutBenefit?.item_id || "", quantity: sproutBenefit?.quantity || "", name: sproutName }
+		]
+	});
+}
+
+// Collect all unique item IDs from plan.json benefits
+const uniqueItemIds = new Set<string>();
+
+[planData.navigator, planData.deep_cultivation, planData.visionary, planData.new_sprout].forEach(tier => {
+	tier.benefits.forEach(benefit => {
+		if (benefit.item_id && benefit.item_id !== "") {
+			uniqueItemIds.add(benefit.item_id);
+		}
+	});
+});
+---
+
+<section id="plans">
+	<h2>{t.title}</h2>
+	<div class="container">
+		<div class="plans-table">
+			<div class="plans-content">
+				<div class="plan-row plans-header">
+					{
+						tiers.map((tier: any) => (
+							<div class="tier-column">
+								<div class="tier-name" style={`color: ${tier.textColor}`}>
+									{tier.name}
+								</div>
+								<div class="tier-price">{tier.price}</div>
+								<button class="tier-interest-button" data-tier-name={tier.id} data-tier-title={tier.name} data-tier-deadline={tier.deadline || ""}>
+									{t.interested}
+								</button>
+							</div>
+						))
+					}
+				</div>
+				{
+					rows.map((row: any) => (
+						<div class={`plan-row ${!row.isAvailable ? "disabled" : ""}`} data-row-id={row.id} data-is-available={row.isAvailable}>
+							{row.values.map((value: any) => {
+								const isAvailable = value.quantity && value.quantity !== "";
+								const isCheckmark = value.quantity === "O" || value.quantity === "o";
+
+								// Check if quantity is a pure number
+								const isNumeric = isAvailable && !isNaN(Number(value.quantity));
+
+								// Get item data for unit and name
+								const itemData = value.itemId ? itemsMap.get(value.itemId) : null;
+								const itemUnit = itemData?.unit ? t.unit[itemData.unit] || itemData.unit : "";
+
+								// Special handling for item ID 28 (booth)
+								const isBoothItem = value.itemId === "28";
+								const shouldShowIcons = isBoothItem && isNumeric;
+								const iconCount = shouldShowIcons ? parseInt(value.quantity, 10) : 0;
+
+								// Build display text with unit
+								let displayText = value.quantity;
+								if (isNumeric && itemUnit) {
+									displayText = `${value.quantity} ${itemUnit}`;
+								} else if (!isAvailable) {
+									displayText = "—";
+								}
+
+								return (
+									<div class="plan-cell" data-item-id={value.itemId}>
+										{isCheckmark ? (
+											<>{value.name && <div class="cell-sub">{value.name}</div>}</>
+										) : shouldShowIcons ? (
+											<>
+												<div class="cell-icon cell-main">
+													{Array.from({ length: iconCount }).map((_, i) => (
+														<Container key={i} />
+													))}
+												</div>
+												{value.name && <div class="cell-sub">{value.name}</div>}
+											</>
+										) : (
+											<>
+												{isAvailable ? (
+													<>
+														<div class="cell-main cell-text">{displayText}</div>
+														{value.name && <div class="cell-sub">{value.name}</div>}
+													</>
+												) : (
+													<div class="cell-sub">{displayText}</div>
+												)}
+											</>
+										)}
+									</div>
+								);
+							})}
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	import { isItemInterested, addInterestedItem, removeInterestedItem, isDeadlinePassed, type InterestedItem } from "../../utils/local-storage.ts";
+	import { openVenueDetails } from "../../utils/venue-linkify.ts";
+
+	// Attach openVenueDetails to window for inline onclick handlers
+	window.openVenueDetails = openVenueDetails;
+
+	function updateHighlighting() {
+		const planCells = document.querySelectorAll(".plan-cell");
+		planCells.forEach(cell => {
+			const itemId = (cell as HTMLElement).getAttribute("data-item-id");
+			if (itemId && itemId !== "") {
+				const isHighlighted = isItemInterested(itemId);
+
+				// Check if cell contains unavailable content
+				const cellText = cell.textContent?.trim();
+				const isUnavailable = cellText === "" || cellText === "—" || cellText === "-";
+
+				if (isHighlighted && !isUnavailable) {
+					cell.classList.add("highlighted");
+				} else {
+					cell.classList.remove("highlighted");
+				}
+			}
+		});
+	}
+
+	function addRowClickHandlers() {
+		const planRows = document.querySelectorAll(".plan-row") as NodeListOf<HTMLElement>;
+		planRows.forEach(row => {
+			const rowIdStr = row.getAttribute("data-row-id");
+			const isAvailable = row.getAttribute("data-is-available") === "true";
+
+			// Only add click handlers and cursor to available rows
+			if (rowIdStr && isAvailable) {
+				row.style.cursor = "pointer";
+				row.addEventListener("click", function (e) {
+					e.stopPropagation();
+					const popupId = `item-popup-${rowIdStr}`;
+					window.popupCtrl(popupId, "open");
+				});
+			}
+		});
+	}
+
+	function removeAllTierItems() {
+		const interestedItems = JSON.parse(localStorage.getItem("interestItems") || "[]");
+		const tierItems = interestedItems.filter((item: InterestedItem) => item.id.startsWith("tier-"));
+
+		tierItems.forEach((tierItem: InterestedItem) => {
+			removeInterestedItem(tierItem.id);
+		});
+	}
+
+	function addTierInterestHandlers() {
+		const tierButtons = document.querySelectorAll(".tier-interest-button");
+		tierButtons.forEach(button => {
+			const tierName = button.getAttribute("data-tier-name");
+			const tierTitle = button.getAttribute("data-tier-title");
+			const tierDeadline = button.getAttribute("data-tier-deadline") || "";
+
+			if (tierName && tierTitle) {
+				button.addEventListener("click", function (e) {
+					e.stopPropagation();
+
+					// Check if deadline has passed
+					if (isDeadlinePassed(tierDeadline)) {
+						return; // Don't allow adding expired plans
+					}
+
+					// Get the tier price from the tier-price element
+					const tierColumn = button.closest(".tier-column");
+					const tierPriceElement = tierColumn?.querySelector(".tier-price");
+					const tierPrice = tierPriceElement?.textContent || "";
+
+					const tierItem = {
+						id: `tier-${tierName}`,
+						title: tierTitle,
+						category: "plan",
+						image: "",
+						deadline: "",
+						price: tierPrice
+					};
+
+					if (isItemInterested(tierItem.id)) {
+						removeInterestedItem(tierItem.id);
+						button.classList.remove("interested");
+					} else {
+						// Remove all other tier items first
+						removeAllTierItems();
+						// Then add the new tier
+						addInterestedItem(tierItem);
+						button.classList.add("interested");
+					}
+				});
+			}
+		});
+	}
+
+	function updateTierButtonStates() {
+		const tierButtons = document.querySelectorAll(".tier-interest-button");
+		tierButtons.forEach(button => {
+			const tierName = button.getAttribute("data-tier-name");
+			const tierDeadline = button.getAttribute("data-tier-deadline") || "";
+
+			// Check if deadline has passed
+			const expired = isDeadlinePassed(tierDeadline);
+			if (expired) {
+				button.setAttribute("disabled", "true");
+				button.classList.add("disabled");
+			} else {
+				button.removeAttribute("disabled");
+				button.classList.remove("disabled");
+			}
+
+			if (tierName) {
+				const tierId = `tier-${tierName}`;
+				if (isItemInterested(tierId)) {
+					button.classList.add("interested");
+				} else {
+					button.classList.remove("interested");
+				}
+			}
+		});
+	}
+
+	document.addEventListener("DOMContentLoaded", function () {
+		updateHighlighting();
+		addRowClickHandlers();
+		addTierInterestHandlers();
+		updateTierButtonStates();
+	});
+
+	window.addEventListener("itemsChange", function () {
+		updateHighlighting();
+		updateTierButtonStates();
+	});
+	document.addEventListener("interested-items-changed", function () {
+		updateHighlighting();
+		updateTierButtonStates();
+	});
+</script>
+
+<style>
+	section {
+		background-color: var(--items-bg);
+		padding: 5rem 2rem;
+		break-inside: avoid;
+	}
+	.container {
+		max-width: min(1200px, 100%);
+		width: fit-content;
+		border-radius: 2rem;
+		background-color: var(--white);
+		margin: 0 auto;
+		padding: 2rem;
+		flex: auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	.plans-table {
+		background-color: var(--white);
+		border-radius: 2rem;
+		overflow: hidden;
+		padding: 2rem;
+	}
+
+	.plans-header {
+		padding-bottom: 1rem;
+		align-items: stretch;
+	}
+
+	.plans-header:hover {
+		background-color: transparent !important;
+	}
+
+	.tier-column {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid var(--border-light);
+		gap: 0.5rem;
+	}
+
+	.tier-name {
+		font-size: 2.3rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		line-height: 1.2;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+	}
+
+	.tier-price {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--black);
+		margin-bottom: 1rem;
+	}
+
+	.tier-interest-button {
+		background: transparent;
+		border: 1px solid var(--black);
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.2s ease;
+		margin: 0 auto;
+		font-size: 0.9rem;
+		color: var(--black);
+		white-space: nowrap;
+	}
+
+	.tier-interest-button:hover {
+		background-color: var(--gray-container);
+		transform: scale(1.02);
+	}
+
+	.tier-interest-button.interested {
+		background-color: var(--items-green);
+		border-color: var(--items-green);
+		color: var(--white);
+	}
+
+	.tier-interest-button.interested:hover {
+		background-color: var(--items-green);
+		opacity: 0.9;
+	}
+
+	.tier-interest-button:disabled,
+	.tier-interest-button.disabled {
+		background-color: var(--gray);
+		border-color: var(--gray);
+		cursor: not-allowed;
+		opacity: 0.5;
+		color: var(--white);
+	}
+
+	.tier-interest-button:disabled:hover,
+	.tier-interest-button.disabled:hover {
+		transform: none;
+		background-color: var(--gray);
+	}
+
+	.plans-content {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.plan-row {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+		padding: 1rem 2rem;
+	}
+
+	.plan-cell {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		min-height: 4rem;
+	}
+
+	.plan-cell.highlighted .cell-main,
+	.plan-cell.highlighted .cell-sub,
+	.plan-cell.highlighted .cell-icon {
+		color: var(--items-green);
+		font-weight: 600;
+	}
+
+	.cell-icon {
+		display: flex;
+		gap: 0.25rem;
+		justify-content: center;
+		margin-bottom: 0.5rem;
+	}
+
+	.cell-icon svg {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	.cell-main {
+		line-height: 1.3;
+	}
+
+	.cell-number {
+		font-size: 2rem;
+		font-weight: bold;
+		color: var(--black);
+	}
+
+	.cell-text {
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: var(--black);
+	}
+
+	.cell-sub {
+		font-size: 1rem;
+		color: var(--black);
+		line-height: 1.5;
+		text-wrap: balance;
+	}
+
+	@media screen and (max-width: 1024px) {
+		.plans-table {
+			width: (100% - 2rem);
+			overflow-x: auto;
+			padding: 1.5rem;
+		}
+
+		.tier-name {
+			font-size: 2rem;
+		}
+
+		.tier-price {
+			font-size: 1.5rem;
+		}
+
+		.tier-interest-button {
+			font-size: 0.8rem;
+			padding: 0.4rem 0.8rem;
+		}
+
+		.plans-header,
+		.plan-row {
+			min-width: 800px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.container {
+			padding: 2rem 1rem;
+		}
+
+		.plans-table {
+			padding: 1rem;
+		}
+
+		.tier-name {
+			font-size: 1.2rem;
+		}
+
+		.tier-price {
+			font-size: 1rem;
+		}
+
+		.tier-interest-button {
+			font-size: 0.7rem;
+			padding: 0.3rem 0.6rem;
+		}
+
+		.plans-header,
+		.plan-row {
+			gap: 1rem;
+			min-width: 600px;
+		}
+
+		.cell-main {
+			font-size: 0.9rem;
+		}
+
+		.cell-sub {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		section {
+			padding: 0 1rem;
+		}
+		.container {
+			padding: 1.5rem;
+		}
+
+		.plans-table {
+			padding: 0rem;
+		}
+	}
+
+	/* Plan row hover effect */
+	.plan-row:not(.disabled):hover {
+		background-color: var(--items-bg);
+		border-radius: 0.5rem;
+		transition: background-color 0.2s ease;
+	}
+
+	/* Disabled row styles */
+	.plan-row.disabled {
+		cursor: default !important;
+	}
+
+	.plan-row.disabled .plan-cell {
+		pointer-events: none;
+	}
+
+	@media print {
+		section {
+			padding: 2rem;
+		}
+
+		.container {
+			width: 100%;
+			padding: 16pt;
+			background-color: transparent;
+		}
+		.plans-table {
+			max-width: unset;
+			padding: 24pt;
+		}
+
+		.tier-name {
+			font-size: 16pt;
+			margin-bottom: 0;
+			line-height: 1;
+		}
+
+		.tier-price {
+			font-size: 12pt;
+		}
+
+		.tier-interest-button {
+			display: none;
+		}
+
+		.tier-column {
+			padding-bottom: 0;
+		}
+
+		.plan-row {
+			padding: 0;
+		}
+
+		.cell-text {
+			font-size: 18pt;
+		}
+		.cell-sub {
+			font-size: 10pt;
+		}
+
+		.plans-content {
+			gap: 8pt;
+		}
+	}
+</style>
+
+<style is:global>
+	/* Venue link styles */
+	.venue-link {
+		color: #0171e3;
+		text-decoration: underline;
+		text-decoration-style: dotted;
+		text-underline-offset: 2px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		font-weight: 600;
+	}
+
+	.venue-link:hover {
+		color: var(--items-green);
+		text-decoration-style: solid;
+	}
+
+	/* Venue highlight animation */
+	.venue-highlight {
+		animation: venue-pulse 2s ease-in-out;
+	}
+
+	@keyframes venue-pulse {
+		0%,
+		100% {
+			background-color: transparent;
+		}
+		50% {
+			background-color: var(--items-green);
+			color: var(--white);
+			padding: 0.25rem 0.5rem;
+			border-radius: 4px;
+		}
+	}
+
+	@media print {
+		.venue-link {
+			text-decoration: none;
+			font-weight: inherit;
+		}
+	}
+</style>
