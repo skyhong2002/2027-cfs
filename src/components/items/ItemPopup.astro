@@ -116,7 +116,7 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 						</span>
 					)
 				}
-				{item.traffic === "high" && t.traffic && <span class="traffic traffic-high">{t.traffic.high}</span>}
+				{item.traffic && t.traffic && <span class={`traffic traffic-${item.traffic}`}>{t.traffic[item.traffic]}</span>}
 				<span class="category">{`${new Date(item.deadline).getMonth() + 1}/${new Date(item.deadline).getDate()}`} {t.deadline}</span>
 			</div>
 			<div class="title-row">
