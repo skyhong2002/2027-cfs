@@ -17,10 +17,11 @@ import Footer from "@components/section/Footer.astro";
 import ogImageZH from "@assets/img/og.webp";
 import ogImageEN from "@assets/img/og-en.webp";
 import ItemsPopup from "@components/section/ItemsPopup.astro";
+import Settings from "@components/section/Settings.astro";
 const { lang = "zh-Hant" } = Astro.props;
 const ogImage = lang === "zh-Hant" ? ogImageZH : ogImageEN;
 const t = await import(`../i18n/${lang}.json`).then(m => m.default);
-const sections = [Nav, Hero, Intro, Highlights, About, Time, Plans, Items, OpenDream, ItemsPopup, Form, Sponsors, Cycle, News, FAQ, Footer];
+const sections = [Nav, Hero, Intro, Highlights, About, Time, Plans, Items, OpenDream, ItemsPopup, Form, Sponsors, Cycle, News, FAQ, Footer, Settings];
 const { title = t.meta.title, description = t.meta.description } = Astro.props;
 
 // Default schema for homepage (Organization + WebSite)

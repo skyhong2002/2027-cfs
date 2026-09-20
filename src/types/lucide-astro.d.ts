@@ -1,5 +1,6 @@
 declare module "@lucide/astro" {
 	export const X: any;
+	export const Settings: any;
 	export const Plus: any;
 	export const Check: any;
 	export const Heart: any;

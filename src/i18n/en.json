@@ -261,6 +261,12 @@
 			"deep": "Deep Tier",
 			"forward": "Forward Tier",
 			"sprout": "Sprout Tier"
+		},
+		"traffic": {
+			"label": "Foot traffic",
+			"high": "High traffic",
+			"mid": "Medium traffic",
+			"low": "Low traffic"
 		}
 	},
 	"addons": {
@@ -525,5 +531,11 @@
 		"contact_us_description": "For collaboration:",
 		"contact_us_description2": "For registration:",
 		"past_websites": "Past Websites"
+	},
+	"settings": {
+		"title": "Test settings",
+		"hint": "Temporary A/B toggles, saved in this browser only.",
+		"show_price": "Show prices",
+		"show_traffic": "Show foot-traffic tags"
 	}
 }

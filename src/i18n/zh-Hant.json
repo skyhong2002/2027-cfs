@@ -261,6 +261,12 @@
 			"deep": "深耕級",
 			"forward": "前瞻級",
 			"sprout": "新芽級"
+		},
+		"traffic": {
+			"label": "人流量",
+			"high": "人流量高",
+			"mid": "人流量中",
+			"low": "人流量低"
 		}
 	},
 	"addons": {
@@ -521,5 +527,11 @@
 		"contact_us_description": "合作聯繫：",
 		"contact_us_description2": "報名事宜：",
 		"past_websites": "歷年網站"
+	},
+	"settings": {
+		"title": "測試設定",
+		"hint": "暫時性的 A/B 測試開關，只影響這個瀏覽器。",
+		"show_price": "顯示價格",
+		"show_traffic": "顯示人流量標籤"
 	}
 }
