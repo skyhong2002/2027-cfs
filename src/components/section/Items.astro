@@ -82,6 +82,7 @@ const config = shopConfig;
 			<X />
 		</template>
 		<div data-i18n-no-items style="display: none;">{t.noInterestedItems}</div>
+		<div data-i18n-subtotal style="display: none;">{t.subtotal}</div>
 	</div>
 </section>
 
@@ -265,7 +266,8 @@ const config = shopConfig;
 		z-index: 1000;
 		bottom: 6.5rem;
 		right: 2rem;
-		width: 16rem;
+		width: 20rem;
+		max-width: calc(100vw - 4rem);
 		max-height: 60rem;
 		background-color: var(--white);
 		border-radius: 1rem;
@@ -355,11 +357,19 @@ const config = shopConfig;
 	}
 
 	:global(.item-price-tag) {
-		font-size: 0.8rem;
-		color: #0171e3;
-		font-weight: 400;
-		margin-top: 0.25rem;
-		display: inline-block;
+		font-size: 0.85rem;
+		color: var(--gray);
+		font-weight: 500;
+		white-space: nowrap;
+	}
+
+	:global(.interest-subtotal) {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.75rem 1rem;
+		font-size: 0.9rem;
+		font-weight: 700;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
 	:global(.remove-item) {

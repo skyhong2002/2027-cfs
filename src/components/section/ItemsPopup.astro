@@ -259,10 +259,27 @@ const items = itemsUnsorted.sort((a, b) => {
 			}
 
 			contentDiv.appendChild(titleSpan);
+			if (item.price) {
+				const priceSpan = document.createElement("span");
+				priceSpan.className = "item-price-tag";
+				priceSpan.textContent = item.price;
+				contentDiv.appendChild(priceSpan);
+			}
 			contentDiv.appendChild(removeButton);
 			itemDiv.appendChild(contentDiv);
 			listContainer.appendChild(itemDiv);
 		});
+
+		// Subtotal of numeric prices (plan-included items and TBD prices are skipped)
+		const subtotal = items.reduce((sum, item) => {
+			const price = item.price || "";
+			return price.startsWith("$") || price.startsWith("NT$") ? sum + (parseInt(price.replace(/[NT$,]/g, ""), 10) || 0) : sum;
+		}, 0);
+		const subtotalLabel = document.querySelector("[data-i18n-subtotal]")?.textContent || "";
+		const subtotalDiv = document.createElement("div");
+		subtotalDiv.className = "interest-subtotal";
+		subtotalDiv.innerHTML = `<span>${subtotalLabel}</span><span>NT$${subtotal.toLocaleString("en-US")}</span>`;
+		listContainer.appendChild(subtotalDiv);
 
 		const removeButtons = listContainer.querySelectorAll(".remove-item");
 		removeButtons.forEach(button => {

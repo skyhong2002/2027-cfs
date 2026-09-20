@@ -249,7 +249,7 @@ const uniqueItemIds = new Set<string>();
 	}
 
 	function addTierInterestHandlers() {
-		const tierButtons = document.querySelectorAll(".tier-interest-button");
+		const tierButtons = document.querySelectorAll("#plans .tier-interest-button");
 		tierButtons.forEach(button => {
 			const tierName = button.getAttribute("data-tier-name");
 			const tierTitle = button.getAttribute("data-tier-title");
@@ -294,7 +294,7 @@ const uniqueItemIds = new Set<string>();
 	}
 
 	function updateTierButtonStates() {
-		const tierButtons = document.querySelectorAll(".tier-interest-button");
+		const tierButtons = document.querySelectorAll("#plans .tier-interest-button");
 		tierButtons.forEach(button => {
 			const tierName = button.getAttribute("data-tier-name");
 			const tierDeadline = button.getAttribute("data-tier-deadline") || "";
