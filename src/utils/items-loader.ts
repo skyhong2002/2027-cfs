@@ -28,7 +28,6 @@ export interface ItemDataRaw {
 	remaining: string;
 	unit: string;
 	type: string;
-	traffic: string;
 	global_description_zh: string;
 	global_description_en: string;
 	talent_recruitment_zh: string;
@@ -56,7 +55,6 @@ export interface ItemData {
 	remaining: string;
 	unit: string;
 	type: string;
-	traffic: string;
 	global_description: string;
 	talent_recruitment: string;
 	brand_exposure: string;
@@ -128,7 +126,6 @@ function extractLocalizedData(rawData: ItemDataRaw, locale: string, id: string):
 		remaining: rawData.remaining,
 		unit: rawData.unit,
 		type: translateType(rawData.type, locale),
-		traffic: rawData.traffic || "",
 		global_description: suffix === "_zh" ? rawData.global_description_zh : rawData.global_description_en,
 		talent_recruitment: suffix === "_zh" ? rawData.talent_recruitment_zh : rawData.talent_recruitment_en,
 		brand_exposure: suffix === "_zh" ? rawData.brand_exposure_zh : rawData.brand_exposure_en,

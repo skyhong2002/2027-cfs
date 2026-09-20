@@ -116,7 +116,6 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 						</span>
 					)
 				}
-				{item.traffic && t.traffic && <span class={`traffic traffic-${item.traffic}`}>{t.traffic[item.traffic]}</span>}
 				<span class="category">{`${new Date(item.deadline).getMonth() + 1}/${new Date(item.deadline).getDate()}`} {t.deadline}</span>
 			</div>
 			<div class="title-row">
@@ -350,25 +349,6 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 		border-radius: 20px;
 		font-size: 0.9rem;
 		font-weight: 500;
-	}
-
-	.traffic {
-		padding: 0.1rem 0.7rem;
-		border-radius: 20px;
-		font-size: 0.9rem;
-		font-weight: 500;
-	}
-
-	.traffic-high {
-		background-color: #ffb3a7;
-	}
-
-	.traffic-mid {
-		background-color: #ffe0a3;
-	}
-
-	.traffic-low {
-		background-color: #e3e3e8;
 	}
 
 	.category {

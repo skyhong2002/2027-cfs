@@ -87,7 +87,6 @@ const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub:
 					</div>
 				)
 			}
-			{card.traffic && t.traffic && <div class={`traffic-tag traffic-${card.traffic}`}>{t.traffic[card.traffic]}</div>}
 			<div class="deadline-tag">{`${new Date(card.deadline).getMonth() + 1}/${new Date(card.deadline).getDate()}`} {t.deadline}</div>
 		</div>
 	</div>
@@ -183,25 +182,6 @@ const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub:
 		border-radius: 20px;
 		font-size: 0.9rem;
 		font-weight: 500;
-	}
-
-	.traffic-tag {
-		padding: 0.1rem 0.7rem;
-		border-radius: 20px;
-		font-size: 0.9rem;
-		font-weight: 500;
-	}
-
-	.traffic-high {
-		background-color: #ffb3a7;
-	}
-
-	.traffic-mid {
-		background-color: #ffe0a3;
-	}
-
-	.traffic-low {
-		background-color: #e3e3e8;
 	}
 
 	.sold-out-tag {
