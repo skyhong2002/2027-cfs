@@ -358,17 +358,21 @@ const uniqueItemIds = new Set<string>();
 	.plans-table {
 		background-color: var(--white);
 		border-radius: 2rem;
-		overflow: hidden;
+		overflow: clip;
 		padding: 2rem;
 	}
 
 	.plans-header {
 		padding-bottom: 1rem;
 		align-items: stretch;
+		position: sticky;
+		top: 4rem;
+		z-index: 2;
+		background-color: var(--white);
 	}
 
 	.plans-header:hover {
-		background-color: transparent !important;
+		background-color: var(--white) !important;
 	}
 
 	.tier-column {

@@ -25,19 +25,19 @@
 	},
 	"highlights": {
 		"title": "What can SITCON offer?",
-		"subtitle": "Saturday, March 13, 2027 · Academia Sinica, Humanities and Social Sciences Building · ~1,300 attendees",
+		"subtitle": "Saturday, March 13, 2027 · Academia Sinica, Humanities and Social Sciences Building",
 		"cards": [
 			{
 				"title": "Talent Recruitment",
 				"description": "Over a thousand CS students in one day. Booths, exclusive sessions and complimentary tickets put you face to face with future engineers.",
-				"link": "#items",
-				"cta": "See recruitment items"
+				"link": "#plans",
+				"cta": "See sponsorship plans"
 			},
 			{
 				"title": "Brand Exposure",
 				"description": "From venue backdrops and the R0 video loop to social media and email pushes, keep your brand in the most active student community.",
 				"link": "#plans",
-				"cta": "Compare plans"
+				"cta": "See sponsorship plans"
 			},
 			{
 				"badge": "New in 2027",
@@ -63,11 +63,11 @@
 		"slogan2": "From the first SITCON to your first project team, let your company start a new story with talent.",
 		"sdgs": {
 			"title1": "Goal 4: Quality Education",
-			"desc1": "SITCON offers tech talks, workshops, Hour of Code, and summer camps to help students explore computer science, improve digital literacy and innovation, and address rural education gaps—lowering barriers so everyone can learn.",
+			"desc1": "SITCON offers tech talks, workshops, Hour of Code, and summer camps to help students explore computer science, improve digital literacy and innovation, and address education gaps in high-need areas—lowering barriers so everyone can learn.",
 			"title2": "Goal 9: Industry, Innovation, and Infrastructure",
 			"desc2": "SITCON encourages exploration of emerging technologies, practical application of CS skills, and open-source sharing that contributes to infrastructure and innovation across industries.",
 			"title3": "Goal 10: Reduced Inequalities",
-			"desc3": "Our activities reach rural and resource-limited areas, encouraging participation and sharing. We provide equal opportunities for students from all backgrounds—through the community expo and café—so everyone enjoys fair chances to connect.",
+			"desc3": "Our activities reach high-need and resource-limited areas, encouraging participation and sharing. We provide equal opportunities for students from all backgrounds—through the community expo and café—so everyone enjoys fair chances to connect.",
 			"title4": "Goal 17: Partnerships for the Goals",
 			"desc4": "Partnerships with the Ministry of Education, schools, and other communities are the foundation of our success. SITCON serves as a bridge connecting diverse resources to advance the SDGs."
 		}

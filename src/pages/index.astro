@@ -20,7 +20,7 @@ import ItemsPopup from "@components/section/ItemsPopup.astro";
 const { lang = "zh-Hant" } = Astro.props;
 const ogImage = lang === "zh-Hant" ? ogImageZH : ogImageEN;
 const t = await import(`../i18n/${lang}.json`).then(m => m.default);
-const sections = [Nav, Hero, Intro, Highlights, About, Time, Plans, Items, OpenDream, ItemsPopup, Form, Sponsors, Cycle, News, FAQ, Footer];
+const sections = [Nav, Hero, Intro, News, Highlights, About, Plans, Items, OpenDream, ItemsPopup, Form, Sponsors, Cycle, Time, FAQ, Footer];
 const { title = t.meta.title, description = t.meta.description } = Astro.props;
 
 // Default schema for homepage (Organization + WebSite)
