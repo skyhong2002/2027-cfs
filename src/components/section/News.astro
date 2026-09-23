@@ -8,7 +8,6 @@ import camp from "@assets/img/camp.webp";
 import covPresident from "@assets/img/news/coverage-president.webp";
 import covCna from "@assets/img/news/coverage-cna.webp";
 import covTaiwanhot from "@assets/img/news/coverage-taiwanhot.webp";
-import conference from "@assets/img/intro.webp";
 import type { ImageMetadata } from "astro";
 import { ChevronLeft, ChevronRight } from "@lucide/astro";
 
@@ -25,7 +24,7 @@ const coverageImages: Record<string, string> = {
 	president: covPresident.src,
 	cna: covCna.src,
 	taiwanhot: covTaiwanhot.src,
-	muchtv: conference.src,
+	muchtv: `${base}/venue/R0.webp`,
 	line: `${base}/items/55246309729.webp`
 };
 ---
@@ -167,6 +166,12 @@ const coverageImages: Record<string, string> = {
 		color: var(--gray);
 		margin-top: auto;
 	}
+	/* Keep the popup button in normal flow below the grid instead of sticky over the cards */
+	#news :global(.detail-btn) {
+		position: static;
+		margin: 2.5rem auto 0;
+	}
+
 	.photo-label {
 		font-size: 0.75rem;
 		color: var(--gray);
