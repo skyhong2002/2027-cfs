@@ -1,6 +1,6 @@
 ---
 const { t, lang } = Astro.props;
-import { Container } from "@lucide/astro";
+import { Container, Check } from "@lucide/astro";
 import planData from "@data/plan.json";
 import { loadItemsData } from "../../utils/items-loader";
 import { getBenefitLocalizedName } from "../../utils/plan-helper";
@@ -117,6 +117,7 @@ const uniqueItemIds = new Set<string>();
 		<div class="plans-table">
 			<div class="plans-content">
 				<div class="plan-row plans-header">
+					<div class="row-label header-label"></div>
 					{
 						tiers.map((tier: any) => (
 							<div class="tier-column">
@@ -134,6 +135,7 @@ const uniqueItemIds = new Set<string>();
 				{
 					rows.map((row: any) => (
 						<div class={`plan-row ${!row.isAvailable ? "disabled" : ""}`} data-row-id={row.id} data-is-available={row.isAvailable}>
+							<div class="row-label">{row.name}</div>
 							{row.values.map((value: any) => {
 								const isAvailable = value.quantity && value.quantity !== "";
 								const isCheckmark = value.quantity === "O" || value.quantity === "o";
@@ -161,27 +163,19 @@ const uniqueItemIds = new Set<string>();
 								return (
 									<div class="plan-cell" data-item-id={value.itemId}>
 										{isCheckmark ? (
-											<>{value.name && <div class="cell-sub">{value.name}</div>}</>
+											<div class="cell-main cell-check">
+												<Check />
+											</div>
 										) : shouldShowIcons ? (
-											<>
-												<div class="cell-icon cell-main">
-													{Array.from({ length: iconCount }).map((_, i) => (
-														<Container key={i} />
-													))}
-												</div>
-												{value.name && <div class="cell-sub">{value.name}</div>}
-											</>
+											<div class="cell-icon cell-main">
+												{Array.from({ length: iconCount }).map((_, i) => (
+													<Container key={i} />
+												))}
+											</div>
+										) : isAvailable ? (
+											<div class="cell-main cell-text">{displayText}</div>
 										) : (
-											<>
-												{isAvailable ? (
-													<>
-														<div class="cell-main cell-text">{displayText}</div>
-														{value.name && <div class="cell-sub">{value.name}</div>}
-													</>
-												) : (
-													<div class="cell-sub">{displayText}</div>
-												)}
-											</>
+											<div class="cell-sub cell-none">{displayText}</div>
 										)}
 									</div>
 								);
@@ -456,9 +450,33 @@ const uniqueItemIds = new Set<string>();
 
 	.plan-row {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
-		padding: 1rem 2rem;
+		grid-template-columns: minmax(11rem, 1.6fr) repeat(4, 1fr);
+		gap: 1.5rem;
+		padding: 0.75rem 1.5rem;
+		align-items: center;
+	}
+
+	.row-label {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1.4;
+		color: var(--black);
+		text-align: left;
+	}
+
+	.plans-header .header-label {
+		border-bottom: 1px solid var(--border-light);
+		align-self: stretch;
+	}
+
+	.cell-check svg {
+		width: 1.5rem;
+		height: 1.5rem;
+		stroke-width: 3;
+	}
+
+	.cell-none {
+		color: var(--gray);
 	}
 
 	.plan-cell {
@@ -468,11 +486,16 @@ const uniqueItemIds = new Set<string>();
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
-		min-height: 4rem;
+		min-height: 2.5rem;
+	}
+
+	.plan-row:not(.disabled):hover .row-label {
+		color: var(--items-green);
 	}
 
 	.plan-cell.highlighted .cell-main,
 	.plan-cell.highlighted .cell-sub,
+	.plan-cell.highlighted .cell-check,
 	.plan-cell.highlighted .cell-icon {
 		color: var(--items-green);
 		font-weight: 600;
@@ -482,7 +505,6 @@ const uniqueItemIds = new Set<string>();
 		display: flex;
 		gap: 0.25rem;
 		justify-content: center;
-		margin-bottom: 0.5rem;
 	}
 
 	.cell-icon svg {
@@ -501,9 +523,10 @@ const uniqueItemIds = new Set<string>();
 	}
 
 	.cell-text {
-		font-size: 1.75rem;
+		font-size: 1.25rem;
 		font-weight: 600;
 		color: var(--black);
+		white-space: nowrap;
 	}
 
 	.cell-sub {
@@ -537,6 +560,27 @@ const uniqueItemIds = new Set<string>();
 		.plan-row {
 			min-width: 800px;
 		}
+
+		/* Inside the horizontal scroller the header must not offset from the top */
+		.plans-header {
+			top: 0;
+		}
+
+		.row-label {
+			position: sticky;
+			left: 0;
+			z-index: 1;
+			background-color: var(--white);
+			margin-right: -1.5rem;
+			padding-right: 1.5rem;
+			box-shadow:
+				-3rem 0 0 var(--white),
+				0.5rem 0 0 var(--white);
+		}
+
+		.plan-row:not(.disabled):hover .row-label {
+			background-color: var(--items-bg);
+		}
 	}
 
 	@media screen and (max-width: 768px) {
@@ -563,8 +607,13 @@ const uniqueItemIds = new Set<string>();
 
 		.plans-header,
 		.plan-row {
-			gap: 1rem;
-			min-width: 600px;
+			gap: 0.75rem;
+			min-width: 640px;
+			padding: 0.5rem 0.75rem;
+		}
+
+		.row-label {
+			font-size: 0.85rem;
 		}
 
 		.cell-main {
@@ -643,7 +692,11 @@ const uniqueItemIds = new Set<string>();
 		}
 
 		.cell-text {
-			font-size: 18pt;
+			font-size: 12pt;
+		}
+
+		.row-label {
+			font-size: 10pt;
 		}
 		.cell-sub {
 			font-size: 10pt;
