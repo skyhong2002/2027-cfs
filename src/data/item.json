@@ -89,14 +89,17 @@
     "product_promotion_zh": "布條印製產品特色或廣告語，於必經動線加強產品展示效果。",
     "product_promotion_en": "Hang branded banners on stair railings to capture attendee attention during movement and maximize product reach.",
     "image": "1TxKVkgtvOxGIVuBHLfgWTqIakeBAcHMN.webp",
-    "image_description_zh": "樓梯欄杆垂掛布條展出 (範例為 HITCON 展出之布條)",
-    "image_description_en": "Stair Railing Hanging Banner Display (Example: HITCON)",
+    "image_description_zh": "歷年樓梯欄杆垂掛布條照片（年份未標示）",
+    "image_description_en": "Stair-railing banner from a past year (year not recorded)",
     "price": "$48,000",
     "deadline": "2027/03/02",
     "talent_recruitment_order": 12,
     "brand_exposure_order": 10,
     "product_promotion_order": 16,
-    "sub": []
+    "sub": [],
+    "photo_historical": true,
+    "photo_scene_note_zh": "沿用舊圖：歷年樓梯欄杆布條照片，年份未標示。",
+    "photo_scene_note_en": "Retained image: stair-railing banner from a past year, year not recorded."
   },
   "4": {
     "name_zh": "樓梯打卡牆",
@@ -326,14 +329,17 @@
     "product_promotion_zh": "設計產品特色明信片，讓與會者可收藏或寄送，延長產品被看到的時間。",
     "product_promotion_en": "Design postcards featuring the product name or imagery for attendees to collect or mail, extending brand exposure beyond the event.",
     "image": "1t7MCvrP_1mSVbjKl2rsHwIGSEgmk8mjR.webp",
-    "image_description_zh": "明信片",
-    "image_description_en": "Postcard",
+    "image_description_zh": "明信片示意圖（非 2026 年會照片）",
+    "image_description_en": "Postcard artwork (not a 2026 photo)",
     "price": "$15,000",
     "deadline": "2027/01/05",
     "talent_recruitment_order": 23,
     "brand_exposure_order": 12,
     "product_promotion_order": 24,
-    "sub": []
+    "sub": [],
+    "photo_historical": true,
+    "photo_scene_note_zh": "沿用舊圖：明信片示意圖，非 2026 年會照片。",
+    "photo_scene_note_en": "Retained image: postcard artwork, not a 2026 photo."
   },
   "12": {
     "name_zh": "網路宣傳",
@@ -505,8 +511,8 @@
     "product_promotion_zh": "於遠距會議室投影或錄影中露出產品資訊，觸及線上參與者。",
     "product_promotion_en": "Exposure of product information within the remote conference room projection or recording, reaching online attendees.",
     "image": "1XCP97OqLZGEZHY3yVaftaia7AF6uAIl8.webp",
-    "image_description_zh": "遠距會議室議程",
-    "image_description_en": "Remote Meeting Room Session",
+    "image_description_zh": "歷年遠距會議室照片（年份未標示）",
+    "image_description_en": "Remote-session room from a past year (year not recorded)",
     "price": "",
     "deadline": "2027/03/16",
     "talent_recruitment_order": 11,
@@ -531,7 +537,10 @@
         "image_description_zh": "",
         "image_description_en": ""
       }
-    ]
+    ],
+    "photo_historical": true,
+    "photo_scene_note_zh": "沿用舊圖：歷年遠距會議室照片，年份未標示。",
+    "photo_scene_note_en": "Retained image: remote-session room from a past year, year not recorded."
   },
   "16": {
     "name_zh": "會場攤位加大",
@@ -1068,15 +1077,18 @@
     "product_promotion_zh": "於會場直欄板展示產品圖片或宣傳標語，讓參與者多角度接觸產品。",
     "product_promotion_en": "Feature the sponsor’s logo on recording video overlays, ensuring continuous product visibility for online viewers.",
     "image": "55247040847.webp",
-    "image_description_zh": "SITCON 2026 錄影畫面底部顯示領航級贊助",
-    "image_description_en": "SITCON 2026 recording overlay showing the Navigator sponsor",
+    "image_description_zh": "SITCON 2026 國際會議廳投影幕顯示含「領航級贊助 LINE」標示的畫面（會場拍攝）",
+    "image_description_en": "Projection in the SITCON 2026 main hall showing a slide with the 'Navigator sponsor LINE' caption, photographed in the venue",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 37,
     "brand_exposure_order": 27,
     "product_promotion_order": 27,
     "sub": [],
-    "photo_year": "2026"
+    "photo_year": "2026",
+    "photo_scene_reference": true,
+    "photo_scene_note_zh": "照片為會場拍攝的投影畫面，並非實際錄影輸出中的底部贊助商浮水印。",
+    "photo_scene_note_en": "This is a venue photograph of a projected slide, not an actual recording frame with the bottom sponsor overlay."
   },
   "35": {
     "name_zh": "門口議程表 Logo 曝光",

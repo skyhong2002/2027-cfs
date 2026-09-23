@@ -860,11 +860,12 @@
    "license_urls": [
     "https://creativecommons.org/licenses/by/4.0"
    ],
-   "alt_zh": "SITCON 2026 錄影畫面底部顯示領航級贊助",
-   "alt_en": "SITCON 2026 recording overlay showing the Navigator sponsor",
+   "alt_zh": "SITCON 2026 國際會議廳投影幕顯示含「領航級贊助 LINE」標示的畫面（會場拍攝）",
+   "alt_en": "Projection in the SITCON 2026 main hall showing a slide with the 'Navigator sponsor LINE' caption, photographed in the venue",
    "curation_status": "ai_labeled",
    "public_use_status": "",
-   "raw_photographer_field": "月太"
+   "raw_photographer_field": "月太",
+   "note": "Scene reference: venue photo of a projected slide, not a recording frame."
   },
   {
    "slot": "item 30",
