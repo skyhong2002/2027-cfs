@@ -5,6 +5,13 @@ import ettodayNews from "@assets/img/news/ettodayNews.webp";
 import yahooNews from "@assets/img/news/yahooNews.webp";
 import moneyUdnNews from "@assets/img/news/moneyUdnNews.webp";
 import newstaiwan from "@assets/img/news/newstaiwan.webp";
+import president2026 from "@assets/img/news/president2026.webp";
+import cna2026 from "@assets/img/news/cna2026.webp";
+import udn2026 from "@assets/img/news/udn2026.webp";
+import ocac2026 from "@assets/img/news/ocac2026.webp";
+import taiwanhot2026 from "@assets/img/news/taiwanhot2026.webp";
+import line2026 from "@assets/img/news/line2026.webp";
+import camp2026 from "@assets/img/news/camp2026.webp";
 import hk from "@assets/img/sitcon_hk.webp";
 import groups from "@assets/img/groups.webp";
 import edu from "@assets/img/edu.webp";
@@ -63,6 +70,13 @@ const news: News[] = [
 		>
 			<img src={yahooNews.src} alt="yahoo.com" class="news-img" />
 		</a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.president.gov.tw/News/39930"><img src={president2026.src} alt="president.gov.tw" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.cna.com.tw/news/aipl/202603280032.aspx"><img src={cna2026.src} alt="cna.com.tw" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/7307/9408273"><img src={udn2026.src} alt="money.udn.com" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://ocacnews.net/article/423192"><img src={ocac2026.src} alt="ocacnews.net" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.taiwanhot.net/news/1131936"><img src={taiwanhot2026.src} alt="taiwanhot.net" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship"><img src={line2026.src} alt="techblog.lycorp.co.jp" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://sitcon.camp/2026/about/"><img src={camp2026.src} alt="sitcon.camp" class="news-img" /></a>
 		<div class="spacing"></div>
 	</div>
 	<Popup hero={false} btnText={t.title} id="news-popup">
@@ -134,6 +148,10 @@ const news: News[] = [
 	}
 
 	.news-content a:nth-child(5) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+	/* Appended 2026 screenshots continue the same staggered overlap as items 2-5 */
+	.news-content a:nth-child(n + 6) {
 		margin-top: calc(var(--unit) / 3.5);
 	}
 
