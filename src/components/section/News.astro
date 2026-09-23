@@ -116,8 +116,23 @@ const news: News[] = [
 		padding: 2rem 2rem 4rem;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: 2.5rem;
+		column-gap: 0;
 		align-items: start;
+	}
+
+	/* lanes are wider than their column so neighbours overlap sideways as well */
+	.news-content a:nth-child(3n + 1) {
+		width: 108%;
+	}
+
+	.news-content a:nth-child(3n + 2) {
+		width: 118%;
+		margin-left: -9%;
+	}
+
+	.news-content a:nth-child(3n + 3) {
+		width: 108%;
+		margin-left: -8%;
 	}
 
 	.news-content a {
@@ -126,17 +141,38 @@ const news: News[] = [
 	}
 
 	.news-content a:nth-child(3n + 2) {
-		transform: translateY(5rem);
-		z-index: 1;
+		transform: translateY(9rem);
 	}
 
-	.news-content a:nth-child(3n + 3) {
-		transform: translateY(2rem);
+	/* each row paints above the row before it; the middle item paints above its own row */
+	.news-content a:nth-child(-n + 3) {
+		z-index: 2;
+	}
+	.news-content a:nth-child(n + 4):nth-child(-n + 6) {
+		z-index: 4;
+	}
+	.news-content a:nth-child(n + 7):nth-child(-n + 9) {
+		z-index: 6;
+	}
+	.news-content a:nth-child(n + 10) {
+		z-index: 8;
+	}
+	.news-content a:nth-child(2):nth-child(3n + 2) {
+		z-index: 3;
+	}
+	.news-content a:nth-child(5):nth-child(3n + 2) {
+		z-index: 5;
+	}
+	.news-content a:nth-child(8):nth-child(3n + 2) {
+		z-index: 7;
+	}
+	.news-content a:nth-child(11):nth-child(3n + 2) {
+		z-index: 9;
 	}
 
 	/* rows after the first overlap the previous row by roughly a fifth of an image */
 	.news-content a:nth-child(n + 4) {
-		margin-top: -24%;
+		margin-top: -21%;
 	}
 
 	.news-img {
@@ -147,7 +183,7 @@ const news: News[] = [
 	}
 
 	.news-content a:hover {
-		z-index: 3;
+		z-index: 20;
 	}
 
 	.news-img:hover {
@@ -170,6 +206,8 @@ const news: News[] = [
 		.news-content a:nth-child(3n + 2) {
 			transform: none;
 			margin-top: 0;
+			width: 100%;
+			margin-left: 0;
 		}
 
 		.news-content a:nth-child(3n + 2) .news-img {
