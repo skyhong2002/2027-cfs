@@ -11,7 +11,7 @@ import udn2026 from "@assets/img/news/udn2026.webp";
 import ocac2026 from "@assets/img/news/ocac2026.webp";
 import taiwanhot2026 from "@assets/img/news/taiwanhot2026.webp";
 import line2026 from "@assets/img/news/line2026.webp";
-import camp2026 from "@assets/img/news/camp2026.webp";
+import muchtv2026 from "@assets/img/news/muchtv2026.webp";
 import hk from "@assets/img/sitcon_hk.webp";
 import groups from "@assets/img/groups.webp";
 import edu from "@assets/img/edu.webp";
@@ -68,7 +68,7 @@ const news: News[] = [
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.taiwanhot.net/news/1131936"><img src={taiwanhot2026.src} alt="taiwanhot.net" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://ocacnews.net/article/423192"><img src={ocac2026.src} alt="ocacnews.net" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship"><img src={line2026.src} alt="techblog.lycorp.co.jp" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://sitcon.camp/2026/about/"><img src={camp2026.src} alt="sitcon.camp" class="news-img" /></a>
+			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.youtube.com/watch?v=zplk0zALtOM"><img src={muchtv2026.src} alt="youtube.com" class="news-img" /></a>
 		</div>
 		<div class="news-side news-side-right">
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/5723/9018057"><img src={moneyUdnNews.src} alt="money.udn.com" class="news-img" /></a>
@@ -120,7 +120,8 @@ const news: News[] = [
 		margin: auto;
 		padding: 2rem;
 		display: grid;
-		grid-template-columns: 1fr minmax(0, 2fr) 1fr;
+		/* side columns equal the 60%-wide middle images: 0.6 : 1 : 0.6 */
+		grid-template-columns: 0.6fr minmax(0, 1fr) 0.6fr;
 		gap: 2rem;
 		align-items: start;
 	}
@@ -171,11 +172,7 @@ const news: News[] = [
 	}
 
 	.news-side .news-img {
-		width: 88%;
-	}
-
-	.news-side a:nth-child(odd) .news-img {
-		margin-inline: 0 auto;
+		width: 100%;
 	}
 
 	.news-side a:nth-child(n + 2) {
