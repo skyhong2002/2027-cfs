@@ -18,8 +18,10 @@ interface HighlightCard {
 		{
 			t.cards.map((card: HighlightCard) => (
 				<a class="card aos aos-fadeInBottom" href={card.link}>
-					{card.badge && <span class="badge">{card.badge}</span>}
-					<h3>{card.title}</h3>
+					<div class="title-row">
+						<h3>{card.title}</h3>
+						{card.badge && <span class="badge">{card.badge}</span>}
+					</div>
 					<p>{card.description}</p>
 					<span class="cta">
 						{card.cta}
@@ -77,10 +79,16 @@ interface HighlightCard {
 		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 	}
 
+	.title-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
 	.badge {
-		position: absolute;
-		top: 1.25rem;
-		right: 1.25rem;
+		white-space: nowrap;
 		background-color: var(--items-green);
 		color: var(--white);
 		border-radius: 20px;
