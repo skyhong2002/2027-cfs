@@ -41,6 +41,7 @@ export interface ItemDataRaw {
 	image_description_en: string;
 	price: string;
 	deadline: string;
+	photo_year?: string;
 	talent_recruitment_order: number;
 	brand_exposure_order: number;
 	product_promotion_order: number;
@@ -63,6 +64,7 @@ export interface ItemData {
 	image_description: string;
 	price: string;
 	deadline: string;
+	photo_year?: string;
 	talent_recruitment_order: number;
 	brand_exposure_order: number;
 	product_promotion_order: number;
@@ -134,6 +136,7 @@ function extractLocalizedData(rawData: ItemDataRaw, locale: string, id: string):
 		image_description: suffix === "_zh" ? rawData.image_description_zh : rawData.image_description_en,
 		price: rawData.price,
 		deadline: rawData.deadline,
+		photo_year: rawData.photo_year || "",
 		talent_recruitment_order: rawData.talent_recruitment_order,
 		brand_exposure_order: rawData.brand_exposure_order,
 		product_promotion_order: rawData.product_promotion_order,

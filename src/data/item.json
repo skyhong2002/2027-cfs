@@ -15,9 +15,9 @@
     "brand_exposure_en": "Place sponsor-branded flags in the F&B area so attendees notice your brand while recharging; we’ll also send a dedicated thank-you via the OPass app push notification.",
     "product_promotion_zh": "於餐飲區域插設產品旗幟，將產品名稱與特色直接呈現給用餐者。",
     "product_promotion_en": "Display product name and logo on dining area flags, ensuring direct product exposure to attendees during meal breaks.",
-    "image": "1HS23uNdT5hsggdeR_80aipTdnHoOrntH.webp",
-    "image_description_zh": "午餐旗、點心旗",
-    "image_description_en": "Lunch Flag, Snack Flag",
+    "image": "55245760211.webp",
+    "image_description_zh": "SITCON 2026 供餐區的贊助商小旗與餐點",
+    "image_description_en": "Sponsor flags on the SITCON 2026 meal table",
     "price": "",
     "deadline": "2026/12/25",
     "talent_recruitment_order": 17,
@@ -29,20 +29,21 @@
         "name_en": "Lunch Flag",
         "price": "$40,000",
         "remaining": "1",
-        "image": "1BMDgojDDgcNXgpZHuZynR5u4bFHl3j7Z.webp",
-        "image_description_zh": "午餐旗",
-        "image_description_en": "Lunch Flag"
+        "image": "55245760831.webp",
+        "image_description_zh": "SITCON 2026 工作人員分裝餐點，桌上插著贊助商小旗",
+        "image_description_en": "SITCON 2026 staff packing meals beside sponsor flags"
       },
       {
         "name_zh": "點心旗",
         "name_en": "Snack Flag",
         "price": "$30,000",
         "remaining": "1",
-        "image": "148PDz3MqsCAIPC-crxYNQ5djK-0yCGUi.webp",
-        "image_description_zh": "點心旗",
-        "image_description_en": "Snack Flag"
+        "image": "55244856967.webp",
+        "image_description_zh": "SITCON 2026 餐點區的贊助商小旗與排隊人潮",
+        "image_description_en": "Sponsor flags at the SITCON 2026 food area with attendees queuing"
       }
-    ]
+    ],
+    "photo_year": "2026"
   },
   "2": {
     "name_zh": "一次性紙餐墊",
@@ -60,15 +61,16 @@
     "brand_exposure_en": "All lunches will include sponsor-designed paper placemats. Every attendee will directly encounter your brand while dining.",
     "product_promotion_zh": "於餐墊印上產品圖像或優惠資訊，讓與會者在用餐過程中自然閱讀並記住產品。",
     "product_promotion_en": "Print product images or QR codes on disposable paper placemats, enabling repeated product recall while attendees dine.",
-    "image": "1ZFqucNatz0bdbd4jU2t-bMfW5Rankzp5.webp",
-    "image_description_zh": "一次性紙餐墊",
-    "image_description_en": "Disposable Paper Placemat",
+    "image": "55245996529.webp",
+    "image_description_zh": "SITCON 2026 印有贊助商圖樣的紙餐墊",
+    "image_description_en": "A SITCON 2026 paper placemat printed with a sponsor design",
     "price": "$45,000",
     "deadline": "2027/03/09",
     "talent_recruitment_order": 14,
     "brand_exposure_order": 3,
     "product_promotion_order": 14,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "3": {
     "name_zh": "樓梯欄杆垂掛布條展出",
@@ -112,15 +114,16 @@
     "brand_exposure_en": "Install a large photo wall at the stair entrance to drive selfies and social sharing, organically amplifying your brand.",
     "product_promotion_zh": "設計以產品為核心的拍照打卡牆，吸引用戶分享產品相關內容至社群。",
     "product_promotion_en": "Design a branded photo wall near stairways to encourage attendees to take and share photos, amplifying product content on social media.",
-    "image": "1Bt6DCwkuI0N2a9M3ZEPkdzYfeY-ajZ-p.webp",
-    "image_description_zh": "樓梯打卡牆",
-    "image_description_en": "Staircase Check-in Wall",
+    "image": "55245922753.webp",
+    "image_description_zh": "SITCON 2026 會眾走上會場樓梯",
+    "image_description_en": "SITCON 2026 attendees walking up the venue stairs",
     "price": "$48,000",
     "deadline": "2027/01/05",
     "talent_recruitment_order": 20,
     "brand_exposure_order": 8,
     "product_promotion_order": 17,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "5": {
     "name_zh": "獨家帆布袋",
@@ -138,9 +141,9 @@
     "brand_exposure_en": "Every attendee receives a sponsor-designed canvas tote—carried on-site and reused long after the event.",
     "product_promotion_zh": "將產品元素或 Logo 融入專屬帆布袋設計中，參與者將於會後持續攜帶使用，為您的產品創造長時間曝光。",
     "product_promotion_en": "Feature your logo or product elements on a custom tote bag for lasting post-event brand exposure.",
-    "image": "1wHsSJ5IMcvS4NJ_qorK4D-ETw3Bud3gk.webp",
-    "image_description_zh": "獨家帆布袋",
-    "image_description_en": "Exclusive Canvas Bag",
+    "image": "55246008294.webp",
+    "image_description_zh": "SITCON 2026 工作人員發放帆布袋",
+    "image_description_en": "SITCON 2026 staff handing out canvas bags",
     "price": "",
     "deadline": "2027/02/23",
     "talent_recruitment_order": 21,
@@ -165,7 +168,8 @@
         "image_description_zh": "",
         "image_description_en": ""
       }
-    ]
+    ],
+    "photo_year": "2026"
   },
   "6": {
     "name_zh": "Badge 繩廠商 Logo 曝光",
@@ -183,15 +187,16 @@
     "brand_exposure_en": "Sponsor logo printed on every attendee and staff lanyard, worn on the chest all day.",
     "product_promotion_zh": "將產品名或產品圖像設計於 Badge 繩，與會者全程配戴，實現長時間產品曝光。",
     "product_promotion_en": "Showcase product design or logo on attendee lanyards, ensuring high-frequency visibility throughout the event day.",
-    "image": "1bUiN0iJydzjOleG7MJBauOhPgWFpCDEY.webp",
-    "image_description_zh": "Badge 繩廠商 Logo 曝光",
-    "image_description_en": "Badge Lanyard Vendor Logo Exposure",
+    "image": "55244868277.webp",
+    "image_description_zh": "SITCON 2026 迎賓袋內的贊助商文宣、掛繩與面紙包",
+    "image_description_en": "Sponsor flyers, lanyards and a tissue pack from the SITCON 2026 welcome bag",
     "price": "$66,000",
     "deadline": "2027/01/05",
     "talent_recruitment_order": 31,
     "brand_exposure_order": 1,
     "product_promotion_order": 20,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "7": {
     "name_zh": "年會 T-shirt Logo 曝光",
@@ -209,15 +214,16 @@
     "brand_exposure_en": "Feature your logo on the official SITCON conference T-shirt, deeply aligning your brand with the student community and SITCON culture.",
     "product_promotion_zh": "於 T-shirt 上印刷產品元素或廣告語，透過大面積集體穿著形成產品傳播。",
     "product_promotion_en": "Print product name or logo on official SITCON T-shirts, allowing brand exposure during and after the event as participants continue wearing them.",
-    "image": "17WKzrW_lOnGmedqI5Mg5qT0Y6oKjILnQ.webp",
-    "image_description_zh": "年會 T-shirt Logo 曝光",
-    "image_description_en": "Conference T-shirt Logo Exposure",
+    "image": "40243001324.webp",
+    "image_description_zh": "SITCON 2018 年會 T-shirt 印有贊助商 Logo（2018 年照片）",
+    "image_description_en": "SITCON 2018 conference T-shirt with a sponsor logo (2018 photo)",
     "price": "$66,000",
     "deadline": "2027/01/02",
     "talent_recruitment_order": 39,
     "brand_exposure_order": 5,
     "product_promotion_order": 21,
-    "sub": []
+    "sub": [],
+    "photo_year": "2018"
   },
   "8": {
     "name_zh": "工作人員徽章曝光",
@@ -235,15 +241,16 @@
     "brand_exposure_en": "Staff badges will display your logo, traveling across the venue with hundreds of crew members.",
     "product_promotion_zh": "工作人員徽章結合產品設計，於高互動場景中成為產品推廣的一部分。",
     "product_promotion_en": "Place product logo on staff badges, increasing visibility as staff interact and assist attendees throughout the venue.",
-    "image": "1VsvBuB6ZO-BLR76g-FWXjxk5xDIn-qCN.webp",
-    "image_description_zh": "工作人員徽章曝光",
-    "image_description_en": "Staff Badge Exposure",
+    "image": "50258121376.webp",
+    "image_description_zh": "SITCON 2020 工作人員識別證與贊助商牌（2020 年照片）",
+    "image_description_en": "SITCON 2020 staff badge with sponsor tag (2020 photo)",
     "price": "$33,000",
     "deadline": "2027/01/02",
     "talent_recruitment_order": 36,
     "brand_exposure_order": 28,
     "product_promotion_order": 22,
-    "sub": []
+    "sub": [],
+    "photo_year": "2020"
   },
   "9": {
     "name_zh": "SITCON 貼紙置入",
@@ -261,15 +268,16 @@
     "brand_exposure_en": "Co-branded SITCON × Sponsor stickers included in welcome bags—destined for laptops, luggage, and notebooks.",
     "product_promotion_zh": "製作以產品為主題的 SITCON 聯名貼紙，讓與會者攜帶產品訊息並擴散。",
     "product_promotion_en": "Co-brand SITCON stickers with product logos, giving attendees memorable souvenirs while reinforcing product awareness.",
-    "image": "1ytfkVsScQ5g877tFP9FP65xMYGtP-GED.webp",
-    "image_description_zh": "SITCON 貼紙置入",
-    "image_description_en": "SITCON Sticker Placement",
+    "image": "34396945815.webp",
+    "image_description_zh": "SITCON 2017 贊助商貼紙（2017 年照片）",
+    "image_description_en": "Sponsor stickers at SITCON 2017 (2017 photo)",
     "price": "$40,000",
     "deadline": "2026/12/29",
     "talent_recruitment_order": 28,
     "brand_exposure_order": 33,
     "product_promotion_order": 23,
-    "sub": []
+    "sub": [],
+    "photo_year": "2017"
   },
   "10": {
     "name_zh": "面紙包",
@@ -287,15 +295,16 @@
     "brand_exposure_en": "Sponsor-designed pocket tissue packs in every welcome bag—handy throughout the event.",
     "product_promotion_zh": "將產品包裝或宣傳資訊設計於面紙包上，隨身攜帶與使用中加深產品記憶。",
     "product_promotion_en": "Feature product branding on tissue packs distributed at the venue, providing both utility and continuous product visibility.",
-    "image": "1fTR5oZWZTNuADUEs_4jrdX4rgZlq3tOD.webp",
-    "image_description_zh": "面紙包",
-    "image_description_en": "Tissue Pack",
+    "image": "55244868277.webp",
+    "image_description_zh": "SITCON 2026 迎賓袋內的贊助商文宣、掛繩與面紙包",
+    "image_description_en": "Sponsor flyers, lanyards and a tissue pack from the SITCON 2026 welcome bag",
     "price": "$11,000",
     "deadline": "2026/12/29",
     "talent_recruitment_order": 16,
     "brand_exposure_order": 34,
     "product_promotion_order": 15,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "11": {
     "name_zh": "明信片",
@@ -437,9 +446,9 @@
     "brand_exposure_en": "Host a sponsor session where your speakers engage students directly, sharing industry experience and vision.",
     "product_promotion_zh": "提供品牌專屬議程時段，展示專業並與會眾深度交流。",
     "product_promotion_en": "Provide an exclusive session slot for the brand to showcase expertise and engage in in-depth interaction with attendees.",
-    "image": "195SOaQUpAkwe8wtnDIdOE1MJs1ItPCXr.webp",
-    "image_description_zh": "獨家議程",
-    "image_description_en": "Exclusive Session",
+    "image": "55250565523.webp",
+    "image_description_zh": "SITCON 2026 議程中的與談者與投影片",
+    "image_description_en": "Panelists and slides during a SITCON 2026 session",
     "price": "",
     "deadline": "2027/03/16",
     "talent_recruitment_order": 3,
@@ -473,7 +482,8 @@
         "image_description_zh": "",
         "image_description_en": ""
       }
-    ]
+    ],
+    "photo_year": "2026"
   },
   "15": {
     "name_zh": "遠距會議室議程",
@@ -536,15 +546,16 @@
     "brand_exposure_en": "With a double-size booth, attendees don’t just see your brand—they experience its values and culture.",
     "product_promotion_zh": "加大攤位展示空間，提供完整產品體驗與深度互動，提升品牌轉換效率。",
     "product_promotion_en": "Add product displays in more rooms, ensuring wide coverage and stronger product visibility.",
-    "image": "1D_1Gf8RyFDcxMsIJgljT_d9DbUItjNOx.webp",
-    "image_description_zh": "會場加大攤位",
-    "image_description_en": "Expanded Booth Space",
+    "image": "55246322579.webp",
+    "image_description_zh": "SITCON 2026 加大攤位上的贊助商展示",
+    "image_description_en": "A sponsor's enlarged booth at SITCON 2026",
     "price": "$35,000",
     "deadline": "2027/03/13",
     "talent_recruitment_order": 22,
     "brand_exposure_order": 31,
     "product_promotion_order": 8,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "17": {
     "name_zh": "R0 影片輪播加時",
@@ -562,15 +573,16 @@
     "brand_exposure_en": "Run extended brand videos in the main hall (R0) during keynotes and featured sessions.",
     "product_promotion_zh": "增加產品展示影片播放時段，提升與會者多次重複接觸機會，強化推廣深度。",
     "product_promotion_en": "Insert product ad clips between conference segments, maximizing repeated exposure and visibility.",
-    "image": "16ZenNZcOay9TTe3-QMHlwer4yqgM55C2.webp",
-    "image_description_zh": "R0 影片輪播加時",
-    "image_description_en": "Extended R0 Video Loop Time",
+    "image": "55250303861.webp",
+    "image_description_zh": "SITCON 2026 國際會議廳舞台與後方直播控制席",
+    "image_description_en": "SITCON 2026 main hall stage and the live-stream control desk",
     "price": "$18,000",
     "deadline": "2027/03/21",
     "talent_recruitment_order": 19,
     "brand_exposure_order": 19,
     "product_promotion_order": 5,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "18": {
     "name_zh": "拍貼機贊助商方案",
@@ -588,15 +600,16 @@
     "brand_exposure_en": "Photo booths will feature your logo and waiting-screen animation, driving organic brand sharing through keepsake photos and social posts.",
     "product_promotion_zh": "於拍貼機背景或邊框設計產品元素，與會者拍攝時自然帶出產品資訊並分享至社群。",
     "product_promotion_en": "Incorporate product elements into the photo booth background or props, ensuring natural brand exposure as attendees capture and share photos.",
-    "image": "1DMbkVg6yolWUCmK4PcDM05V_hCDRrzzP.webp",
-    "image_description_zh": "拍貼機贊助商方案",
-    "image_description_en": "Photo Booth Sponsorship Package",
+    "image": "52366051784.webp",
+    "image_description_zh": "SITCON 2022 贊助商拍貼活動看板（2022 年照片）",
+    "image_description_en": "Sponsor photo booth signage at SITCON 2022 (2022 photo)",
     "price": "$52,000",
     "deadline": "2027/01/07",
     "talent_recruitment_order": 24,
     "brand_exposure_order": 4,
     "product_promotion_order": 37,
-    "sub": []
+    "sub": [],
+    "photo_year": "2022"
   },
   "19": {
     "name_zh": "SITCON 網站議程表置入",
@@ -640,15 +653,16 @@
     "brand_exposure_en": "Concise sponsor taglines displayed in restroom signage—high-attention placements that stick in memory.",
     "product_promotion_zh": "於洗手間入口或鏡面貼上產品宣傳標語，利用高頻率動線加強產品記憶。",
     "product_promotion_en": "Place product messages on restroom mirrors or walls, creating high-visibility touchpoints that reinforce brand recall.",
-    "image": "1lAr03G2_g6cm1rKc8c4hYie4VSrCcOpp.webp",
-    "image_description_zh": "洗手間標語曝光",
-    "image_description_en": "Restroom Signage Exposure",
+    "image": "55246227505.webp",
+    "image_description_zh": "SITCON 2026 走廊，牆面可見洗手間指示",
+    "image_description_en": "A SITCON 2026 corridor with restroom signage",
     "price": "$28,000",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 18,
     "brand_exposure_order": 9,
     "product_promotion_order": 39,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "21": {
     "name_zh": "「遠道而來票」獨家冠名",
@@ -666,15 +680,16 @@
     "brand_exposure_en": "Launch the SITCON × Sponsor “Travel Scholarship Ticket” to help students from remote areas or abroad attend SITCON.",
     "product_promotion_zh": "推出 SITCON × 廠商聯名票種，附帶產品優惠券或體驗券，強化產品試用與導流。",
     "product_promotion_en": "Launch a SITCON × Sponsor co-branded ticket, extending brand reach with exclusive product visibility and cultural relevance.",
-    "image": "1-WahsEwy1m3wlnM9tNlw2Dsf_jQoyHOs.webp",
-    "image_description_zh": "「遠道而來票」獨家冠名",
-    "image_description_en": "Title Sponsorship of the \"Come From Afar\" Ticket",
+    "image": "55246178770.webp",
+    "image_description_zh": "SITCON 2026 報到看板列出票種",
+    "image_description_en": "SITCON 2026 registration board listing ticket types",
     "price": "$42,000",
     "deadline": "2027/01/17",
     "talent_recruitment_order": 26,
     "brand_exposure_order": 40,
     "product_promotion_order": 40,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "22": {
     "name_zh": "會議室椅套曝光",
@@ -692,9 +707,9 @@
     "brand_exposure_en": "Display your logo on seat covers in designated session rooms—visible throughout attendees’ focused time.",
     "product_promotion_zh": "椅套背面印有產品圖片或 QR code，與會者在專注聽講時持續接觸產品內容。",
     "product_promotion_en": "Embed product logo or QR code onto conference chair covers, keeping the brand visible throughout entire sessions.",
-    "image": "1XH-h-SvU0g9hn-hG0Jxy5WHuRm10PtUg.webp",
-    "image_description_zh": "會議室椅套曝光",
-    "image_description_en": "Conference Room Chair Cover Exposure",
+    "image": "53699877352.webp",
+    "image_description_zh": "SITCON 2024 演講廳座椅背面的贊助商牌卡（2024 年照片）",
+    "image_description_en": "Sponsor cards on seat backs at SITCON 2024 (2024 photo)",
     "price": "",
     "deadline": "2027/01/15",
     "talent_recruitment_order": 29,
@@ -728,7 +743,8 @@
         "image_description_zh": "",
         "image_description_en": ""
       }
-    ]
+    ],
+    "photo_year": "2024"
   },
   "23": {
     "name_zh": "獨家導遊團行程",
@@ -746,15 +762,16 @@
     "brand_exposure_en": "Guided tours will introduce your brand with mini tasks for participants, weaving your story into the exploration.",
     "product_promotion_zh": "由專人導覽結合產品講解，提供深度互動體驗，讓參與者實際認識產品特色。",
     "product_promotion_en": "Offer an exclusive sponsor-branded guided tour, providing participants with interactive engagement while strengthening product association.",
-    "image": "1zmdu-ywNtR5qbAN-4ONVTRwf2I_ibzQk.webp",
-    "image_description_zh": "獨家導遊團行程",
-    "image_description_en": "Exclusive Guided Tour",
+    "image": "55246067549.webp",
+    "image_description_zh": "SITCON 2026 導覽團帶領參與者參觀攤位",
+    "image_description_en": "A SITCON 2026 guided tour visiting the booths",
     "price": "$16,000",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 2,
     "brand_exposure_order": 37,
     "product_promotion_order": 38,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "24": {
     "name_zh": "SITCON 會場指標置入",
@@ -772,15 +789,16 @@
     "brand_exposure_en": "Place your logo on venue wayfinding signs, accompanying attendees as they navigate the event.",
     "product_promotion_zh": "於會場導引指標上展示產品名稱或標語，讓參與者在移動中持續看到產品資訊。",
     "product_promotion_en": "Integrate product name or logo into venue signage and directional boards, ensuring consistent attendee exposure to the brand.",
-    "image": "15tZrDDfvaWpa_AzB4VOHxFC2U5Dla1W1.webp",
-    "image_description_zh": "SITCON 會場指標置入",
-    "image_description_en": "SITCON Venue Signage Placement",
+    "image": "55246151595.webp",
+    "image_description_zh": "SITCON 2026 會場門上的贊助商指示牌",
+    "image_description_en": "A sponsor-branded venue sign at SITCON 2026",
     "price": "$18,000",
     "deadline": "2027/02/23",
     "talent_recruitment_order": 25,
     "brand_exposure_order": 13,
     "product_promotion_order": 18,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "25": {
     "name_zh": "SITCON 與會者 Email 推播置入",
@@ -824,15 +842,16 @@
     "brand_exposure_en": "The General Chair will acknowledge your brand by name during opening and closing remarks, highlighting your support.",
     "product_promotion_zh": "主持人口播除感謝贊助，更加入產品名稱與賣點，提升會場中產品能見度。",
     "product_promotion_en": "The host will acknowledge the sponsor by name during the opening and closing sessions, ensuring brand presence at key moments.",
-    "image": "1pufnqfInFp6CpIhA629kTJfdXZVyVd6T.webp",
-    "image_description_zh": "年會開閉幕口播",
-    "image_description_en": "Conference Opening & Closing Ceremony Mentions",
+    "image": "55246270679.webp",
+    "image_description_zh": "SITCON 2026 主持人在講台前手持 SITCON 2026 麥克風",
+    "image_description_en": "A SITCON 2026 host at the podium with the SITCON 2026 microphone",
     "price": "$5,000",
     "deadline": "2027/03/16",
     "talent_recruitment_order": 15,
     "brand_exposure_order": 26,
     "product_promotion_order": 35,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "27": {
     "name_zh": "會場電視輪播",
@@ -850,15 +869,16 @@
     "brand_exposure_en": "Your logo and brand videos will loop on public screens across the venue.",
     "product_promotion_zh": "於會場電視牆持續播放產品影片與優惠訊息，確保參與者反覆接觸並加深印象。",
     "product_promotion_en": "Display product ads or promotional videos on venue screens, ensuring visibility across all attendees and reinforcing product exposure.",
-    "image": "1DgUQk13r0Uy81scw-o9pXDjUE-iSXx4a.webp",
-    "image_description_zh": "會場電視輪播",
-    "image_description_en": "TV Screen Loop Exposure",
+    "image": "55246309729.webp",
+    "image_description_zh": "SITCON 2026 攤位上的電視播放影片",
+    "image_description_en": "A booth TV playing video at SITCON 2026",
     "price": "$4,000",
     "deadline": "2027/03/21",
     "talent_recruitment_order": 10,
     "brand_exposure_order": 29,
     "product_promotion_order": 10,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "28": {
     "name_zh": "會場攤位",
@@ -876,15 +896,16 @@
     "brand_exposure_en": "Meet attendees face-to-face on conference day. With demos, hands-on interactions, and live Q&A, your brand goes beyond visibility to memorability.",
     "product_promotion_zh": "提供品牌專屬展示空間，透過互動體驗直接接觸會眾。",
     "product_promotion_en": "Provide a dedicated space for product display and interaction, enabling attendees to directly experience and engage with your brand.",
-    "image": "12PSOeKeZ4vd5lEq7BSAONeVIM1YoijHX.webp",
-    "image_description_zh": "會場攤位\r",
-    "image_description_en": "Exhibition Booth",
+    "image": "55246493860.webp",
+    "image_description_zh": "SITCON 2026 贊助商攤位與展示桌",
+    "image_description_en": "A sponsor booth at SITCON 2026",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 1,
     "brand_exposure_order": 25,
     "product_promotion_order": 2,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "29": {
     "name_zh": "R0 影片輪播",
@@ -902,15 +923,16 @@
     "brand_exposure_en": "Play your brand reel before/after keynotes and featured sessions in the main hall (R0), capturing attention at peak focus moments.",
     "product_promotion_zh": "於大會 R0 輪播影片中嵌入產品展示與亮點介紹，吸引與會者於休息時間進一步搜尋或下單。",
     "product_promotion_en": "Showcase your product in extended video slots during keynote sessions, keeping attendees’ focus on your brand.",
-    "image": "1ru6m6CzwNQh3BGZsujecBsHnug_ypjBs.webp",
-    "image_description_zh": "R0 影片輪播",
-    "image_description_en": "R0 Video Loop",
+    "image": "55245769956.webp",
+    "image_description_zh": "SITCON 2026 R0 投影幕輪播贊助商 Logo",
+    "image_description_en": "Sponsor logos on the SITCON 2026 R0 screen",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 4,
     "brand_exposure_order": 18,
     "product_promotion_order": 4,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "30": {
     "name_zh": "迎賓袋文宣",
@@ -928,15 +950,16 @@
     "brand_exposure_en": "Include brochures/flyers in every welcome bag so attendees take your key messages with them—during and after the event.",
     "product_promotion_zh": "在迎賓資料或手冊中置入產品型錄或優惠資訊，讓與會者第一時間接觸產品訊息。",
     "product_promotion_en": "Insert promotional flyers or vouchers into the welcome bags, increasing brand visibility as participants explore event materials.",
-    "image": "1B7gOF2CFhAma4yGFQM5zrUlthXBcIeDu.webp",
-    "image_description_zh": "迎賓袋文宣",
-    "image_description_en": "Welcome Bag Brochure Insertion",
+    "image": "55250543379.webp",
+    "image_description_zh": "SITCON 2026 迎賓袋內的企業招募文宣",
+    "image_description_en": "Company recruitment flyers from the SITCON 2026 welcome bag",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 9,
     "brand_exposure_order": 35,
     "product_promotion_order": 32,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "31": {
     "name_zh": "贈票",
@@ -954,15 +977,16 @@
     "brand_exposure_en": "Use complimentary tickets for community engagement or campus outreach—expanding reach and goodwill while aligning your brand with support and access.",
     "product_promotion_zh": "以產品聯名活動形式發放贈票，提升產品在活動前的討論熱度與曝光。",
     "product_promotion_en": "Offer branded complimentary tickets, expanding event reach and providing product exposure through attendee sharing.",
-    "image": "1Tz8nzVCUVC7YxPHyp3ghkcMKANhUnkTN.webp",
-    "image_description_zh": "贈票",
-    "image_description_en": "Complimentary Tickets",
+    "image": "55245922823.webp",
+    "image_description_zh": "SITCON 2026 入口的報到隊伍",
+    "image_description_en": "The SITCON 2026 registration queue at the entrance",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 30,
     "brand_exposure_order": 39,
     "product_promotion_order": 36,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "32": {
     "name_zh": "接駁車車內廣播",
@@ -980,15 +1004,16 @@
     "brand_exposure_en": "Run concise on-board announcements during shuttle rides, delivering your message in a distraction-free setting throughout event transit.",
     "product_promotion_zh": "於接駁車內播放與產品相關廣告或簡介，於移動過程中強化產品印象。",
     "product_promotion_en": "Deliver sponsor announcements during shuttle rides, ensuring participants notice product promotion while in transit.",
-    "image": "1Nnd0TAQFvvoIYiPuGoq0wM4E1X_K8KzR.webp",
-    "image_description_zh": "接駁車車內廣播",
-    "image_description_en": "Shuttle Bus Onboard Announcement",
+    "image": "54479258402.webp",
+    "image_description_zh": "SITCON 2025 接駁車停靠站牌旁，車頭顯示 SITCON 2025（2025 年照片）",
+    "image_description_en": "SITCON 2025 shuttle bus at the stop (2025 photo)",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 13,
     "brand_exposure_order": 30,
     "product_promotion_order": 33,
-    "sub": []
+    "sub": [],
+    "photo_year": "2025"
   },
   "33": {
     "name_zh": "R0 議程前夥伴宣讀",
@@ -1006,15 +1031,16 @@
     "brand_exposure_en": "MC acknowledgment of your brand by name (plus a one-line tagline) before sessions in R0, elevating visibility in a formal, high-attention setting.",
     "product_promotion_zh": "於 R0 會場影片播放時插入產品旁白或簡短介紹，達到深度導入。",
     "product_promotion_en": "Insert a product voiceover or short narrative during the video screening at the R0 hall to ensure deep promotional penetration.",
-    "image": "1BEND-T-BK_lP6lzB_u8KW76jVZJmZace.webp",
-    "image_description_zh": "R0 議程前夥伴宣讀",
-    "image_description_en": "R0 Pre-session Partner Acknowledgment",
+    "image": "55247911036.webp",
+    "image_description_zh": "SITCON 2026 講者在 JAM THE CHAOS 背板前發言",
+    "image_description_en": "A SITCON 2026 speaker in front of the JAM THE CHAOS backdrop",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 27,
     "brand_exposure_order": 21,
     "product_promotion_order": 28,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "34": {
     "name_zh": "錄影模板  Logo 曝光",
@@ -1032,15 +1058,16 @@
     "brand_exposure_en": "Persistent logo placement on the recording video template, with long-tail exposure via VOD replays to reach online audiences beyond the venue.",
     "product_promotion_zh": "於會場直欄板展示產品圖片或宣傳標語，讓參與者多角度接觸產品。",
     "product_promotion_en": "Feature the sponsor’s logo on recording video overlays, ensuring continuous product visibility for online viewers.",
-    "image": "14qNzf2Gg_4m6CQOgJFgwfS9LwsvL5EVj.webp",
-    "image_description_zh": "錄影模板  Logo 曝光",
-    "image_description_en": "Recording Video Template Logo Exposure",
+    "image": "55247040847.webp",
+    "image_description_zh": "SITCON 2026 錄影畫面底部顯示領航級贊助",
+    "image_description_en": "SITCON 2026 recording overlay showing the Navigator sponsor",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 37,
     "brand_exposure_order": 27,
     "product_promotion_order": 27,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "35": {
     "name_zh": "門口議程表 Logo 曝光",
@@ -1058,15 +1085,16 @@
     "brand_exposure_en": "Feature your logo on agenda boards at session room entrances—high-traffic touchpoints where every attendee checks schedules.",
     "product_promotion_zh": "在入口護柱印上產品特色資訊，於參與者進出時重複加深產品印象。",
     "product_promotion_en": "Display sponsor logos on entrance credential boards, creating immediate visibility as attendees check in.",
-    "image": "1PHZIhxUuHkFlMGabClewbZTJgtBMRyUa.webp",
-    "image_description_zh": "門口議程表 Logo 曝光",
-    "image_description_en": "Entrance Agenda Board Logo Exposure",
+    "image": "39142120860.webp",
+    "image_description_zh": "SITCON 2018 國際會議廳門口議程表與贊助商 Logo（2018 年照片）",
+    "image_description_en": "SITCON 2018 door schedule board with sponsor logos (2018 photo)",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 34,
     "brand_exposure_order": 22,
     "product_promotion_order": 30,
-    "sub": []
+    "sub": [],
+    "photo_year": "2018"
   },
   "36": {
     "name_zh": "議程廳講者背板",
@@ -1084,15 +1112,16 @@
     "brand_exposure_en": "Logo placement on speaker backdrops—amplified through photos, media shots, and social posts for image-driven recall.",
     "product_promotion_zh": "於會場直欄板展示產品圖片或宣傳標語，讓參與者多角度接觸產品。",
     "product_promotion_en": "Feature sponsor logos on collaborative agenda boards, ensuring product exposure as participants revisit session notes.",
-    "image": "1LjZTDtYLUU_Jx4BZfZvGvPRCuy7GRZOL.webp",
-    "image_description_zh": "議程廳講者背板",
-    "image_description_en": "Speaker Backdrop in Session Halls",
+    "image": "55248058358.webp",
+    "image_description_zh": "SITCON 2026 講者背板與合作夥伴 Logo",
+    "image_description_en": "SITCON 2026 speaker backdrop with partner logos",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 32,
     "brand_exposure_order": 23,
     "product_promotion_order": 31,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "37": {
     "name_zh": "入口落地窗背板 Logo 曝光",
@@ -1110,15 +1139,16 @@
     "brand_exposure_en": "Large backdrops flanking the venue entrance put your logo in the first line of sight, creating an immediate sense of presence.",
     "product_promotion_zh": "入口大型背板以產品視覺為主設計，提供參與者拍照打卡並分享產品。",
     "product_promotion_en": "Showcase sponsor logos on large entryway backdrops, delivering a strong first impression and reinforcing product awareness.",
-    "image": "1s0SsLok3mJitUmR_6CQA6M26KX-HDzbR.webp",
-    "image_description_zh": "入口落地窗背板 Logo 曝光",
-    "image_description_en": "Entrance Floor-to-ceiling Window Backdrop Logo Exposure",
+    "image": "55245917048.webp",
+    "image_description_zh": "SITCON 2026 會場入口與兩側的 JAM THE CHAOS 看板",
+    "image_description_en": "SITCON 2026 venue entrance with JAM THE CHAOS signs",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 38,
     "brand_exposure_order": 32,
     "product_promotion_order": 29,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "38": {
     "name_zh": "年會意象背板",
@@ -1136,15 +1166,16 @@
     "brand_exposure_en": "Branded placement on the conference photo backdrop—an aesthetic focal point for selfies and social sharing.",
     "product_promotion_zh": "在 SITCON 年會意象背板上放置產品 Logo，參與者於拍照或活動留影時，即能自然曝光產品品牌。",
     "product_promotion_en": "Place the sponsor’s logo on the SITCON event backdrop, ensuring natural brand exposure in photos and event highlights.",
-    "image": "1mgrzHzkPgpWqSM0MzULyls1Ecbv6Nf25.webp",
-    "image_description_zh": "年會意象背板",
-    "image_description_en": "Conference Theme Backdrop",
+    "image": "55244873992.webp",
+    "image_description_zh": "SITCON 2026 年會意象背板與合作夥伴 Logo",
+    "image_description_en": "SITCON 2026 main backdrop with partner logos",
     "price": "",
     "deadline": "2027/02/21",
     "talent_recruitment_order": 40,
     "brand_exposure_order": 17,
     "product_promotion_order": 34,
-    "sub": []
+    "sub": [],
+    "photo_year": "2026"
   },
   "39": {
     "name_zh": "年會共筆 Logo 曝光",

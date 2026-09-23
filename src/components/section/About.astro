@@ -46,8 +46,8 @@ const chartData = JSON.stringify({
 					image: VolunteerImg.src,
 					data: [t.stats[4]]
 				}
-			].map(card => (
-				<div class="stat-card" style={`background: url(${card.image}) lightgray 50% / cover no-repeat;`}>
+			].map((card, i) => (
+				<div class="stat-card" role="img" aria-label={t.stats_alt?.[i]} style={`background: url(${card.image}) lightgray 50% / cover no-repeat;`}>
 					<div class={"card-content aos aos-fadeIn" + (card.data[0].label == "meetups and talks" ? " space" : "")}>
 						{card.data.map(stat => (
 							<div>
@@ -108,6 +108,7 @@ const chartData = JSON.stringify({
 				<h3>{t.popup.chart.schools_text_title}</h3>
 				<img src={SchoolsText.src} alt="Schools" id="schools-text" />
 			</div>
+			{t.popup.photo_credit && <p class="data-note">{t.popup.photo_credit}</p>}
 			<div class="social-media-section">
 				<h3>{t.popup.chart.social_media.title}</h3>
 				{t.popup.chart.social_media.note && <p class="data-note">{t.popup.chart.social_media.note}</p>}

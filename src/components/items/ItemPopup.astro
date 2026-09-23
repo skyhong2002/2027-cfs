@@ -6,8 +6,15 @@ import { marked } from "marked";
 import { linkifyVenueCodes } from "../../utils/venue-linkify";
 
 import type { SubItem } from "../../utils/items-loader";
+import photoCredits from "../../data/photo-credits.json";
 
 const { item, t, lang, popupId } = Astro.props;
+const photoCredit = (photoCredits as any).photos.find((p: any) => item.image && p.file.endsWith(item.image));
+const photoCreditText = photoCredit
+	? lang === "en"
+		? `Photo: SITCON Flickr${photoCredit.photographer ? " / " + photoCredit.photographer : ""}, ${photoCredit.license}, ${photoCredit.date_taken.slice(0, 4)}`
+		: `照片：SITCON Flickr${photoCredit.photographer ? "／" + photoCredit.photographer : ""}，${photoCredit.license}，${photoCredit.date_taken.slice(0, 4)} 年`
+	: "";
 
 // Calculate total remaining for items with sub-items
 const hasSubItems = item.sub && item.sub.length > 0;
@@ -105,6 +112,7 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 			}
 		</div>
 		<div class="item-details lenis-scroll">
+			{photoCreditText && <p class="photo-credit">{photoCreditText}</p>}
 			<div class="item-meta">
 				{isSoldOut && <span class="sold-out">{t.sold_out}</span>}
 				{!isSoldOut && item.quantity === "獨家" && <span class="exclusive">{t.exclusive}</span>}
@@ -349,6 +357,12 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 		border-radius: 20px;
 		font-size: 0.9rem;
 		font-weight: 500;
+	}
+
+	.photo-credit {
+		font-size: 0.75rem;
+		color: var(--gray);
+		margin-bottom: 0.5rem;
 	}
 
 	.category {

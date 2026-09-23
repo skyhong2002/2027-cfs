@@ -2,7 +2,7 @@
 const { t } = Astro.props;
 import Popup from "@components/Popup.astro";
 import { Check } from "@lucide/astro";
-import volunteer from "@assets/img/sitcon-volunteer.webp";
+import volunteer from "@assets/img/opendream-2026.webp";
 
 interface OpenDreamPlan {
 	id: string;
@@ -50,6 +50,7 @@ const colors = ["#77B55A", "#537FF1"];
 		</ul>
 		<p class="note">{t.exclusive_note}</p>
 		<p class="note">{t.price_note}</p>
+		<p class="note">{t.photo_credit}</p>
 	</div>
 	<div class="aos spacer"></div>
 	<Popup btnText={t.popup_label} title={t.popup.title} hero={true} id="opendream-popup" background={volunteer.src}>

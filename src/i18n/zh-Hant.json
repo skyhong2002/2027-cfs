@@ -17,7 +17,9 @@
 		"title": "學生需舞台，產業要人才",
 		"title2": "SITCON 是兩者相遇的最佳橋樑",
 		"subtitle": "SITCON 2027 學生計算機年會",
-		"subtitle2": "贊助徵求書"
+		"subtitle2": "贊助徵求書",
+		"image_alt": "SITCON 2026 年會國際會議廳，會眾坐滿階梯座席面向舞台",
+		"photo_credit": "照片：SITCON Flickr／夏川，CC BY 4.0"
 	},
 	"intro": {
 		"sentence1": "SITCON 是由學生組成、投身資訊教育與推廣開源精神的社群。",
@@ -119,30 +121,111 @@
 				"description": "寬敞無障礙物的開放式空間，擁有一整面陽光明媚的落地窗。不同於其他議程廳的演講形式，此空間可自由佈置桌椅，進行各式活動。"
 			}
 		],
-		"teams": []
+		"teams": [],
+		"volunteer_alt": "SITCON 2026 年會參與者在 JAM THE CHAOS 主視覺背板前合影"
 	},
 	"news": {
 		"title": "我們做過的事",
 		"things": [
 			{
 				"title": "東亞最大學生資訊年會",
-				"description": "啟發香港 SITCON x HK、重慶學生開源年會的成立，並向各地學生社團與資訊團體提供支援；每年皆有一半以上新參與者加入，參與者畢業後遍佈臺、美、日、荷各國資訊業界，且常態回流支持。"
+				"description": "啟發香港 SITCON x HK、重慶學生開源年會的成立，並向各地學生社團與資訊團體提供支援；每年皆有一半以上新參與者加入，參與者畢業後遍佈臺、美、日、荷各國資訊業界，且常態回流支持。",
+				"photo_label": "歷年活動照片",
+				"photo_credit": "照片：SITCON 歷年活動"
 			},
 			{
 				"title": "北中南聚會",
-				"description": "持續與各地方社團聯手舉辦聚會，提供學生們資訊交流的管道。其中也不乏與臺灣大學、淡江大學等學校合作，而匯聚了來自各處的資訊領域佼佼者。"
+				"description": "持續與各地方社團聯手舉辦聚會，提供學生們資訊交流的管道。其中也不乏與臺灣大學、淡江大學等學校合作，而匯聚了來自各處的資訊領域佼佼者。",
+				"photo_label": "SITCON 2026 負一籌 × BoF",
+				"photo_credit": "照片：SITCON Flickr／pU，CC BY 4.0"
 			},
 			{
 				"title": "SITCON Hour of Code",
-				"description": "自 2014 年起與教育部合作，於全臺各地定期舉辦「Hour of Code」，促使數百名 4 ~ 16 歲兒童與學子萌生了對資訊領域的好奇心。"
+				"description": "自 2014 年起與教育部合作，於全臺各地定期舉辦「Hour of Code」，促使數百名 4 ~ 16 歲兒童與學子萌生了對資訊領域的好奇心。",
+				"photo_label": "2025 SITCON Hour of Code 桃園場",
+				"photo_credit": "照片：SITCON Flickr／康喔，CC BY 4.0"
 			},
 			{
 				"title": "SITCON 黑客松",
-				"description": "我們在 2014、2015 年舉辦 HackGen，並在 2024 年將活動規模全面升級，舉辦 SITCON 黑客松，期待參與者們能於黑客松中學習發想、規劃並最終實作，讓社會與企業看見具有潛能的學生團隊。"
+				"description": "我們在 2014、2015 年舉辦 HackGen，並在 2024 年將活動規模全面升級，舉辦 SITCON 黑客松，期待參與者們能於黑客松中學習發想、規劃並最終實作，讓社會與企業看見具有潛能的學生團隊。",
+				"photo_label": "SITCON Hackathon 2024",
+				"photo_credit": "照片：SITCON Flickr／小群，CC BY-SA 2.0"
 			},
 			{
 				"title": "SITCON 夏令營",
-				"description": "自 2014 年開始，SITCON 每年 7 月皆會舉辦夏令營，讓有志於資訊領域的學生能夠輕鬆入門並激發對開源精神的熱情。學員與志工皆由學生組成，不僅僅是主線課程，還有開源演講、社群博覽會以及視界咖啡館，讓學生不只是學習，更有許多交流、激盪想法的機會。"
+				"description": "自 2014 年開始，SITCON 每年 7 月皆會舉辦夏令營，讓有志於資訊領域的學生能夠輕鬆入門並激發對開源精神的熱情。學員與志工皆由學生組成，不僅僅是主線課程，還有開源演講、社群博覽會以及視界咖啡館，讓學生不只是學習，更有許多交流、激盪想法的機會。",
+				"photo_label": "SITCON Camp 2026",
+				"photo_credit": "照片：SITCON Flickr／竺原，CC BY 4.0"
+			}
+		],
+		"coverage_title": "2026 媒體報導與合作夥伴分享",
+		"coverage_note": "以下為已核對的 2026 年會相關報導。同一則稿件的轉載併列於一張卡片，不另計為獨立報導。",
+		"coverage": [
+			{
+				"key": "president",
+				"source": "總統府新聞",
+				"date": "2026/03/28",
+				"title": "SITCON 年會開幕　副總統盼讓 IT 成為守護國家的關鍵力量",
+				"url": "https://www.president.gov.tw/News/39930",
+				"label": "",
+				"note": "",
+				"image_alt": "SITCON 2026 年會主題背板 JAM THE CHAOS",
+				"image_credit": "照片：SITCON Flickr／阿智，CC BY 4.0"
+			},
+			{
+				"key": "cna",
+				"source": "中央社",
+				"date": "2026/03/28",
+				"title": "全球局勢動盪 副總統：IT 是台灣安全及發展核心",
+				"url": "https://www.cna.com.tw/news/aipl/202603280032.aspx",
+				"label": "",
+				"note": "經濟日報同日轉載此則中央社報導（money.udn.com）。",
+				"image_alt": "SITCON 2026 國際會議廳全景與直播設備",
+				"image_credit": "照片：SITCON Flickr／竺原，CC BY 4.0"
+			},
+			{
+				"key": "taiwanhot",
+				"source": "台灣好新聞",
+				"date": "2026/03/28",
+				"title": "SITCON 年會開幕　蕭美琴：盼讓 IT 成為守護國家的關鍵力量",
+				"url": "https://www.taiwanhot.net/news/1131936",
+				"label": "",
+				"note": "",
+				"image_alt": "SITCON 2026 國際會議廳舞台與巨幅投影",
+				"image_credit": "照片：SITCON Flickr／John，CC BY 4.0"
+			},
+			{
+				"key": "ocac",
+				"source": "僑務電子報",
+				"date": "",
+				"title": "SITCON 2026 年會報導",
+				"url": "https://ocacnews.net/article/423192",
+				"label": "",
+				"note": "標題與日期以來源頁面為準。",
+				"image_alt": "SITCON 2026 報到大廳與排隊人潮",
+				"image_credit": "照片：SITCON Flickr／夏川，CC BY 4.0"
+			},
+			{
+				"key": "muchtv",
+				"source": "MUCH TV《台灣新視界》",
+				"date": "",
+				"title": "SITCON Camp 2026 電視專題（開放文化基金會合作）",
+				"url": "https://sitcon.camp/2026/about/",
+				"label": "電視專題",
+				"note": "影片於 SITCON Camp 官方網站嵌入播放；播出日期未另行核實。",
+				"image_alt": "SITCON Camp 2026 學員在教室舉手回應",
+				"image_credit": "照片：SITCON Flickr／竺原，CC BY 4.0"
+			},
+			{
+				"key": "line",
+				"source": "LINE Taiwan 技術部落格",
+				"date": "",
+				"title": "LINE Taiwan × SITCON 2026 贊助回顧",
+				"url": "https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship",
+				"label": "合作夥伴文章",
+				"note": "合作夥伴分享，非獨立新聞報導。",
+				"image_alt": "SITCON 2026 攤位上的電視播放影片",
+				"image_credit": "照片：SITCON Flickr，CC BY 4.0"
 			}
 		]
 	},
@@ -238,7 +321,8 @@
 					"content": "支持 5 位學生 NT$30,000；支持 10 位學生 NT$50,000。若希望支持更多學生，歡迎與我們洽談。"
 				}
 			]
-		}
+		},
+		"photo_credit": "照片：SITCON Flickr／pU，CC BY 4.0"
 	},
 	"global": {
 		"deadline": "截止",
@@ -268,7 +352,9 @@
 			"deep": "深耕級",
 			"forward": "前瞻級",
 			"sprout": "新芽級"
-		}
+		},
+		"photo_year_label": "照片",
+		"photo_source": "照片：SITCON Flickr"
 	},
 	"addons": {
 		"title": "加購項目",
@@ -506,8 +592,15 @@
 			"school_stats": {
 				"title": "SITCON 2025 與會者學校統計"
 			},
-			"photo_note": "頁首合照：SITCON 2025 活動照片（歷史參考）"
-		}
+			"photo_note": "頁首照片：SITCON 2026 年會參與者於主視覺背板前合影（SITCON Flickr，CC BY 4.0，攝影者未標示）",
+			"photo_credit": "活動照片：SITCON Flickr，CC BY 4.0。攝影：夏川（會場、志工合照）、月太（講者）、康喔（SITCON Camp 2026）。完整清單見 docs/photo-sources.md。"
+		},
+		"stats_alt": [
+			"SITCON 2026 年會會場，從前排到二樓看台坐滿會眾",
+			"SITCON 2026 講者在講台前手持 SITCON 2026 麥克風",
+			"SITCON Camp 2026 學員圍在筆電旁討論",
+			"SITCON 2026 工作人員相見歡大合照，大家比出愛心"
+		]
 	},
 	"sponsors": {
 		"inline": ["我們想給熱情的學生應得的資源、舞台、啟發", "然而，對於學生而言，這十分不容易", "十多年來有你，才有今天的 SITCON"]

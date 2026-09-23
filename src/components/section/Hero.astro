@@ -9,11 +9,13 @@ import IntroImg from "@assets/img/intro.webp";
 		<h2 class="aos aos-fadeZoom">{t.title}<br />{t.title2}</h2>
 		<p class="aos aos-fadeIn">{t.subtitle}<br />{t.subtitle2}</p>
 	</div>
-	<img src={IntroImg.src} class="coverImg" />
+	<img src={IntroImg.src} class="coverImg" alt={t.image_alt} />
+	<p class="photo-credit">{t.photo_credit}</p>
 </section>
 
 <style>
 	section {
+		position: relative;
 		min-height: 100svh;
 		text-align: center;
 		padding: 1rem;
@@ -31,6 +33,15 @@ import IntroImg from "@assets/img/intro.webp";
 
 	img {
 		display: block;
+	}
+
+	.photo-credit {
+		position: absolute;
+		right: 1rem;
+		bottom: 0.75rem;
+		font-size: 0.7rem;
+		color: var(--gray);
+		opacity: 0.8;
 	}
 
 	h2 {
