@@ -113,9 +113,7 @@
 			{
 				"code": "R3",
 				"name": "Teleconference Room",
-				"description": "Total 36 seats; additional standing space at both sides of the stage, in front of the first row, and at the back.",
-				"photo_note": "Historical reference photo, year not recorded; not a 2026 image.",
-				"photo_alt": "Remote-session room, reference photo from a past year (year not recorded)"
+				"description": "Total 36 seats; additional standing space at both sides of the stage, in front of the first row, and at the back."
 			},
 			{
 				"code": "lounge",
@@ -131,92 +129,23 @@
 		"things": [
 			{
 				"title": "The largest student CS conference in East Asia",
-				"description": "We inspired SITCON x HK and the Chongqing Student Open Source Conference, and we support student clubs and tech groups across regions. Each year, over half of our attendees are first-timers; alumni work across the tech industry in Taiwan, the U.S., Japan, and the Netherlands—and regularly return to give back.",
-				"photo_label": "Photo from a past year",
-				"photo_credit": "Photo: SITCON archive"
+				"description": "We inspired SITCON x HK and the Chongqing Student Open Source Conference, and we support student clubs and tech groups across regions. Each year, over half of our attendees are first-timers; alumni work across the tech industry in Taiwan, the U.S., Japan, and the Netherlands—and regularly return to give back."
 			},
 			{
 				"title": "Meetups across North, Central, and South Taiwan",
-				"description": "We co-host meetups with local communities, offering students channels to exchange knowledge. We often collaborate with schools like National Taiwan University and Tamkang University, bringing together outstanding talents from everywhere.",
-				"photo_label": "SITCON 2026 pre-planning meetup × BoF",
-				"photo_credit": "Photo: SITCON Flickr / pU, CC BY 4.0"
+				"description": "We co-host meetups with local communities, offering students channels to exchange knowledge. We often collaborate with schools like National Taiwan University and Tamkang University, bringing together outstanding talents from everywhere."
 			},
 			{
 				"title": "SITCON Hour of Code",
-				"description": "Since 2014, in partnership with the Ministry of Education, we've regularly hosted Hour of Code events across Taiwan, sparking curiosity for computing among hundreds of children aged 4–16.",
-				"photo_label": "2025 SITCON Hour of Code, Taoyuan",
-				"photo_credit": "Photo: SITCON Flickr / 康喔, CC BY 4.0"
+				"description": "Since 2014, in partnership with the Ministry of Education, we've regularly hosted Hour of Code events across Taiwan, sparking curiosity for computing among hundreds of children aged 4–16."
 			},
 			{
 				"title": "SITCON Hackathon",
-				"description": "We held HackGen in 2014 and 2015, and in 2024 we scaled up to the SITCON Hackathon. Participants learn to ideate, plan, and ultimately build—so society and industry discover high-potential student teams.",
-				"photo_label": "SITCON Hackathon 2024",
-				"photo_credit": "Photo: SITCON Flickr / 小群, CC BY-SA 2.0"
+				"description": "We held HackGen in 2014 and 2015, and in 2024 we scaled up to the SITCON Hackathon. Participants learn to ideate, plan, and ultimately build—so society and industry discover high-potential student teams."
 			},
 			{
 				"title": "SITCON Summer Camp",
-				"description": "Since 2014, every July we run a summer camp to help students get started with CS and ignite passion for open source. Students serve as both campers and volunteers. Beyond the core curriculum, we host open-source talks, a community expo, and the Vision Café—so learning is paired with rich opportunities to connect and exchange ideas.",
-				"photo_label": "SITCON Camp 2026",
-				"photo_credit": "Photo: SITCON Flickr / 竺原, CC BY 4.0"
-			}
-		],
-		"coverage_title": "2026 press coverage and partner stories",
-		"coverage_note": "Verified coverage related to SITCON 2026. Syndicated copies of the same story are grouped on one card, not counted as separate reports.",
-		"coverage": [
-			{
-				"key": "president",
-				"source": "Office of the President",
-				"date": "2026/03/28",
-				"title": "SITCON opens: Vice President hopes IT becomes a key force in protecting the nation",
-				"url": "https://www.president.gov.tw/News/39930",
-				"label": "",
-				"note": "OCAC News republished the Presidential Office release on 2026/03/29 (ocacnews.net) under the same title.",
-				"image_alt": "SITCON 2026 theme backdrop JAM THE CHAOS",
-				"image_credit": "Photo: SITCON Flickr / 阿智, CC BY 4.0"
-			},
-			{
-				"key": "cna",
-				"source": "CNA",
-				"date": "2026/03/28",
-				"title": "Amid global turmoil, Vice President: IT is core to Taiwan's security and development",
-				"url": "https://www.cna.com.tw/news/aipl/202603280032.aspx",
-				"label": "",
-				"note": "Economic Daily News republished this CNA story the same day (money.udn.com).",
-				"image_alt": "SITCON 2026 main hall with live-stream equipment",
-				"image_credit": "Photo: SITCON Flickr / 竺原, CC BY 4.0"
-			},
-			{
-				"key": "taiwanhot",
-				"source": "TaiwanHot",
-				"date": "2026/03/28",
-				"title": "SITCON opens: Hsiao Bi-khim hopes IT becomes a key force in protecting the nation",
-				"url": "https://www.taiwanhot.net/news/1131936",
-				"label": "",
-				"note": "",
-				"image_alt": "SITCON 2026 main hall stage with the large projection",
-				"image_credit": "Photo: SITCON Flickr / John, CC BY 4.0"
-			},
-			{
-				"key": "muchtv",
-				"source": "MUCH TV, Taiwan New Focus",
-				"date": "",
-				"title": "Taiwan New Focus: Open Culture Foundation - 2026 SITCON Student Computing Conference",
-				"url": "https://sitcon.camp/2026/about/",
-				"label": "TV feature",
-				"note": "MUCH interviews the Open Culture Foundation about the SITCON conference and student community; embedded on the official SITCON Camp site, broadcast date not independently verified.",
-				"image_alt": "The international conference hall during SITCON 2026",
-				"image_credit": "Photo: SITCON Flickr / 夏川, CC BY 4.0"
-			},
-			{
-				"key": "line",
-				"source": "LINE Taiwan Tech Blog",
-				"date": "",
-				"title": "Sponsorship and Booth Information for SITCON 2026",
-				"url": "https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship",
-				"label": "Partner story",
-				"note": "A partner's pre-event article about its sponsorship and booth, not independent news coverage.",
-				"image_alt": "A booth TV playing video at SITCON 2026",
-				"image_credit": "Photo: SITCON Flickr, CC BY 4.0"
+				"description": "Since 2014, every July we run a summer camp to help students get started with CS and ignite passion for open source. Students serve as both campers and volunteers. Beyond the core curriculum, we host open-source talks, a community expo, and the Vision Café—so learning is paired with rich opportunities to connect and exchange ideas."
 			}
 		]
 	},
@@ -343,13 +272,7 @@
 			"deep": "Deep Tier",
 			"forward": "Forward Tier",
 			"sprout": "Sprout Tier"
-		},
-		"photo_year_label": "Photo",
-		"photo_source": "Photo: SITCON Flickr",
-		"scene_reference": "Scene reference",
-		"scene_reference_note": "Scene reference - not a photograph of this sponsorship placement.",
-		"historical_reference": "Historical reference photo",
-		"historical_reference_note": "A retained reference image from a past year, not a 2026 photo."
+		}
 	},
 	"addons": {
 		"title": "Add-ons",
@@ -587,8 +510,7 @@
 			"school_stats": {
 				"title": "SITCON 2025 Attendee School Statistics"
 			},
-			"photo_note": "Header photo: SITCON 2026 participants at the main backdrop (SITCON Flickr, CC BY 4.0, photographer not listed)",
-			"photo_credit": "Event photos: SITCON Flickr, CC BY 4.0. Photographers: 夏川 (venue, staff photo), 月太 (speaker), 康喔 (SITCON Camp 2026). Full list in docs/photo-sources.md."
+			"photo_credit": "Event photos: SITCON Flickr, CC BY 4.0. Photographers: 夏川 (venue, staff photo), 月太 (speaker), 康喔 (SITCON Camp 2026, Hour of Code 2025), 竺原 (SITCON Camp 2026), pU (pre-planning meetup × BoF), 小群 (Hackathon 2024, CC BY-SA 2.0). Full list in docs/photo-sources.md."
 		},
 		"stats_alt": [
 			"SITCON 2026 lecture hall full from the front rows to the balcony",

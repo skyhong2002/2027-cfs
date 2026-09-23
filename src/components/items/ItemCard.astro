@@ -87,15 +87,6 @@ const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub:
 					</div>
 				)
 			}
-			{
-				card.photo_year && card.photo_year !== "2026" && (
-					<div class="photo-year-tag">
-						{t.photo_year_label} {card.photo_year}
-					</div>
-				)
-			}
-			{card.photo_scene_reference && <div class="scene-ref-tag">{t.scene_reference}</div>}
-			{card.photo_historical && <div class="scene-ref-tag">{t.historical_reference}</div>}
 			<div class="deadline-tag">{`${new Date(card.deadline).getMonth() + 1}/${new Date(card.deadline).getDate()}`} {t.deadline}</div>
 		</div>
 	</div>
@@ -190,24 +181,6 @@ const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub:
 		padding: 0.1rem 0.7rem;
 		border-radius: 20px;
 		font-size: 0.9rem;
-		font-weight: 500;
-	}
-
-	.scene-ref-tag {
-		background-color: #fff3cd;
-		color: #7a5a00;
-		padding: 0.1rem 0.7rem;
-		border-radius: 20px;
-		font-size: 0.8rem;
-		font-weight: 500;
-	}
-
-	.photo-year-tag {
-		background-color: rgba(255, 255, 255, 0.85);
-		color: var(--gray);
-		padding: 0.1rem 0.7rem;
-		border-radius: 20px;
-		font-size: 0.8rem;
 		font-weight: 500;
 	}
 

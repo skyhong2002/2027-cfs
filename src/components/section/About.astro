@@ -1,7 +1,7 @@
 ---
 const { t } = Astro.props;
 import Popup from "@components/Popup.astro";
-import Volunteer from "@assets/img/sitcon-volunteer.webp";
+import Volunteer from "@assets/img/about-popup-2026.webp";
 import SchoolsText from "@assets/img/schools-text-2025.svg";
 import AttendeeImg from "@assets/img/stat/attendee-stat.webp";
 import SpeakerImg from "@assets/img/stat/speaker-stat.webp";
@@ -87,7 +87,6 @@ const chartData = JSON.stringify({
 	</div>
 	<Popup btnText={t.detail} title={t.detail} background={Volunteer.src} id="stat-popup" class="popup">
 		<div class="container">
-			{t.popup.photo_note && <p class="data-note">{t.popup.photo_note}</p>}
 			<div class="chart-area">
 				<div id="role-chart" class="chart-container"></div>
 				<div class="level">

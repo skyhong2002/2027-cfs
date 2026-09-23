@@ -1,57 +1,69 @@
 ---
 import Popup from "@components/Popup.astro";
+import youratorNews from "@assets/img/news/youratorNews.webp";
+import ettodayNews from "@assets/img/news/ettodayNews.webp";
+import yahooNews from "@assets/img/news/yahooNews.webp";
+import moneyUdnNews from "@assets/img/news/moneyUdnNews.webp";
+import newstaiwan from "@assets/img/news/newstaiwan.webp";
 import hk from "@assets/img/sitcon_hk.webp";
 import groups from "@assets/img/groups.webp";
 import edu from "@assets/img/edu.webp";
 import hackathon from "@assets/img/hackathon.webp";
 import camp from "@assets/img/camp.webp";
-import covPresident from "@assets/img/news/coverage-president.webp";
-import covCna from "@assets/img/news/coverage-cna.webp";
-import covTaiwanhot from "@assets/img/news/coverage-taiwanhot.webp";
 import type { ImageMetadata } from "astro";
 import { ChevronLeft, ChevronRight } from "@lucide/astro";
 
 const { t } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-
-type Thing = { img: ImageMetadata; title: string; description: string; photo_label: string; photo_credit: string };
-type Coverage = { key: string; source: string; date: string; title: string; url: string; label: string; note: string; image_alt: string; image_credit: string };
-
-const thingImages = [hk, groups, edu, hackathon, camp];
-const news: Thing[] = t.things.map((thing: any, i: number) => ({ img: thingImages[i], ...thing }));
-
-const coverageImages: Record<string, string> = {
-	president: covPresident.src,
-	cna: covCna.src,
-	taiwanhot: covTaiwanhot.src,
-	muchtv: `${base}/venue/R0.webp`,
-	line: `${base}/items/55246309729.webp`
+type News = {
+	img: ImageMetadata;
+	title: string;
+	description: string;
 };
+const news: News[] = [
+	{
+		img: hk,
+		title: t.things[0].title,
+		description: t.things[0].description
+	},
+	{
+		img: groups,
+		title: t.things[1].title,
+		description: t.things[1].description
+	},
+	{
+		img: edu,
+		title: t.things[2].title,
+		description: t.things[2].description
+	},
+	{
+		img: hackathon,
+		title: t.things[3].title,
+		description: t.things[3].description
+	},
+	{
+		img: camp,
+		title: t.things[4].title,
+		description: t.things[4].description
+	}
+];
 ---
 
 <section id="news">
-	<div class="coverage">
-		<h2>{t.coverage_title}</h2>
-		<p class="coverage-note">{t.coverage_note}</p>
-		<div class="coverage-grid">
-			{
-				t.coverage.map((c: Coverage) => (
-					<a class="coverage-card aos aos-fadeInBottom" href={c.url} target="_blank" rel="noopener noreferrer">
-						<img src={coverageImages[c.key]} alt={c.image_alt} loading="lazy" />
-						<div class="coverage-body">
-							<div class="coverage-meta">
-								<span class="source">{c.source}</span>
-								{c.date && <span>{c.date}</span>}
-								{c.label && <span class="label">{c.label}</span>}
-							</div>
-							<h4>{c.title}</h4>
-							{c.note && <p class="note">{c.note}</p>}
-							<p class="credit">{c.image_credit}</p>
-						</div>
-					</a>
-				))
-			}
-		</div>
+	<div class="news-content">
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.ettoday.net/news/20200813/1784111.htm"><img src={ettodayNews.src} alt="news.owlting.com" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://newstaiwan.net/2024/03/09/155739/">
+			<img src={newstaiwan.src} alt="newstaiwan.net" class="news-img" />
+		</a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.yourator.co/articles/215"><img src={youratorNews.src} alt="yourator.co" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/5723/9018057"><img src={moneyUdnNews.src} alt="money.udn.com" class="news-img" /></a>
+		<a
+			target="_blank"
+			class="aos aos-fadeInBottom"
+			href="https://tw.news.yahoo.com/1300-%E9%9D%92%E5%B9%B4%E5%BC%95%E7%88%86ai-%E5%89%B5%E6%96%B0%E8%88%87%E8%B7%A8%E7%95%8C%E5%A4%A7%E9%9D%A9%E5%91%BD-020635586.html"
+		>
+			<img src={yahooNews.src} alt="yahoo.com" class="news-img" />
+		</a>
+		<div class="spacing"></div>
 	</div>
 	<Popup hero={false} btnText={t.title} id="news-popup">
 		<h3>{t.title}</h3>
@@ -64,10 +76,6 @@ const coverageImages: Record<string, string> = {
 					news.map(item => (
 						<div class="things-item">
 							<img src={item.img.src} alt={item.title} class="things-img" />
-							<p class="photo-label">
-								{item.photo_label}
-								{item.photo_credit && <span>｜{item.photo_credit}</span>}
-							</p>
 							<div class="content">
 								<h4>{item.title}</h4>
 								<p class="things-description">{item.description}</p>
@@ -89,107 +97,50 @@ const coverageImages: Record<string, string> = {
 		padding: 3rem 3rem 1rem;
 	}
 
-	.coverage {
-		max-width: 1100px;
+	.news-content {
+		--unit: max(-100vw, -800px);
+		max-width: 900px;
 		margin: auto;
-		padding: 4rem 2rem 2rem;
-	}
-	.coverage h2 {
-		font-size: 2.5rem;
-		text-align: center;
-		margin-bottom: 0.75rem;
-	}
-	.coverage-note {
-		text-align: center;
-		color: var(--gray);
-		font-size: 0.9rem;
-		margin-bottom: 2rem;
-	}
-	.coverage-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-	}
-	.coverage-card {
-		display: flex;
-		flex-direction: column;
-		background: var(--white);
-		border-radius: 1rem;
-		overflow: hidden;
-		color: inherit;
-		text-decoration: none;
-		box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
-		transition: transform 0.3s;
-	}
-	.coverage-card:hover {
-		transform: translateY(-4px);
-	}
-	.coverage-card img {
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		object-fit: cover;
-	}
-	.coverage-body {
-		padding: 1.25rem 1.5rem 1.5rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-	.coverage-meta {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		font-size: 0.8rem;
-		color: var(--gray);
-	}
-	.coverage-meta .source {
-		font-weight: 700;
-		color: var(--black);
-	}
-	.coverage-meta .label {
-		background: var(--gray-container);
-		border-radius: 20px;
-		padding: 0 0.6rem;
-	}
-	.coverage-card h4 {
-		font-size: 1.1rem;
-		line-height: 1.4;
-		margin: 0;
-	}
-	.coverage-card .note {
-		font-size: 0.85rem;
-		color: var(--gray);
-		line-height: 1.5;
-	}
-	.coverage-card .credit {
-		font-size: 0.7rem;
-		color: var(--gray);
-		margin-top: auto;
-	}
-	/* Keep the popup button in normal flow below the grid instead of sticky over the cards */
-	#news :global(.detail-btn) {
-		position: static;
-		margin: 2.5rem auto 0;
+		padding: 2rem;
 	}
 
-	.photo-label {
-		font-size: 0.75rem;
-		color: var(--gray);
-		padding: 0.5rem 2rem 0;
+	.news-img {
+		width: 60%;
+		display: block;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		transition: transform 0.3s;
+		margin-inline: auto 0;
+		position: relative;
 	}
-	@media screen and (max-width: 60rem) {
-		.coverage-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
+
+	.news-content a:nth-child(odd) .news-img {
+		margin-inline: 0 auto;
 	}
-	@media screen and (max-width: 40rem) {
-		.coverage-grid {
-			grid-template-columns: 1fr;
-		}
-		.coverage h2 {
-			font-size: 1.8rem;
-		}
+
+	.news-content a {
+		display: block;
 	}
+
+	.news-content a:nth-child(2) {
+		margin-top: calc(var(--unit) / 3);
+	}
+
+	.news-content a:nth-child(3) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+
+	.news-content a:nth-child(4) {
+		margin-top: calc(var(--unit) / 7);
+	}
+
+	.news-content a:nth-child(5) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+
+	.news-img:hover {
+		transform: scale(1.05);
+	}
+
 	.spacing {
 		height: 2rem;
 	}
