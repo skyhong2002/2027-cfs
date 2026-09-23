@@ -113,7 +113,9 @@
 			{
 				"code": "R3",
 				"name": "Teleconference Room",
-				"description": "Total 36 seats; additional standing space at both sides of the stage, in front of the first row, and at the back."
+				"description": "Total 36 seats; additional standing space at both sides of the stage, in front of the first row, and at the back.",
+				"photo_note": "Historical reference photo, year not recorded; not a 2026 image.",
+				"photo_alt": "Remote-session room, reference photo from a past year (year not recorded)"
 			},
 			{
 				"code": "lounge",
@@ -345,7 +347,9 @@
 		"photo_year_label": "Photo",
 		"photo_source": "Photo: SITCON Flickr",
 		"scene_reference": "Scene reference",
-		"scene_reference_note": "Scene reference - not a photograph of this sponsorship placement."
+		"scene_reference_note": "Scene reference - not a photograph of this sponsorship placement.",
+		"historical_reference": "Historical reference photo",
+		"historical_reference_note": "A retained reference image from a past year, not a 2026 photo."
 	},
 	"addons": {
 		"title": "Add-ons",

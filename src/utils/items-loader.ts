@@ -43,6 +43,7 @@ export interface ItemDataRaw {
 	deadline: string;
 	photo_year?: string;
 	photo_scene_reference?: boolean;
+	photo_historical?: boolean;
 	photo_scene_note_zh?: string;
 	photo_scene_note_en?: string;
 	talent_recruitment_order: number;
@@ -69,6 +70,7 @@ export interface ItemData {
 	deadline: string;
 	photo_year?: string;
 	photo_scene_reference?: boolean;
+	photo_historical?: boolean;
 	photo_scene_note?: string;
 	talent_recruitment_order: number;
 	brand_exposure_order: number;
@@ -143,6 +145,7 @@ function extractLocalizedData(rawData: ItemDataRaw, locale: string, id: string):
 		deadline: rawData.deadline,
 		photo_year: rawData.photo_year || "",
 		photo_scene_reference: !!rawData.photo_scene_reference,
+		photo_historical: !!rawData.photo_historical,
 		photo_scene_note: suffix === "_zh" ? rawData.photo_scene_note_zh || "" : rawData.photo_scene_note_en || "",
 		talent_recruitment_order: rawData.talent_recruitment_order,
 		brand_exposure_order: rawData.brand_exposure_order,

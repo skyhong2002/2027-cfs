@@ -120,6 +120,13 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 					</p>
 				)
 			}
+			{
+				item.photo_historical && (
+					<p class="photo-credit scene-note">
+						<strong>{t.historical_reference}</strong> {t.historical_reference_note} {item.photo_scene_note}
+					</p>
+				)
+			}
 			<div class="item-meta">
 				{isSoldOut && <span class="sold-out">{t.sold_out}</span>}
 				{!isSoldOut && item.quantity === "獨家" && <span class="exclusive">{t.exclusive}</span>}

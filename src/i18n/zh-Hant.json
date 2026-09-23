@@ -113,7 +113,9 @@
 			{
 				"code": "R3",
 				"name": "遠距會議室",
-				"description": "總計 36 席位，舞台兩側、第一排座位前方及會議廳後方可再容納更多人。"
+				"description": "總計 36 席位，舞台兩側、第一排座位前方及會議廳後方可再容納更多人。",
+				"photo_note": "歷年參考照片，年份未標示，非 2026 年會照片。",
+				"photo_alt": "遠距會議室歷年參考照片（年份未標示）"
 			},
 			{
 				"code": "lounge",
@@ -345,7 +347,9 @@
 		"photo_year_label": "照片",
 		"photo_source": "照片：SITCON Flickr",
 		"scene_reference": "場景參考照片",
-		"scene_reference_note": "場景參考，並非本贊助品項實際佈置的照片。"
+		"scene_reference_note": "場景參考，並非本贊助品項實際佈置的照片。",
+		"historical_reference": "歷年參考照片",
+		"historical_reference_note": "此為沿用的歷年參考圖片，非 2026 年會照片。"
 	},
 	"addons": {
 		"title": "加購項目",

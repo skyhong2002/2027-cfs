@@ -95,6 +95,7 @@ const isSoldOut = card.remaining === "0" || (hasSubItems && card.sub.every((sub:
 				)
 			}
 			{card.photo_scene_reference && <div class="scene-ref-tag">{t.scene_reference}</div>}
+			{card.photo_historical && <div class="scene-ref-tag">{t.historical_reference}</div>}
 			<div class="deadline-tag">{`${new Date(card.deadline).getMonth() + 1}/${new Date(card.deadline).getDate()}`} {t.deadline}</div>
 		</div>
 	</div>

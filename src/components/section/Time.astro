@@ -68,7 +68,8 @@ interface TeamItem {
 								<p>{item.description}</p>
 							</div>
 						</div>
-						<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/venue/${item.code}.webp`} alt={item.name} />
+						<img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/venue/${item.code}.webp`} alt={item.photo_alt || item.name} />
+						{item.photo_note && <p class="venue-photo-note">{item.photo_note}</p>}
 					</div>
 				))
 			}
@@ -281,6 +282,12 @@ interface TeamItem {
 
 	strong {
 		display: block;
+	}
+
+	.venue-photo-note {
+		font-size: 0.75rem;
+		color: var(--gray);
+		margin: 0.4rem 0 0;
 	}
 
 	.volunteer-img {
