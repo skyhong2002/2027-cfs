@@ -57,22 +57,20 @@ const news: News[] = [
 
 <section id="news">
 	<div class="news-content">
-		<div class="news-col news-col-outer">
+		<div class="news-side news-side-left">
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.ettoday.net/news/20200813/1784111.htm"><img src={ettodayNews.src} alt="news.owlting.com" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://newstaiwan.net/2024/03/09/155739/"><img src={newstaiwan.src} alt="newstaiwan.net" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.yourator.co/articles/215"><img src={youratorNews.src} alt="yourator.co" class="news-img" /></a>
 		</div>
-		<div class="news-col news-col-inner">
+		<div class="news-stack">
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.president.gov.tw/News/39930"><img src={president2026.src} alt="president.gov.tw" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.cna.com.tw/news/aipl/202603280032.aspx"><img src={cna2026.src} alt="cna.com.tw" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.taiwanhot.net/news/1131936"><img src={taiwanhot2026.src} alt="taiwanhot.net" class="news-img" /></a>
-		</div>
-		<div class="news-col news-col-inner">
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://ocacnews.net/article/423192"><img src={ocac2026.src} alt="ocacnews.net" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship"><img src={line2026.src} alt="techblog.lycorp.co.jp" class="news-img" /></a>
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://sitcon.camp/2026/about/"><img src={camp2026.src} alt="sitcon.camp" class="news-img" /></a>
 		</div>
-		<div class="news-col news-col-outer">
+		<div class="news-side news-side-right">
 			<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/5723/9018057"><img src={moneyUdnNews.src} alt="money.udn.com" class="news-img" /></a>
 			<a
 				target="_blank"
@@ -116,25 +114,22 @@ const news: News[] = [
 		padding: 3rem 3rem 1rem;
 	}
 
-	/* Four columns: 2026 coverage in the middle two, older items outside; phones show only the middle two */
+	/* Original stacked collage in the middle (2026 coverage), plus one narrower stacked column on each side */
 	.news-content {
-		max-width: 1200px;
+		max-width: 1400px;
 		margin: auto;
 		padding: 2rem;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1.25rem;
+		grid-template-columns: 1fr minmax(0, 2fr) 1fr;
+		gap: 2rem;
 		align-items: start;
 	}
 
-	.news-col {
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-	}
-
-	.news-col-outer {
-		padding-top: 3rem;
+	.news-stack {
+		--unit: max(-100vw, -800px);
+		max-width: 900px;
+		width: 100%;
+		margin: auto;
 	}
 
 	.news-content a {
@@ -142,14 +137,66 @@ const news: News[] = [
 	}
 
 	.news-img {
-		width: 100%;
+		width: 60%;
 		display: block;
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 		transition: transform 0.3s;
+		margin-inline: auto 0;
+		position: relative;
+	}
+
+	.news-stack a:nth-child(odd) .news-img {
+		margin-inline: 0 auto;
+	}
+
+	.news-stack a:nth-child(2) {
+		margin-top: calc(var(--unit) / 3);
+	}
+
+	.news-stack a:nth-child(3) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+
+	.news-stack a:nth-child(4) {
+		margin-top: calc(var(--unit) / 7);
+	}
+
+	.news-stack a:nth-child(n + 5) {
+		margin-top: calc(var(--unit) / 3.5);
+	}
+
+	/* Side columns: same overlapping stack, one image per row */
+	.news-side {
+		padding-top: 4rem;
+	}
+
+	.news-side .news-img {
+		width: 88%;
+	}
+
+	.news-side a:nth-child(odd) .news-img {
+		margin-inline: 0 auto;
+	}
+
+	.news-side a:nth-child(n + 2) {
+		margin-top: -18%;
 	}
 
 	.news-img:hover {
-		transform: scale(1.04);
+		transform: scale(1.05);
+		z-index: 1;
+	}
+
+	@media screen and (max-width: 60rem) {
+		.news-content {
+			display: block;
+			max-width: 900px;
+			padding: 2rem;
+		}
+
+		.news-side {
+			display: none;
+		}
 	}
 
 	/* Popup button stays in normal flow under the grid instead of floating over it */
