@@ -57,30 +57,24 @@ const news: News[] = [
 
 <section id="news">
 	<div class="news-content">
-		<div class="news-side news-side-left">
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.ettoday.net/news/20200813/1784111.htm"><img src={ettodayNews.src} alt="news.owlting.com" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.taiwanhot.net/news/1131936"><img src={taiwanhot2026.src} alt="taiwanhot.net" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.yourator.co/articles/215"><img src={youratorNews.src} alt="yourator.co" class="news-img" /></a>
-		</div>
-		<div class="news-stack">
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.president.gov.tw/News/39930"><img src={president2026.src} alt="president.gov.tw" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.youtube.com/watch?v=zplk0zALtOM"><img src={muchtv2026.src} alt="youtube.com" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship"><img src={line2026.src} alt="techblog.lycorp.co.jp" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://www.cna.com.tw/news/aipl/202603280032.aspx"><img src={cna2026.src} alt="cna.com.tw" class="news-img" /></a>
-			<a
-				target="_blank"
-				class="aos aos-fadeInBottom"
-				href="https://tw.news.yahoo.com/1300-%E9%9D%92%E5%B9%B4%E5%BC%95%E7%88%86ai-%E5%89%B5%E6%96%B0%E8%88%87%E8%B7%A8%E7%95%8C%E5%A4%A7%E9%9D%A9%E5%91%BD-020635586.html"
-			>
-				<img src={yahooNews.src} alt="yahoo.com" class="news-img" />
-			</a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://newstaiwan.net/2024/03/09/155739/"><img src={newstaiwan.src} alt="newstaiwan.net" class="news-img" /></a>
-		</div>
-		<div class="news-side news-side-right">
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/5723/9018057"><img src={moneyUdnNews.src} alt="money.udn.com" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://ocacnews.net/article/423192"><img src={ocac2026.src} alt="ocacnews.net" class="news-img" /></a>
-			<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/7307/9408273"><img src={udn2026.src} alt="money.udn.com" class="news-img" /></a>
-		</div>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.ettoday.net/news/20200813/1784111.htm"><img src={ettodayNews.src} alt="news.owlting.com" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.president.gov.tw/News/39930"><img src={president2026.src} alt="president.gov.tw" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/5723/9018057"><img src={moneyUdnNews.src} alt="money.udn.com" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.yourator.co/articles/215"><img src={youratorNews.src} alt="yourator.co" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.youtube.com/watch?v=zplk0zALtOM"><img src={muchtv2026.src} alt="youtube.com" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://ocacnews.net/article/423192"><img src={ocac2026.src} alt="ocacnews.net" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://newstaiwan.net/2024/03/09/155739/"><img src={newstaiwan.src} alt="newstaiwan.net" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship"><img src={line2026.src} alt="techblog.lycorp.co.jp" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://money.udn.com/money/story/7307/9408273"><img src={udn2026.src} alt="money.udn.com" class="news-img" /></a>
+		<a
+			target="_blank"
+			class="aos aos-fadeInBottom"
+			href="https://tw.news.yahoo.com/1300-%E9%9D%92%E5%B9%B4%E5%BC%95%E7%88%86ai-%E5%89%B5%E6%96%B0%E8%88%87%E8%B7%A8%E7%95%8C%E5%A4%A7%E9%9D%A9%E5%91%BD-020635586.html"
+		>
+			<img src={yahooNews.src} alt="yahoo.com" class="news-img" />
+		</a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.cna.com.tw/news/aipl/202603280032.aspx"><img src={cna2026.src} alt="cna.com.tw" class="news-img" /></a>
+		<a target="_blank" class="aos aos-fadeInBottom" href="https://www.taiwanhot.net/news/1131936"><img src={taiwanhot2026.src} alt="taiwanhot.net" class="news-img" /></a>
 	</div>
 	<Popup hero={false} btnText={t.title} id="news-popup">
 		<h3>{t.title}</h3>
@@ -114,85 +108,81 @@ const news: News[] = [
 		padding: 3rem 3rem 1rem;
 	}
 
-	/* Original stacked collage in the middle (2026 coverage), plus one narrower stacked column on each side */
+	/* One interleaved collage: three lanes, rows step down and overlap only the bottom of the row above.
+	   Middle lane (every 3n+2 item) carries the 2026 coverage and is the only lane shown on phones. */
 	.news-content {
 		max-width: 1400px;
 		margin: auto;
-		padding: 2rem;
+		padding: 2rem 2rem 4rem;
 		display: grid;
-		/* side columns equal the 60%-wide middle images: 0.6 : 1 : 0.6 */
-		grid-template-columns: 0.6fr minmax(0, 1fr) 0.6fr;
-		gap: 2rem;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2.5rem;
 		align-items: start;
-	}
-
-	.news-stack {
-		--unit: max(-100vw, -800px);
-		max-width: 900px;
-		width: 100%;
-		margin: auto;
 	}
 
 	.news-content a {
 		display: block;
-	}
-
-	.news-img {
-		width: 60%;
-		display: block;
-		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-		transition: transform 0.3s;
-		margin-inline: auto 0;
 		position: relative;
 	}
 
-	.news-stack a:nth-child(odd) .news-img {
-		margin-inline: 0 auto;
+	.news-content a:nth-child(3n + 2) {
+		transform: translateY(5rem);
+		z-index: 1;
 	}
 
-	.news-stack a:nth-child(2) {
-		margin-top: calc(var(--unit) / 3);
+	.news-content a:nth-child(3n + 3) {
+		transform: translateY(2rem);
 	}
 
-	.news-stack a:nth-child(3) {
-		margin-top: calc(var(--unit) / 3.5);
+	/* rows after the first overlap the previous row by roughly a fifth of an image */
+	.news-content a:nth-child(n + 4) {
+		margin-top: -24%;
 	}
 
-	.news-stack a:nth-child(4) {
-		margin-top: calc(var(--unit) / 7);
-	}
-
-	.news-stack a:nth-child(n + 5) {
-		margin-top: calc(var(--unit) / 3.5);
-	}
-
-	/* Side columns: same overlapping stack, one image per row */
-	.news-side {
-		padding-top: 4rem;
-	}
-
-	.news-side .news-img {
+	.news-img {
 		width: 100%;
+		display: block;
+		box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
+		transition: transform 0.3s;
 	}
 
-	.news-side a:nth-child(n + 2) {
-		margin-top: -18%;
+	.news-content a:hover {
+		z-index: 3;
 	}
 
 	.news-img:hover {
 		transform: scale(1.05);
-		z-index: 1;
 	}
 
 	@media screen and (max-width: 60rem) {
 		.news-content {
+			--unit: max(-100vw, -800px);
 			display: block;
 			max-width: 900px;
 			padding: 2rem;
 		}
 
-		.news-side {
+		.news-content a:nth-child(3n + 1),
+		.news-content a:nth-child(3n + 3) {
 			display: none;
+		}
+
+		.news-content a:nth-child(3n + 2) {
+			transform: none;
+			margin-top: 0;
+		}
+
+		.news-content a:nth-child(3n + 2) .news-img {
+			width: 60%;
+			margin-inline: auto 0;
+		}
+
+		.news-content a:nth-child(6n + 2) .news-img {
+			margin-inline: 0 auto;
+		}
+
+		.news-content a:nth-child(3n + 2):not(:nth-child(2)) {
+			margin-top: -3.5rem;
 		}
 	}
 
