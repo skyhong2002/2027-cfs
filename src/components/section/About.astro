@@ -71,6 +71,7 @@ const chartData = JSON.stringify({
 				</div>
 			))
 		}
+		{t.review.note && <p class="review-note aos aos-fadeIn">{t.review.note}</p>}
 	</div>
 	<Popup btnText={t.detail} title={t.detail} background={Volunteer.src} id="stat-popup" class="popup">
 		<div class="container">
@@ -90,6 +91,7 @@ const chartData = JSON.stringify({
 				</div>
 			</div>
 			<div id="schools-text-container">
+				{t.popup.chart.source_note && <p class="data-note">{t.popup.chart.source_note}</p>}
 				<h3>{t.popup.chart.schools_text_title}</h3>
 				<img src={SchoolsText.src} alt="Schools" id="schools-text" />
 			</div>
@@ -416,6 +418,21 @@ const chartData = JSON.stringify({
 		font-weight: 700;
 		text-align: center;
 		font-size: 2.5rem;
+	}
+
+	.review-note {
+		font-size: 0.85rem;
+		font-weight: 400;
+		color: var(--gray);
+		margin-top: 1rem;
+		line-height: 1.5;
+	}
+
+	.data-note {
+		font-size: 0.85rem;
+		color: var(--gray);
+		text-align: center;
+		margin: 0.5rem 0 2rem;
 	}
 
 	#schools-text {

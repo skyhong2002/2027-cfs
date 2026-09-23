@@ -347,29 +347,30 @@
 			}
 		],
 		"review": {
-			"title": "2025 Rewind",
+			"title": "2026 Rewind",
 			"stats": [
 				{
-					"label": "Venue attendance",
-					"number": "1,300",
-					"note": ""
-				},
-				{
-					"label": "From",
-					"number": "200",
-					"note": "schools worldwide"
+					"label": "",
+					"number": "1,286",
+					"note": "participants"
 				},
 				{
 					"label": "",
-					"number": "70%",
-					"note": "from universities or graduate schools"
+					"number": "23",
+					"note": "company & community booths"
 				},
 				{
 					"label": "",
-					"number": "1/3",
-					"note": "active in tech communities"
+					"number": "92.1%",
+					"note": "of registrants were students"
+				},
+				{
+					"label": "",
+					"number": "28.1%",
+					"note": "looking for internships or jobs"
 				}
-			]
+			],
+			"note": "Event results compiled by the organizing team after the conference. Registration statistics: snapshot after the second ticket wave on 2026/03/03, n=1,315."
 		},
 		"popup": {
 			"title": "Related Statistics",
@@ -378,42 +379,40 @@
 				"attender_role_title": "Attendee Role Distribution",
 				"programming_level_title": "Programming Proficiency Distribution",
 				"attender_role": {
-					"Undergraduates": 679,
-					"High school / vocational students": 291,
-					"Graduate students": 117,
-					"Working professionals": 87,
-					"Junior high students": 25,
-					"Junior college students": 15,
-					"Others": 6,
-					"Teachers / Professors": 3,
-					"Elementary school students": 1
+					"Undergraduates": 749,
+					"High school / vocational students": 317,
+					"Graduate students": 109,
+					"Working professionals": 90,
+					"Junior high students": 19,
+					"Junior college students": 17,
+					"Teachers / Professors": 8,
+					"Others": 6
 				},
 				"attender_role_percentage": {
-					"Undergraduates": 55.47,
-					"High school / vocational students": 23.77,
-					"Graduate students": 9.56,
-					"Working professionals": 7.11,
-					"Junior high students": 2.04,
-					"Junior college students": 1.23,
-					"Others": 0.49,
-					"Teachers / Professors": 0.25,
-					"Elementary school students": 0.08
+					"Undergraduates": 56.96,
+					"High school / vocational students": 24.11,
+					"Graduate students": 8.29,
+					"Working professionals": 6.84,
+					"Junior high students": 1.44,
+					"Junior college students": 1.29,
+					"Teachers / Professors": 0.61,
+					"Others": 0.46
 				},
 				"programming_level": {
-					"Intermediate": 476,
-					"Novice": 276,
-					"Proficient": 185,
-					"Beginner": 182,
-					"No programming experience": 54,
-					"Advanced": 51
+					"Intermediate": 472,
+					"Novice": 303,
+					"Beginner": 234,
+					"Proficient": 191,
+					"Advanced": 65,
+					"No programming experience": 50
 				},
 				"programming_level_percentage": {
-					"Intermediate": 38.89,
-					"Novice": 22.55,
-					"Proficient": 15.11,
-					"Beginner": 14.87,
-					"No programming experience": 4.41,
-					"Advanced": 4.17
+					"Intermediate": 35.89,
+					"Novice": 23.04,
+					"Beginner": 17.79,
+					"Proficient": 14.52,
+					"Advanced": 4.94,
+					"No programming experience": 3.8
 				},
 				"level_info": {
 					"Beginner": "Can follow book examples step by step to complete functions",
@@ -479,7 +478,8 @@
 							"65+": 0.8
 						}
 					}
-				}
+				},
+				"source_note": "Source: SITCON 2026 registration data, snapshot after the second ticket wave on 2026/03/03, n=1,315."
 			},
 			"school_stats": {
 				"title": "SITCON 2025 Attendee School Statistics"
