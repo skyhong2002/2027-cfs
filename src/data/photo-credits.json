@@ -327,24 +327,6 @@
    "raw_photographer_field": "John"
   },
   {
-   "slot": "cov_ocac",
-   "photo_id": "55245926593",
-   "file": "src/assets/img/news/coverage-ocac.webp",
-   "photo_url": "https://www.flickr.com/photos/sitcon/55245926593",
-   "album": "SITCON 2026",
-   "date_taken": "2026-03-28 08:25:48",
-   "photographer": "夏川",
-   "license": "CC BY 4.0",
-   "license_urls": [
-    "https://creativecommons.org/licenses/by/4.0"
-   ],
-   "alt_zh": "SITCON 2026 報到大廳與排隊人潮",
-   "alt_en": "SITCON 2026 registration lobby with attendees queuing",
-   "curation_status": "ai_labeled",
-   "public_use_status": "",
-   "raw_photographer_field": "夏川"
-  },
-  {
    "slot": "item 6",
    "photo_id": "55244868277",
    "file": "public/items/55244868277.webp",

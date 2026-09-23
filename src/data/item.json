@@ -123,7 +123,10 @@
     "brand_exposure_order": 8,
     "product_promotion_order": 17,
     "sub": [],
-    "photo_year": "2026"
+    "photo_year": "2026",
+    "photo_scene_reference": true,
+    "photo_scene_note_zh": "照片為 2026 會場樓梯的人潮，並非品牌打卡牆。",
+    "photo_scene_note_en": "The photo shows the 2026 venue stairs, not a branded photo wall."
   },
   "5": {
     "name_zh": "獨家帆布袋",
@@ -662,7 +665,10 @@
     "brand_exposure_order": 9,
     "product_promotion_order": 39,
     "sub": [],
-    "photo_year": "2026"
+    "photo_year": "2026",
+    "photo_scene_reference": true,
+    "photo_scene_note_zh": "照片為走廊上的洗手間指標，並非贊助商標語。",
+    "photo_scene_note_en": "The photo shows a corridor restroom sign, not a sponsored slogan."
   },
   "21": {
     "name_zh": "「遠道而來票」獨家冠名",
@@ -878,7 +884,10 @@
     "brand_exposure_order": 29,
     "product_promotion_order": 10,
     "sub": [],
-    "photo_year": "2026"
+    "photo_year": "2026",
+    "photo_scene_reference": true,
+    "photo_scene_note_zh": "照片為攤位上的電視，並非會場走廊的輪播螢幕。",
+    "photo_scene_note_en": "The photo shows a booth TV, not the hallway loop screens."
   },
   "28": {
     "name_zh": "會場攤位",

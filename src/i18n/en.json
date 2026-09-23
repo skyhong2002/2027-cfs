@@ -168,7 +168,7 @@
 				"title": "SITCON opens: Vice President hopes IT becomes a key force in protecting the nation",
 				"url": "https://www.president.gov.tw/News/39930",
 				"label": "",
-				"note": "",
+				"note": "OCAC News republished the Presidential Office release on 2026/03/29 (ocacnews.net) under the same title.",
 				"image_alt": "SITCON 2026 theme backdrop JAM THE CHAOS",
 				"image_credit": "Photo: SITCON Flickr / 阿智, CC BY 4.0"
 			},
@@ -195,35 +195,24 @@
 				"image_credit": "Photo: SITCON Flickr / John, CC BY 4.0"
 			},
 			{
-				"key": "ocac",
-				"source": "OCAC News",
-				"date": "",
-				"title": "Coverage of SITCON 2026",
-				"url": "https://ocacnews.net/article/423192",
-				"label": "",
-				"note": "Title and date as shown on the source page.",
-				"image_alt": "SITCON 2026 registration lobby with attendees queuing",
-				"image_credit": "Photo: SITCON Flickr / 夏川, CC BY 4.0"
-			},
-			{
 				"key": "muchtv",
 				"source": "MUCH TV, Taiwan New Focus",
 				"date": "",
-				"title": "TV feature on SITCON Camp 2026 (with Open Culture Foundation)",
+				"title": "Taiwan New Focus: Open Culture Foundation - 2026 SITCON Student Computing Conference",
 				"url": "https://sitcon.camp/2026/about/",
 				"label": "TV feature",
-				"note": "Embedded on the official SITCON Camp site; broadcast date not independently verified.",
-				"image_alt": "SITCON Camp 2026 participants raising their hands in class",
-				"image_credit": "Photo: SITCON Flickr / 竺原, CC BY 4.0"
+				"note": "MUCH interviews the Open Culture Foundation about the SITCON conference and student community; embedded on the official SITCON Camp site, broadcast date not independently verified.",
+				"image_alt": "SITCON 2026 main hall packed with attendees facing the stage",
+				"image_credit": "Photo: SITCON Flickr / 夏川, CC BY 4.0"
 			},
 			{
 				"key": "line",
 				"source": "LINE Taiwan Tech Blog",
 				"date": "",
-				"title": "LINE Taiwan × SITCON 2026 sponsorship recap",
+				"title": "Sponsorship and Booth Information for SITCON 2026",
 				"url": "https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship",
 				"label": "Partner story",
-				"note": "A partner's own story, not independent news coverage.",
+				"note": "A partner's pre-event article about its sponsorship and booth, not independent news coverage.",
 				"image_alt": "A booth TV playing video at SITCON 2026",
 				"image_credit": "Photo: SITCON Flickr, CC BY 4.0"
 			}
@@ -354,7 +343,9 @@
 			"sprout": "Sprout Tier"
 		},
 		"photo_year_label": "Photo",
-		"photo_source": "Photo: SITCON Flickr"
+		"photo_source": "Photo: SITCON Flickr",
+		"scene_reference": "Scene reference",
+		"scene_reference_note": "Scene reference - not a photograph of this sponsorship placement."
 	},
 	"addons": {
 		"title": "Add-ons",

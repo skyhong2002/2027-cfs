@@ -113,6 +113,13 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 		</div>
 		<div class="item-details lenis-scroll">
 			{photoCreditText && <p class="photo-credit">{photoCreditText}</p>}
+			{
+				item.photo_scene_reference && (
+					<p class="photo-credit scene-note">
+						<strong>{t.scene_reference}</strong> {t.scene_reference_note} {item.photo_scene_note}
+					</p>
+				)
+			}
 			<div class="item-meta">
 				{isSoldOut && <span class="sold-out">{t.sold_out}</span>}
 				{!isSoldOut && item.quantity === "獨家" && <span class="exclusive">{t.exclusive}</span>}
@@ -357,6 +364,13 @@ const shouldShowPlanTiers = tierBenefits.some(tb => tb.benefit !== undefined);
 		border-radius: 20px;
 		font-size: 0.9rem;
 		font-weight: 500;
+	}
+
+	.scene-note {
+		color: #7a5a00;
+		background: #fff3cd;
+		padding: 0.4rem 0.7rem;
+		border-radius: 0.5rem;
 	}
 
 	.photo-credit {

@@ -168,7 +168,7 @@
 				"title": "SITCON 年會開幕　副總統盼讓 IT 成為守護國家的關鍵力量",
 				"url": "https://www.president.gov.tw/News/39930",
 				"label": "",
-				"note": "",
+				"note": "僑務電子報 2026/03/29 轉載總統府新聞稿（ocacnews.net），標題相同。",
 				"image_alt": "SITCON 2026 年會主題背板 JAM THE CHAOS",
 				"image_credit": "照片：SITCON Flickr／阿智，CC BY 4.0"
 			},
@@ -195,35 +195,24 @@
 				"image_credit": "照片：SITCON Flickr／John，CC BY 4.0"
 			},
 			{
-				"key": "ocac",
-				"source": "僑務電子報",
-				"date": "",
-				"title": "SITCON 2026 年會報導",
-				"url": "https://ocacnews.net/article/423192",
-				"label": "",
-				"note": "標題與日期以來源頁面為準。",
-				"image_alt": "SITCON 2026 報到大廳與排隊人潮",
-				"image_credit": "照片：SITCON Flickr／夏川，CC BY 4.0"
-			},
-			{
 				"key": "muchtv",
-				"source": "MUCH TV《台灣新視界》",
+				"source": "MUCH《台灣新驕點》",
 				"date": "",
-				"title": "SITCON Camp 2026 電視專題（開放文化基金會合作）",
+				"title": "台灣新驕點：開放文化基金會 - 2026 SITCON 學生計算機年會",
 				"url": "https://sitcon.camp/2026/about/",
 				"label": "電視專題",
-				"note": "影片於 SITCON Camp 官方網站嵌入播放；播出日期未另行核實。",
-				"image_alt": "SITCON Camp 2026 學員在教室舉手回應",
-				"image_credit": "照片：SITCON Flickr／竺原，CC BY 4.0"
+				"note": "MUCH 專訪開放文化基金會，介紹 SITCON 學生計算機年會與學生社群；影片嵌入於 SITCON Camp 官方網站，播出日期未另行核實。",
+				"image_alt": "SITCON 2026 年會國際會議廳，會眾坐滿階梯座席面向舞台",
+				"image_credit": "照片：SITCON Flickr／夏川，CC BY 4.0"
 			},
 			{
 				"key": "line",
 				"source": "LINE Taiwan 技術部落格",
 				"date": "",
-				"title": "LINE Taiwan × SITCON 2026 贊助回顧",
+				"title": "SITCON 2026 贊助與攤位資訊",
 				"url": "https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship",
 				"label": "合作夥伴文章",
-				"note": "合作夥伴分享，非獨立新聞報導。",
+				"note": "合作夥伴的會前文章，介紹贊助與攤位資訊，非獨立新聞報導。",
 				"image_alt": "SITCON 2026 攤位上的電視播放影片",
 				"image_credit": "照片：SITCON Flickr，CC BY 4.0"
 			}
@@ -354,7 +343,9 @@
 			"sprout": "新芽級"
 		},
 		"photo_year_label": "照片",
-		"photo_source": "照片：SITCON Flickr"
+		"photo_source": "照片：SITCON Flickr",
+		"scene_reference": "場景參考照片",
+		"scene_reference_note": "場景參考，並非本贊助品項實際佈置的照片。"
 	},
 	"addons": {
 		"title": "加購項目",

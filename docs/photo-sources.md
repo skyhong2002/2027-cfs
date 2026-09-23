@@ -24,7 +24,6 @@
 | cov_president | [55245915108](https://www.flickr.com/photos/sitcon/55245915108) | SITCON 2026 | 2026-03-28 | 阿智 | CC BY 4.0 | `src/assets/img/news/coverage-president.webp` |
 | cov_cna | [55250669659](https://www.flickr.com/photos/sitcon/55250669659) | SITCON 2026 | 2026-03-28 | 竺原 | CC BY 4.0 | `src/assets/img/news/coverage-cna.webp` |
 | cov_taiwanhot | [55244917572](https://www.flickr.com/photos/sitcon/55244917572) | SITCON 2026 | 2026-03-28 | John | CC BY 4.0 | `src/assets/img/news/coverage-taiwanhot.webp` |
-| cov_ocac | [55245926593](https://www.flickr.com/photos/sitcon/55245926593) | SITCON 2026 | 2026-03-28 | 夏川 | CC BY 4.0 | `src/assets/img/news/coverage-ocac.webp` |
 | item 6 | [55244868277](https://www.flickr.com/photos/sitcon/55244868277) | SITCON 2026 | 2026-03-28 | 月太 | CC BY 4.0 | `public/items/55244868277.webp` |
 | item 7 | [40243001324](https://www.flickr.com/photos/sitcon/40243001324) | SITCON 2018 會前/場佈 | 2018-03-09 | 家維 | CC BY-SA 2.0 | `public/items/40243001324.webp` |
 | item 5 | [55246008294](https://www.flickr.com/photos/sitcon/55246008294) | SITCON 2026 | 2026-03-28 | 未標示 | CC BY 4.0 | `public/items/55246008294.webp` |
@@ -62,7 +61,7 @@
 ## 未更換或有落差的位置
 
 - 品項 15 遠距會議室議程、11 明信片、3 樓梯欄杆垂掛布條：索引中沒有對應品項的照片（任何年份），維持原圖。
-- 品項 4 樓梯打卡牆、20 洗手間標語、27 會場電視輪播：2026 沒有直接呈現該品項的照片，改用最接近的場景（樓梯人潮、走廊洗手間指標、攤位電視），需人工確認是否合適。
+- 品項 4 樓梯打卡牆、20 洗手間標語、27 會場電視輪播：2026 沒有直接呈現該品項的照片，改用最接近的場景（樓梯人潮、走廊洗手間指標、攤位電視）。卡片與彈窗均標示「場景參考照片，並非本贊助品項實際佈置」並說明差異。
 - 品項 10 面紙包與 6 Badge 繩共用同一張迎賓袋內容物照片。
 - 數位品項（12 網路宣傳與其子項、13 OPass、19 網站議程表、25 Email、39 共筆、40 網頁 Logo）不是活動照片，維持原圖。
 - 場地 R3 遠距會議室：2026 相簿沒有可辨識的該教室照片，維持原圖。
@@ -74,7 +73,7 @@
 - 總統府新聞 2026/03/28 https://www.president.gov.tw/News/39930
 - 中央社 2026/03/28 https://www.cna.com.tw/news/aipl/202603280032.aspx （經濟日報同日轉載 https://money.udn.com/money/story/7307/9408273 ，併為同一卡片）
 - 台灣好新聞 2026/03/28 https://www.taiwanhot.net/news/1131936 （2026-09-23 已開啟確認標題）
-- 僑務電子報 https://ocacnews.net/article/423192 （頁面需 JS 才能讀到標題，日期未核實，卡片不標日期）
-- MUCH TV《台灣新視界》SITCON Camp 2026 專題：嵌入於 https://sitcon.camp/2026/about/ ，影片 https://www.youtube-nocookie.com/embed/zplk0zALtOM ，播出日期未核實
-- LINE Taiwan 技術部落格 https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship （合作夥伴文章，內含 2025 數據，不採用）
+- 僑務電子報 2026/03/29 https://ocacnews.net/article/423192 轉載總統府新聞稿，標題相同；併入總統府卡片，不另立卡片
+- MUCH《台灣新驕點》第 56 集「開放文化基金會 - 2026 SITCON 學生計算機年會」（主題為年會與學生社群，非 Camp）：嵌入於 https://sitcon.camp/2026/about/ ，影片 https://www.youtube-nocookie.com/embed/zplk0zALtOM ，YouTube oEmbed 已核對標題，播出日期未核實
+- LINE Taiwan 技術部落格「SITCON 2026 贊助與攤位資訊」 https://techblog.lycorp.co.jp/zh-hant/sitcon2026-sponsorship （合作夥伴會前文章，非回顧；內含 2025 數據，不採用）
 - 未列入：蕃新聞 https://n.yam.com/Article/20260328555977 與 newstaiwan.net 為同一篇稿件，標題人數 1,400 與主辦數字不符；newstaiwan.net 2026-09-23 回傳 403。
