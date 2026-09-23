@@ -46,6 +46,7 @@ const { t } = Astro.props;
 	.nav-title {
 		font-size: 1.3rem;
 		font-weight: bold;
+		white-space: nowrap;
 	}
 
 	.nav-menu {
@@ -126,7 +127,7 @@ const { t } = Astro.props;
 		transform: rotate(-45deg) translate(0.35rem, -0.35rem);
 	}
 
-	@media screen and (max-width: 60rem) {
+	@media screen and (max-width: 72rem) {
 		.hamburger {
 			display: flex;
 		}
