@@ -195,8 +195,9 @@ const chartData = JSON.stringify({
 		}));
 	}
 
-	function createPieOption(title: string, data: Array<{ name: string; value: number; itemStyle: { color: string } }>, showPercentage = true) {
+	function createPieOption(title: string, data: Array<{ name: string; value: number; itemStyle: { color: string } }>, showPercentage = true, compact = false) {
 		const total = data.reduce((sum: number, item: { name: string; value: number; itemStyle: { color: string } }) => sum + item.value, 0);
+		const valueByName = new Map(data.map(item => [item.name, item.value]));
 
 		const windowWidth = window.innerWidth;
 		const isMobile = windowWidth <= 768;
@@ -227,21 +228,36 @@ const chartData = JSON.stringify({
 				trigger: "item",
 				formatter: "{b}: {c} ({d}%)"
 			},
-			legend: {
-				orient: "horizontal",
-				bottom: legendBottom,
-				left: "center",
-				itemWidth: legendItemSize,
-				itemHeight: legendItemSize,
-				textStyle: {
-					fontSize: legendFontSize
-				}
-			},
+			legend: compact
+				? {
+						orient: "vertical",
+						top: 222,
+						left: 16,
+						itemWidth: 10,
+						itemHeight: 10,
+						itemGap: 6,
+						textStyle: { fontSize: 11, overflow: "truncate", width: 272 },
+						formatter: (name: string) => {
+							const value = valueByName.get(name) || 0;
+							const percentage = ((value / total) * 100).toFixed(0);
+							return showPercentage ? `${name} ${value} (${percentage}%)` : `${name} ${value}%`;
+						}
+					}
+				: {
+						orient: "horizontal",
+						bottom: legendBottom,
+						left: "center",
+						itemWidth: legendItemSize,
+						itemHeight: legendItemSize,
+						textStyle: {
+							fontSize: legendFontSize
+						}
+					},
 			series: [
 				{
 					type: "pie",
-					radius: pieRadius,
-					center: pieCenter,
+					radius: compact ? ["22%", "42%"] : pieRadius,
+					center: compact ? ["50%", "32%"] : pieCenter,
 					avoidLabelOverlap: true,
 					itemStyle: {
 						borderRadius: 8,
@@ -249,7 +265,7 @@ const chartData = JSON.stringify({
 						borderWidth: 2
 					},
 					label: {
-						show: true,
+						show: !compact,
 						formatter: (params: any) => {
 							const percentage = ((params.value / total) * 100).toFixed(0);
 							if (showPercentage) {
@@ -263,7 +279,7 @@ const chartData = JSON.stringify({
 					},
 					emphasis: {
 						label: {
-							show: true,
+							show: !compact,
 							fontSize: labelFontSize + 2,
 							fontWeight: "bold"
 						},
@@ -298,9 +314,9 @@ const chartData = JSON.stringify({
 				chartWidth = Math.min(windowWidth - 100, 480);
 				chartHeight = 400;
 			} else {
-				// Mobile: single column, smaller
+				// Mobile: single column, taller so the wrapped legend fits below the pie
 				chartWidth = windowWidth - 80;
-				chartHeight = 280;
+				chartHeight = 420;
 			}
 
 			// Set explicit dimensions
@@ -312,12 +328,13 @@ const chartData = JSON.stringify({
 			// Role chart
 			roleChart = echarts.init(roleElement, null, { width: chartWidth, height: chartHeight });
 			const roleData = createPieData(chartData.attenderRole, colors);
-			roleChart.setOption(createPieOption(chartData.attenderRoleTitle, roleData));
+			const compact = windowWidth <= 768;
+			roleChart.setOption(createPieOption(chartData.attenderRoleTitle, roleData, true, compact));
 
 			// Level chart
 			levelChart = echarts.init(levelElement, null, { width: chartWidth, height: chartHeight });
 			const levelData = createPieData(chartData.programmingLevel, colors);
-			levelChart.setOption(createPieOption(chartData.programmingLevelTitle, levelData));
+			levelChart.setOption(createPieOption(chartData.programmingLevelTitle, levelData, true, compact));
 		}
 	}
 

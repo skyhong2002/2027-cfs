@@ -164,8 +164,21 @@ const { t } = Astro.props;
 		.nav-menu {
 			padding: 2rem 1rem 1rem;
 		}
+		.nav-container {
+			gap: 0.75rem;
+			padding: 1rem 1.25rem;
+		}
+		.nav-container > a {
+			min-width: 0;
+			flex: 1 1 auto;
+		}
 		.nav-title {
-			font-size: 1.1rem;
+			font-size: clamp(0.85rem, 4vw, 1.1rem);
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.hamburger {
+			flex-shrink: 0;
 		}
 		.hamburger {
 			scale: 0.95;
