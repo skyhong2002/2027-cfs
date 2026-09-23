@@ -370,14 +370,35 @@
 					"note": "looking for internships or jobs"
 				}
 			],
-			"note": "Event results compiled by the organizing team after the conference. Registration statistics: snapshot after the second ticket wave on 2026/03/03, n=1,315."
+			"note": "Event results compiled by the organizing team after the conference. Registration statistics: snapshot after the second ticket wave on 2026/03/03, n=1,315.",
+			"coverage": {
+				"title": "2026 press coverage:",
+				"links": [
+					{
+						"name": "Office of the President",
+						"url": "https://www.president.gov.tw/News/39930"
+					},
+					{
+						"name": "CNA",
+						"url": "https://www.cna.com.tw/news/aipl/202603280032.aspx"
+					},
+					{
+						"name": "Economic Daily News",
+						"url": "https://money.udn.com/money/story/7307/9408273"
+					},
+					{
+						"name": "OCAC News",
+						"url": "https://ocacnews.net/article/423192"
+					}
+				]
+			}
 		},
 		"popup": {
 			"title": "Related Statistics",
 			"chart": {
 				"unit": "People",
-				"attender_role_title": "Attendee Role Distribution",
-				"programming_level_title": "Programming Proficiency Distribution",
+				"attender_role_title": "2026 Registrant Identity Distribution",
+				"programming_level_title": "2026 Registrant Programming Proficiency",
 				"attender_role": {
 					"Undergraduates": 749,
 					"High school / vocational students": 317,
@@ -421,7 +442,7 @@
 					"Proficient": "Can evaluate trade-offs among multiple solutions",
 					"Advanced": "Has rich experience and can advise others effectively"
 				},
-				"schools_text_title": "Attendee School Distribution",
+				"schools_text_title": "2025 Attendee School Distribution (historical reference)",
 				"social_media": {
 					"title": "Social Media Statistics",
 					"facebook": {
@@ -477,13 +498,15 @@
 							"55-64": 1.1,
 							"65+": 0.8
 						}
-					}
+					},
+					"note": "Legacy social media figures; observation dates pending verification. Not measured for the 2026 conference."
 				},
 				"source_note": "Source: SITCON 2026 registration data, snapshot after the second ticket wave on 2026/03/03, n=1,315."
 			},
 			"school_stats": {
 				"title": "SITCON 2025 Attendee School Statistics"
-			}
+			},
+			"photo_note": "Header photo: SITCON 2025 event photo (historical reference)"
 		}
 	},
 	"sponsors": {

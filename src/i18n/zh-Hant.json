@@ -370,14 +370,35 @@
 					"note": "正在尋找實習或正職"
 				}
 			],
-			"note": "活動成果：主辦團隊會後彙整。報名受眾統計：2026/03/03 第二波索票後，n=1,315。"
+			"note": "活動成果：主辦團隊會後彙整。報名受眾統計：2026/03/03 第二波索票後，n=1,315。",
+			"coverage": {
+				"title": "2026 媒體報導：",
+				"links": [
+					{
+						"name": "總統府新聞",
+						"url": "https://www.president.gov.tw/News/39930"
+					},
+					{
+						"name": "中央社",
+						"url": "https://www.cna.com.tw/news/aipl/202603280032.aspx"
+					},
+					{
+						"name": "經濟日報",
+						"url": "https://money.udn.com/money/story/7307/9408273"
+					},
+					{
+						"name": "僑務電子報",
+						"url": "https://ocacnews.net/article/423192"
+					}
+				]
+			}
 		},
 		"popup": {
 			"title": "相關統計資料",
 			"chart": {
 				"unit": "人數",
-				"attender_role_title": "與會者身份分佈",
-				"programming_level_title": "軟體開發程度分佈",
+				"attender_role_title": "2026 報名者身份分佈",
+				"programming_level_title": "2026 報名者軟體開發程度分佈",
 				"attender_role": {
 					"大學生": 749,
 					"高中 / 職生": 317,
@@ -421,7 +442,7 @@
 					"熟練": "能評估多個解決方法間的優劣",
 					"進階": "擁有豐富的經驗可以給予他人適當建議"
 				},
-				"schools_text_title": "與會者學校分佈",
+				"schools_text_title": "2025 與會者學校分佈（歷史參考）",
 				"social_media": {
 					"title": "社群媒體統計",
 					"facebook": {
@@ -477,13 +498,15 @@
 							"55-64": 1.1,
 							"65+": 0.8
 						}
-					}
+					},
+					"note": "以下為既有社群媒體數據，觀測日期待確認，非 2026 年會期間量測。"
 				},
 				"source_note": "資料來源：SITCON 2026 報名資料，2026/03/03 第二波索票後統計，n=1,315。"
 			},
 			"school_stats": {
 				"title": "SITCON 2025 與會者學校統計"
-			}
+			},
+			"photo_note": "頁首合照：SITCON 2025 活動照片（歷史參考）"
 		}
 	},
 	"sponsors": {

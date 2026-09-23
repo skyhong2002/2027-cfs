@@ -72,9 +72,22 @@ const chartData = JSON.stringify({
 			))
 		}
 		{t.review.note && <p class="review-note aos aos-fadeIn">{t.review.note}</p>}
+		{
+			t.review.coverage && (
+				<p class="review-coverage aos aos-fadeIn">
+					<span>{t.review.coverage.title}</span>
+					{t.review.coverage.links.map((link: { name: string; url: string }) => (
+						<a href={link.url} target="_blank" rel="noopener noreferrer">
+							{link.name}
+						</a>
+					))}
+				</p>
+			)
+		}
 	</div>
 	<Popup btnText={t.detail} title={t.detail} background={Volunteer.src} id="stat-popup" class="popup">
 		<div class="container">
+			{t.popup.photo_note && <p class="data-note">{t.popup.photo_note}</p>}
 			<div class="chart-area">
 				<div id="role-chart" class="chart-container"></div>
 				<div class="level">
@@ -97,6 +110,7 @@ const chartData = JSON.stringify({
 			</div>
 			<div class="social-media-section">
 				<h3>{t.popup.chart.social_media.title}</h3>
+				{t.popup.chart.social_media.note && <p class="data-note">{t.popup.chart.social_media.note}</p>}
 				<div class="social-platforms">
 					<div class="platform-section">
 						<h4>{t.popup.chart.social_media.facebook.name}</h4>
@@ -426,6 +440,24 @@ const chartData = JSON.stringify({
 		color: var(--gray);
 		margin-top: 1rem;
 		line-height: 1.5;
+	}
+
+	.review-coverage {
+		font-size: 0.85rem;
+		font-weight: 400;
+		color: var(--gray);
+		margin-top: 0.5rem;
+		line-height: 1.6;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.25rem 1rem;
+	}
+
+	.review-coverage a {
+		color: #0171e3;
+		text-decoration: underline;
+		text-underline-offset: 2px;
 	}
 
 	.data-note {
