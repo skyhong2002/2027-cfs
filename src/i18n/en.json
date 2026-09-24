@@ -18,8 +18,7 @@
 		"title2": "SITCON is Where We Meet",
 		"subtitle": "Students' Information Technology Conference 2027",
 		"subtitle2": "Sponsorship Prospectus",
-		"image_alt": "SITCON 2026 main hall packed with attendees facing the stage",
-		"photo_credit": "Photo: SITCON Flickr / 夏川, CC BY 4.0"
+		"image_alt": "SITCON 2026 main hall packed with attendees facing the stage"
 	},
 	"intro": {
 		"sentence1": "SITCON is a student community dedicated to computing education and championing open-source culture.",
@@ -256,8 +255,7 @@
 					"url": "https://hackmd.io/@SITCON/afar-2027"
 				}
 			]
-		},
-		"photo_credit": "Photo: SITCON Flickr / pU, CC BY 4.0"
+		}
 	},
 	"global": {
 		"deadline": "Deadline",

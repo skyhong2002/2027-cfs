@@ -18,8 +18,7 @@
 		"title2": "SITCON 是兩者相遇的最佳橋樑",
 		"subtitle": "SITCON 2027 學生計算機年會",
 		"subtitle2": "贊助徵求書",
-		"image_alt": "SITCON 2026 年會國際會議廳，會眾坐滿階梯座席面向舞台",
-		"photo_credit": "照片：SITCON Flickr／夏川，CC BY 4.0"
+		"image_alt": "SITCON 2026 年會國際會議廳，會眾坐滿階梯座席面向舞台"
 	},
 	"intro": {
 		"sentence1": "SITCON 是由學生組成、投身資訊教育與推廣開源精神的社群。",
@@ -256,8 +255,7 @@
 					"url": "https://hackmd.io/@SITCON/afar-2027"
 				}
 			]
-		},
-		"photo_credit": "照片：SITCON Flickr／pU，CC BY 4.0"
+		}
 	},
 	"global": {
 		"deadline": "截止",
