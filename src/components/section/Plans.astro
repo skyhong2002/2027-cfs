@@ -57,7 +57,12 @@ const maxBenefits = Math.max(planData.navigator.benefits.length, planData.deep_c
 // Helper function to generate fallback row IDs
 const getFallbackRowId = (index: number) => `row-${index}`;
 
-const rows = [];
+const rows: {
+	id: string;
+	name: string;
+	isAvailable: boolean;
+	values: { itemId: string; quantity: string; name: string }[];
+}[] = [];
 for (let i = 0; i < maxBenefits; i++) {
 	const navBenefit = planData.navigator.benefits[i];
 	const deepBenefit = planData.deep_cultivation.benefits[i];
@@ -68,7 +73,7 @@ for (let i = 0; i < maxBenefits; i++) {
 	const rowId = navBenefit?.item_id || deepBenefit?.item_id || visBenefit?.item_id || sproutBenefit?.item_id || getFallbackRowId(i);
 
 	// Check if the item exists in the items data
-	const itemExists = rowId && rowId !== getFallbackRowId(i) && itemsMap.has(rowId);
+	const itemExists = rowId !== getFallbackRowId(i) && itemsMap.has(rowId);
 
 	// Check if any tier has a non-empty quantity AND the item exists in items data
 	const hasAnyAvailableItem =
@@ -99,6 +104,21 @@ for (let i = 0; i < maxBenefits; i++) {
 	});
 }
 
+// Per-tier item lists for the phone layout (one card per tier)
+const tierCards = tiers.map((tier, ti) => ({
+	...tier,
+	items: rows
+		.filter(row => row.values[ti].quantity !== "")
+		.map(row => {
+			const v = row.values[ti];
+			const isCheck = v.quantity === "O" || v.quantity === "o";
+			const isNumeric = !isNaN(Number(v.quantity));
+			const unit = itemsMap.get(v.itemId)?.unit;
+			const unitText = unit ? t.unit[unit] || unit : "";
+			return { id: v.itemId, name: v.name, isAvailable: itemsMap.has(v.itemId), isCheck, text: isCheck ? "" : isNumeric && unitText ? `${v.quantity} ${unitText}` : v.quantity };
+		})
+}));
+
 // Collect all unique item IDs from plan.json benefits
 const uniqueItemIds = new Set<string>();
 
@@ -125,7 +145,7 @@ const uniqueItemIds = new Set<string>();
 									{tier.name}
 								</div>
 								<div class="tier-price">{tier.price}</div>
-								<button class="tier-interest-button" data-tier-name={tier.id} data-tier-title={tier.name} data-tier-deadline={tier.deadline || ""}>
+								<button class="tier-interest-button" data-tier-name={tier.id} data-tier-title={tier.name} data-tier-price={tier.price} data-tier-deadline={tier.deadline || ""}>
 									{t.interested}
 								</button>
 							</div>
@@ -185,6 +205,34 @@ const uniqueItemIds = new Set<string>();
 				}
 			</div>
 		</div>
+		<div class="plans-mobile">
+			{
+				tierCards.map(tier => (
+					<div class="tier-card">
+						<div class="tier-card-head">
+							<div class="tier-name" style={`color: ${tier.textColor}`}>
+								{tier.name}
+							</div>
+							<div class="tier-price">{tier.price}</div>
+							<button class="tier-interest-button" data-tier-name={tier.id} data-tier-title={tier.name} data-tier-price={tier.price} data-tier-deadline={tier.deadline || ""}>
+								{t.interested}
+							</button>
+						</div>
+						<div class="tier-card-items">
+							{tier.items.map(item => {
+								const Tag = item.isAvailable ? "button" : "div";
+								return (
+									<Tag class="tier-card-line" type={item.isAvailable ? "button" : undefined} data-row-id={item.id} data-item-id={item.id} data-is-available={item.isAvailable}>
+										<span class="line-name">{item.name}</span>
+										<span class="line-value">{item.isCheck ? <Check aria-label={lang === "en" ? "Included" : "包含"} /> : item.text}</span>
+									</Tag>
+								);
+							})}
+						</div>
+					</div>
+				))
+			}
+		</div>
 	</div>
 </section>
 
@@ -196,7 +244,7 @@ const uniqueItemIds = new Set<string>();
 	window.openVenueDetails = openVenueDetails;
 
 	function updateHighlighting() {
-		const planCells = document.querySelectorAll(".plan-cell");
+		const planCells = document.querySelectorAll("#plans .plan-cell, #plans .tier-card-line[data-item-id]");
 		planCells.forEach(cell => {
 			const itemId = (cell as HTMLElement).getAttribute("data-item-id");
 			if (itemId && itemId !== "") {
@@ -216,7 +264,7 @@ const uniqueItemIds = new Set<string>();
 	}
 
 	function addRowClickHandlers() {
-		const planRows = document.querySelectorAll(".plan-row") as NodeListOf<HTMLElement>;
+		const planRows = document.querySelectorAll("#plans [data-row-id]") as NodeListOf<HTMLElement>;
 		planRows.forEach(row => {
 			const rowIdStr = row.getAttribute("data-row-id");
 			const isAvailable = row.getAttribute("data-is-available") === "true";
@@ -258,10 +306,7 @@ const uniqueItemIds = new Set<string>();
 						return; // Don't allow adding expired plans
 					}
 
-					// Get the tier price from the tier-price element
-					const tierColumn = button.closest(".tier-column");
-					const tierPriceElement = tierColumn?.querySelector(".tier-price");
-					const tierPrice = tierPriceElement?.textContent || "";
+					const tierPrice = button.getAttribute("data-tier-price") || "";
 
 					const tierItem = {
 						id: `tier-${tierName}`,
@@ -305,6 +350,7 @@ const uniqueItemIds = new Set<string>();
 
 			if (tierName) {
 				const tierId = `tier-${tierName}`;
+				button.setAttribute("aria-pressed", String(isItemInterested(tierId)));
 				if (isItemInterested(tierId)) {
 					button.classList.add("interested");
 				} else {
@@ -538,7 +584,8 @@ const uniqueItemIds = new Set<string>();
 
 	@media screen and (max-width: 1024px) {
 		.plans-table {
-			width: (100% - 2rem);
+			width: 100%;
+			min-width: 0;
 			overflow-x: auto;
 			padding: 1.5rem;
 		}
@@ -583,58 +630,114 @@ const uniqueItemIds = new Set<string>();
 		}
 	}
 
+	.plans-mobile {
+		display: none;
+	}
+
 	@media screen and (max-width: 768px) {
+		section {
+			padding: 3rem 1rem;
+		}
+
 		.container {
-			padding: 2rem 1rem;
+			width: 100%;
+			display: block;
+			padding: 0;
+			background: transparent;
 		}
 
 		.plans-table {
-			padding: 1rem;
+			display: none;
 		}
 
-		.tier-name {
-			font-size: 1.2rem;
+		.plans-mobile {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr);
+			gap: 1rem;
 		}
 
-		.tier-price {
+		.tier-card {
+			min-width: 0;
+			background: var(--white);
+			border-radius: 1.25rem;
+			padding: 1.25rem;
+		}
+
+		.tier-card-head {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr);
+			gap: 0.75rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid var(--border-light);
+		}
+
+		.tier-card-head .tier-name {
+			font-size: 1.5rem;
+			margin: 0;
+			overflow-wrap: anywhere;
+		}
+
+		.tier-card-head .tier-price {
+			font-size: 1.25rem;
+			margin: 0;
+		}
+
+		.tier-card-head .tier-interest-button {
+			width: 100%;
+			min-height: 44px;
+			margin: 0;
 			font-size: 1rem;
 		}
 
-		.tier-interest-button {
-			font-size: 0.7rem;
-			padding: 0.3rem 0.6rem;
-		}
-
-		.plans-header,
-		.plan-row {
+		.tier-card-line {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) fit-content(45%);
+			align-items: center;
 			gap: 0.75rem;
-			min-width: 640px;
-			padding: 0.5rem 0.75rem;
+			width: 100%;
+			min-width: 0;
+			min-height: 44px;
+			padding: 0.75rem 0;
+			border: 0;
+			border-bottom: 1px solid var(--border-light);
+			background: transparent;
+			color: var(--black);
+			font: inherit;
+			text-align: left;
+			line-height: 1.5;
+			overflow-wrap: anywhere;
 		}
 
-		.row-label {
-			font-size: 0.85rem;
+		.tier-card-line:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
 		}
 
-		.cell-main {
-			font-size: 0.9rem;
+		.tier-card-line[data-is-available="true"]:hover,
+		.tier-card-line.highlighted {
+			color: var(--items-green);
 		}
 
-		.cell-sub {
-			font-size: 0.8rem;
-		}
-	}
-
-	@media screen and (max-width: 480px) {
-		section {
-			padding: 0 1rem;
-		}
-		.container {
-			padding: 1.5rem;
+		.tier-card-line:focus-visible,
+		.tier-interest-button:focus-visible {
+			outline: 2px solid var(--black);
+			outline-offset: 3px;
 		}
 
-		.plans-table {
-			padding: 0rem;
+		.line-name {
+			font-size: 0.95rem;
+		}
+
+		.line-value {
+			font-weight: 600;
+			text-align: right;
+		}
+
+		.line-value svg {
+			display: block;
+			width: 1.25rem;
+			height: 1.25rem;
+			stroke-width: 3;
 		}
 	}
 
