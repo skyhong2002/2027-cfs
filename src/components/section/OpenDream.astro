@@ -63,6 +63,20 @@ const colors = ["#77B55A", "#537FF1"];
 					</div>
 				))
 			}
+			{
+				t.popup.links && (
+					<div class="popup-section">
+						<h3>{t.popup.links_title}</h3>
+						<p class="popup-links">
+							{t.popup.links.map((link: { name: string; url: string }) => (
+								<a href={link.url} target="_blank" rel="noopener noreferrer">
+									{link.name}
+								</a>
+							))}
+						</p>
+					</div>
+				)
+			}
 		</div>
 	</Popup>
 </section>
@@ -239,6 +253,14 @@ const colors = ["#77B55A", "#537FF1"];
 		text-align: left;
 		font-size: 1.4rem;
 		margin-bottom: 0.5rem;
+	}
+
+	.popup-links a {
+		display: inline-block;
+		margin-right: 1.5rem;
+		color: #0171e3;
+		text-decoration: underline;
+		text-underline-offset: 2px;
 	}
 
 	.popup-section p {

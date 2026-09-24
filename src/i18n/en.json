@@ -198,7 +198,7 @@
 	"opendream": {
 		"title": "Open Dream Program",
 		"subtitle": "Bring students in need to SITCON",
-		"description": "Every year some students cannot attend because of travel and lodging costs. The Open Dream Program is funded by sponsors and provides tickets plus a travel and lodging subsidy (about NT$3,000 per student) so students in need can join SITCON.",
+		"description": "Every year some students cannot attend because of travel and lodging costs. The Open Dream Program is funded by sponsors and provides a ticket plus round-trip transportation (bus, train or HSR) and lodging the night before the event, so students with financial need can join SITCON. Estimated at about NT$3,000 per student.",
 		"plans": [
 			{
 				"id": "opendream-5",
@@ -213,13 +213,7 @@
 		],
 		"interested": "Interested",
 		"benefits_title": "Sponsor-exclusive benefits",
-		"benefits": [
-			"SITCONTIX ticketing system exposure",
-			"Press release",
-			"Social media posts",
-			"Website exposure",
-			"Post-event report"
-		],
+		"benefits": ["SITCONTIX ticketing system exposure", "Press release", "Social media posts", "Website exposure", "Post-event report"],
 		"exclusive_note": "These benefits are exclusive to Open Dream Program sponsors and are not part of other sponsorship plans.",
 		"price_note": "Program details and pricing are still being finalized; the official announcement prevails.",
 		"popup_label": "Full program details",
@@ -228,15 +222,19 @@
 			"sections": [
 				{
 					"title": "Who it supports",
-					"content": "Students with financial need, regardless of where they live."
+					"content": "Enrolled students whose family finances make attending hard (proof required), regardless of where they live. Reviewed first come first served; places depend on funding."
 				},
 				{
 					"title": "Difference from the \"Far-Away Ticket\"",
-					"content": "Far-Away Ticket: a ticket, no subsidy.\nOpen Dream Program: a ticket plus a travel and lodging subsidy."
+					"content": "Far-Away Ticket: a reserved ticket type for students in high-need areas, outlying islands and overseas, no subsidy.\nOpen Dream Program: a ticket plus a travel and lodging subsidy."
 				},
 				{
 					"title": "Subsidy",
-					"content": "About NT$3,000 per student, covering round-trip transportation (train or bus) and one night of lodging."
+					"content": "Transportation is reimbursed against bus, train or HSR receipts; lodging is the night before the event (12 March), booked by SITCON. Supported students publish a 500-word reflection after the event. Estimated at about NT$3,000 per student."
+				},
+				{
+					"title": "Application timeline",
+					"content": "Applications close 3 Jan 2027, results by 20 Jan 2027, invitation codes valid until 5 Feb 2027."
 				},
 				{
 					"title": "Sponsor benefits",
@@ -245,6 +243,17 @@
 				{
 					"title": "Headcount and pricing",
 					"content": "Support 5 students for NT$30,000, or 10 students for NT$50,000. Contact us if you would like to support more."
+				}
+			],
+			"links_title": "Application details (for students)",
+			"links": [
+				{
+					"name": "SITCON 2027 Open Dream Program",
+					"url": "https://hackmd.io/@SITCON/dream-2027"
+				},
+				{
+					"name": "SITCON 2027 Far-Away Ticket",
+					"url": "https://hackmd.io/@SITCON/afar-2027"
 				}
 			]
 		},
