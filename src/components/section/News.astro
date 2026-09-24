@@ -192,12 +192,12 @@ const news: News[] = [
 
 	@media screen and (max-width: 60rem) {
 		.news-content {
-			--unit: max(-100vw, -800px);
 			display: block;
 			max-width: 900px;
-			padding: 2rem;
+			padding: 1.5rem 1rem 2rem;
 		}
 
+		/* phones: only the middle lane, each screenshot nearly full width so headlines stay legible */
 		.news-content a:nth-child(3n + 1),
 		.news-content a:nth-child(3n + 3) {
 			display: none;
@@ -205,13 +205,12 @@ const news: News[] = [
 
 		.news-content a:nth-child(3n + 2) {
 			transform: none;
-			margin-top: 0;
 			width: 100%;
-			margin-left: 0;
+			margin: 0;
 		}
 
 		.news-content a:nth-child(3n + 2) .news-img {
-			width: 60%;
+			width: 90%;
 			margin-inline: auto 0;
 		}
 
@@ -220,7 +219,7 @@ const news: News[] = [
 		}
 
 		.news-content a:nth-child(3n + 2):not(:nth-child(2)) {
-			margin-top: -3.5rem;
+			margin-top: -1.25rem;
 		}
 	}
 
