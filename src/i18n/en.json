@@ -122,7 +122,7 @@
 			}
 		],
 		"teams": [],
-		"volunteer_alt": "SITCON 2026 participants posing in front of the JAM THE CHAOS backdrop"
+		"volunteer_alt": "SITCON 2026 all-staff group photo on the main hall stage"
 	},
 	"news": {
 		"title": "What We've Done",
@@ -213,7 +213,13 @@
 		],
 		"interested": "Interested",
 		"benefits_title": "Sponsor-exclusive benefits",
-		"benefits": ["SITCONTIX ticketing system exposure", "Press release", "Social media posts", "Website exposure", "Post-event report"],
+		"benefits": [
+			"SITCONTIX ticketing system exposure",
+			"Press release",
+			"Social media posts",
+			"Website exposure",
+			"Post-event report"
+		],
 		"exclusive_note": "These benefits are exclusive to Open Dream Program sponsors and are not part of other sponsorship plans.",
 		"price_note": "Program details and pricing are still being finalized; the official announcement prevails.",
 		"popup_label": "Full program details",

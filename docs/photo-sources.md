@@ -35,7 +35,8 @@
 | item 29 | [55245769956](https://www.flickr.com/photos/sitcon/55245769956) | SITCON 2026 | 2026-03-28 | 月太 | CC BY 4.0 | `public/items/55245769956.webp` |
 | item 36 | [55248058358](https://www.flickr.com/photos/sitcon/55248058358) | SITCON 2026 | 2026-03-28 | 阿智 | CC BY 4.0 | `public/items/55248058358.webp` |
 | item 30 | [55250543379](https://www.flickr.com/photos/sitcon/55250543379) | SITCON 2026 | 2026-03-28 | pU | CC BY 4.0 | `public/items/55250543379.webp` |
-| time_volunteer | [55244926657](https://www.flickr.com/photos/sitcon/55244926657) | SITCON 2026 | 2026-03-28 | 未標示 | CC BY 4.0 | `src/assets/img/sitcon-volunteer.webp` |
+| time_volunteer | [55245885083](https://www.flickr.com/photos/sitcon/55245885083) | SITCON 2026 | 2026-03-28 | pU | CC BY 4.0 | `src/assets/img/sitcon-volunteer.webp` |
+| (舊) time_volunteer | [55244926657](https://www.flickr.com/photos/sitcon/55244926657) | SITCON 2026 | 2026-03-28 | 未標示 | CC BY 4.0 | `src/assets/img/sitcon-volunteer.webp` |
 | time_popup_bg | [55250303861](https://www.flickr.com/photos/sitcon/55250303861) | SITCON 2026 | 2026-03-27 | 夏川 | CC BY 4.0 | `src/assets/img/r0.webp` |
 | venue_R0 | [55247039552](https://www.flickr.com/photos/sitcon/55247039552) | SITCON 2026 | 2026-03-28 | 夏川 | CC BY 4.0 | `public/venue/R0.webp` |
 | venue_R1R2 | [55250303556](https://www.flickr.com/photos/sitcon/55250303556) | SITCON 2026 | 2026-03-27 | 夏川 | CC BY 4.0 | `public/venue/R1 R2.webp` |
@@ -43,7 +44,7 @@
 
 ## 還原為原始圖片的位置（0dbbf3e）
 
-- 新聞區：原始的五張新聞截圖與排版（ettoday、newstaiwan、Yourator、經濟日報、Yahoo）維持不動；其後依序附加 7 張 2026 來源的真實頁面截圖（1200×1000，2026-09-23 以 headless Chromium 擷取）：總統府、中央社、經濟日報、僑務電子報、台灣好新聞、LINE Taiwan 技術部落格、MUCH《台灣新驕點》#56 的 YouTube 影片頁（2026-09-24 改為影片 3 分 10 秒處的畫面加標題列，移除廣告元素後擷取）。每張連到原始來源。2026-09-24 重新擷取中央社、經濟日報、僑務電子報、台灣好新聞四張：擷取前封鎖廣告網域並移除廣告、側欄、相關新聞與浮動元件，畫面只保留標題與內文；總統府頁面本身無廣告，維持原截圖。2026 報導文字連結列也保留。
+- 新聞區：原始的五張新聞截圖與排版（ettoday、newstaiwan、Yourator、經濟日報、Yahoo）維持不動；其後依序附加 7 張 2026 來源的真實頁面截圖（1200×1000，2026-09-23 以 headless Chromium 擷取）：總統府、中央社、經濟日報、僑務電子報、台灣好新聞、LINE Taiwan 技術部落格、MUCH《台灣新驕點》#56 的 YouTube 影片頁（2026-09-24 改為影片 3 分 10 秒處的畫面加標題列，移除廣告元素後擷取）。每張連到原始來源。2026-09-24 重新擷取中央社、經濟日報、僑務電子報、台灣好新聞四張：擷取前封鎖廣告網域並移除廣告、側欄、相關新聞與浮動元件，畫面只保留標題與內文；總統府頁面本身無廣告，維持原截圖。2026-09-24 再次調整：中央社保留文中嵌入的 YouTube 影片；經濟日報以 140% 縮放、僑務電子報以 125% 縮放擷取，讓內文字體較大。2026 報導文字連結列也保留。
 - 「一年一度的時刻」區塊：2026-09-24 依使用者要求改回 2026 照片（志工合照、活動詳情彈窗背景、場地 R0、R1/R2、交誼廳）；R3 仍為原圖。
 - 贊助品項 4、7、8、9、14、17、18、20、21、22、26、27、31、32、33、34、35：替換圖片不是該品項的精確對應（例如錄影模板改成會場拍攝的投影畫面、樓梯打卡牆改成一般樓梯、洗手間標語改成走廊指標、電視輪播改成攤位電視，或為 2017–2025 舊照），全部還原。
 - 品項 3、11、15 與數位品項（12、13、19、25、39、40）從未更換。

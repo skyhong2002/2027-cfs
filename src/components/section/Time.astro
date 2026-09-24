@@ -32,7 +32,7 @@ interface TeamItem {
 			<p>{t.date}</p>
 			<p>{t.location}</p>
 		</div>
-		<img src={volunteer.src} alt="志工" class="volunteer-img" />
+		<img src={volunteer.src} alt={t.volunteer_alt || "志工"} class="volunteer-img" />
 	</div>
 	<div class="aos spacer"></div>
 	<Popup btnText={t.popup_label} title={t.popup_label} hero={true} id="place-staff-popup" background={r0.src}>
