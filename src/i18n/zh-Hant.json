@@ -522,8 +522,7 @@
 			},
 			"school_stats": {
 				"title": "SITCON 2025 與會者學校統計"
-			},
-			"photo_credit": "活動照片：SITCON Flickr，CC BY 4.0。攝影：夏川（會場、志工合照）、月太（講者）、康喔（SITCON Camp 2026、Hour of Code 2025）、竺原（SITCON Camp 2026）、pU（負一籌 × BoF）、小群（Hackathon 2024，CC BY-SA 2.0）。完整清單見 docs/photo-sources.md。"
+			}
 		},
 		"stats_alt": [
 			"SITCON 2026 年會會場，從前排到二樓看台坐滿會眾",
