@@ -149,6 +149,7 @@
 		]
 	},
 	"plans": {
+		"scroll_hint": "Swipe horizontally to compare all plans →",
 		"title": "Choose the Plan That Fits You",
 		"plan_comparison": "Plan Comparison",
 		"interested": "Interested",
