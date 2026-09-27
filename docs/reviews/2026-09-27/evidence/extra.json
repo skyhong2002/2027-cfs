@@ -1,0 +1,148 @@
+{
+  "mode": "extra",
+  "url": "https://skyhong2002.github.io/2027-cfs/",
+  "time": "2026-09-27T08:28:03.559Z",
+  "observations": {
+    "sections": [
+      {
+        "id": "hero",
+        "y": 0,
+        "height": 1000
+      },
+      {
+        "id": "intro",
+        "y": 1000,
+        "height": 500
+      },
+      {
+        "id": "news",
+        "y": 1500,
+        "height": 1621
+      },
+      {
+        "id": "highlights",
+        "y": 3121,
+        "height": 600
+      },
+      {
+        "id": "about",
+        "y": 3721,
+        "height": 1385
+      },
+      {
+        "id": "plans",
+        "y": 5106,
+        "height": 1971
+      },
+      {
+        "id": "items",
+        "y": 7077,
+        "height": 1315
+      },
+      {
+        "id": "opendream",
+        "y": 8392,
+        "height": 1005
+      },
+      {
+        "id": "form",
+        "y": 9397,
+        "height": 1049
+      },
+      {
+        "id": "sponsors",
+        "y": 10446,
+        "height": 992
+      },
+      {
+        "id": "cycle",
+        "y": 11438,
+        "height": 1270
+      },
+      {
+        "id": "time",
+        "y": 12708,
+        "height": 1000
+      },
+      {
+        "id": "faq",
+        "y": 13708,
+        "height": 517
+      },
+      {
+        "id": "footer",
+        "y": 14225,
+        "height": 649
+      }
+    ],
+    "chair": "剩餘 3\n1/15 截止\n會議室椅套曝光\nR0 會議室椅套曝光\n$50,000\nR1 會議室椅套曝光\n$28,000\nR2 會議室椅套曝光\n$28,000\n\n在會議廳中，每一場基調演講、論壇與開閉幕儀式，與會者目光焦點必然匯聚於椅背標誌。貴單位品牌將在最關鍵時刻深植人心，傳達對學生議程的關注。\n\n人才招募\n\n您的品牌印在椅套上，學生在專注聽講時自然接觸招募資訊。\n\n品牌曝光\n\n於指定會議室椅套上展示貴單位 Logo，與會者全程專注時皆可見。\n\n產品推廣\n\n椅套背面印有產品圖片或 QR code，與會者在專注聽講時持續接觸產品內容。",
+    "venueLinks": [],
+    "allOrder": [
+      "年會 T-shirt Logo 曝光",
+      "獨家帆布袋",
+      "獨家導遊團行程",
+      "會議室椅套曝光",
+      "午餐旗、點心旗",
+      "獨家議程",
+      "遠距會議室議程",
+      "SITCON 貼紙置入",
+      "年會開閉幕口播",
+      "一次性紙餐墊",
+      "拍貼機贊助商方案",
+      "會場攤位加大",
+      "樓梯打卡牆",
+      "洗手間標語曝光",
+      "接駁車車內廣播",
+      "入口落地窗背板 Logo 曝光",
+      "會場電視輪播",
+      "會場攤位",
+      "SITCON 網站議程表置入",
+      "SITCON 與會者 Email 推播置入",
+      "工作人員徽章曝光",
+      "明信片",
+      "面紙包",
+      "年會意象背板",
+      "網路宣傳",
+      "「遠道而來票」獨家冠名",
+      "OPass App 推播公告",
+      "樓梯欄杆垂掛布條展出",
+      "R0 影片輪播",
+      "R0 影片輪播加時",
+      "議程廳講者背板",
+      "R0 議程前夥伴宣讀",
+      "錄影模板  Logo 曝光",
+      "迎賓袋文宣",
+      "網頁 Logo 曝光",
+      "年會共筆 Logo 曝光",
+      "門口議程表 Logo 曝光",
+      "贈票",
+      "Badge 繩廠商 Logo 曝光",
+      "SITCON 會場指標置入"
+    ],
+    "allBefore": [
+      {
+        "id": "item-popup-7",
+        "title": "年會 T-shirt Logo 曝光",
+        "url": "https://skyhong2002.github.io/2027-cfs/item/7/",
+        "scroll": 0,
+        "detailsScroll": 0
+      }
+    ],
+    "allAfter": [
+      {
+        "id": "item-popup-5",
+        "title": "獨家帆布袋",
+        "url": "https://skyhong2002.github.io/2027-cfs/item/5/",
+        "scroll": 0,
+        "detailsScroll": 0
+      }
+    ]
+  },
+  "errors": [],
+  "postsBlocked": [],
+  "browser": "153.0.8010.12",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  }
+}

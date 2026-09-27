@@ -1,0 +1,182 @@
+{
+  "mode": "mobile",
+  "url": "https://skyhong2002.github.io/2027-cfs/",
+  "time": "2026-09-27T08:25:39.630Z",
+  "observations": {
+    "sections": [
+      {
+        "id": "hero",
+        "y": 0,
+        "height": 844
+      },
+      {
+        "id": "intro",
+        "y": 844,
+        "height": 556
+      },
+      {
+        "id": "news",
+        "y": 1400,
+        "height": 1094
+      },
+      {
+        "id": "highlights",
+        "y": 2494,
+        "height": 1428
+      },
+      {
+        "id": "about",
+        "y": 3922,
+        "height": 1873
+      },
+      {
+        "id": "plans",
+        "y": 5795,
+        "height": 1801
+      },
+      {
+        "id": "items",
+        "y": 7596,
+        "height": 1377
+      },
+      {
+        "id": "opendream",
+        "y": 8973,
+        "height": 1320
+      },
+      {
+        "id": "form",
+        "y": 10293,
+        "height": 1341
+      },
+      {
+        "id": "sponsors",
+        "y": 11634,
+        "height": 822
+      },
+      {
+        "id": "cycle",
+        "y": 12456,
+        "height": 1419
+      },
+      {
+        "id": "time",
+        "y": 13875,
+        "height": 844
+      },
+      {
+        "id": "faq",
+        "y": 14719,
+        "height": 521
+      },
+      {
+        "id": "footer",
+        "y": 15240,
+        "height": 1109
+      }
+    ],
+    "review": {
+      "width": 326,
+      "scroll": 326,
+      "height": 658,
+      "items": [
+        {
+          "text": "1,286 人參與",
+          "height": 77
+        },
+        {
+          "text": "23 個 企業與社群攤位夥伴",
+          "height": 129
+        },
+        {
+          "text": "報名者 92.1% 為學生",
+          "height": 129
+        },
+        {
+          "text": "28.1% 正在尋找實習或正職",
+          "height": 129
+        }
+      ]
+    },
+    "stats": {
+      "width": 390,
+      "scroll": 390,
+      "height": 844,
+      "scrollHeight": 4663,
+      "charts": [
+        {
+          "width": 310,
+          "height": 420
+        },
+        {
+          "width": 310,
+          "height": 420
+        },
+        {
+          "width": 310,
+          "height": 250
+        },
+        {
+          "width": 310,
+          "height": 250
+        },
+        {
+          "width": 310,
+          "height": 250
+        },
+        {
+          "width": 310,
+          "height": 250
+        }
+      ]
+    },
+    "timeline": {
+      "width": 294,
+      "scroll": 640,
+      "whiteSpace": "pre",
+      "text": "07 月 年會籌備起跑  10 月 公開宣傳、議程徵稿（預計）  01 月 議程徵稿截止、開放索票（預計）  02 月 公布議程表（預計）  03/13 (六) 年會舉辦"
+    },
+    "plans": {
+      "height": 1801,
+      "collapses": 0,
+      "tableWidth": 358,
+      "scrollWidth": 832,
+      "headerPosition": "static",
+      "labelPosition": "static"
+    },
+    "longBefore": [
+      {
+        "id": "item-popup-1",
+        "title": "午餐旗、點心旗",
+        "url": "https://skyhong2002.github.io/2027-cfs/item/1/",
+        "scroll": 0,
+        "detailsScroll": 0
+      }
+    ],
+    "straightVertical": [
+      {
+        "id": "item-popup-1",
+        "title": "午餐旗、點心旗",
+        "url": "https://skyhong2002.github.io/2027-cfs/item/1/",
+        "scroll": 442,
+        "detailsScroll": 0
+      }
+    ],
+    "diagonalVertical": [
+      {
+        "id": "item-popup-14",
+        "title": "獨家議程",
+        "url": "https://skyhong2002.github.io/2027-cfs/item/14/",
+        "scroll": 0,
+        "detailsScroll": 0
+      }
+    ]
+  },
+  "errors": [],
+  "postsBlocked": [],
+  "browser": "153.0.8010.12",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  }
+}

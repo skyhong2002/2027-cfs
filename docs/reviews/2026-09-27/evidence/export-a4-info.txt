@@ -1,0 +1,20 @@
+Title:           SITCON 2027 贊助徵求書 - 學生需舞台，產業要人才，SITCON 是兩者相遇的最佳橋樑
+Creator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36
+Producer:        Skia/PDF m153
+CreationDate:    Sun Sep 27 16:26:12 2026 CST
+ModDate:         Sun Sep 27 16:26:12 2026 CST
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           44
+Encrypted:       no
+Page size:       595.92 x 842.88 pts (A4)
+Page rot:        0
+File size:       78647918 bytes
+Optimized:       no
+PDF version:     1.4
+5fb7b36cc3fc7c66f0a17194b88ad95b0a6c809415e9d3e76e97277a820b037d  export-a4.pdf

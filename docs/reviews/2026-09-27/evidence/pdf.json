@@ -1,0 +1,92 @@
+{
+  "mode": "pdf",
+  "url": "https://skyhong2002.github.io/2027-cfs/",
+  "time": "2026-09-27T08:26:09.336Z",
+  "observations": {
+    "sections": [
+      {
+        "id": "hero",
+        "y": 0,
+        "height": 1000
+      },
+      {
+        "id": "intro",
+        "y": 1000,
+        "height": 500
+      },
+      {
+        "id": "news",
+        "y": 1500,
+        "height": 1621
+      },
+      {
+        "id": "highlights",
+        "y": 3121,
+        "height": 600
+      },
+      {
+        "id": "about",
+        "y": 3721,
+        "height": 1385
+      },
+      {
+        "id": "plans",
+        "y": 5106,
+        "height": 1971
+      },
+      {
+        "id": "items",
+        "y": 7077,
+        "height": 1315
+      },
+      {
+        "id": "opendream",
+        "y": 8392,
+        "height": 1005
+      },
+      {
+        "id": "form",
+        "y": 9397,
+        "height": 1049
+      },
+      {
+        "id": "sponsors",
+        "y": 10446,
+        "height": 992
+      },
+      {
+        "id": "cycle",
+        "y": 11438,
+        "height": 1270
+      },
+      {
+        "id": "time",
+        "y": 12708,
+        "height": 1000
+      },
+      {
+        "id": "faq",
+        "y": 13708,
+        "height": 517
+      },
+      {
+        "id": "footer",
+        "y": 14225,
+        "height": 649
+      }
+    ],
+    "printButtonCalls": 1,
+    "print": {
+      "height": 37818,
+      "popups": 44,
+      "hiddenAnimated": 0
+    }
+  },
+  "errors": [],
+  "postsBlocked": [],
+  "browser": "153.0.8010.12",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  }
+}
