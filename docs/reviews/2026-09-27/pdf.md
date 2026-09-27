@@ -1,5 +1,7 @@
 # 修復 PDF 匯出的分頁、檔案大小與可交付性
 
+GitHub issue：[#50](https://github.com/skyhong2002/2027-cfs/issues/50)。
+
 回饋：無風。狀態：已重現（Chromium A4）。
 
 ## 重現／查看步驟

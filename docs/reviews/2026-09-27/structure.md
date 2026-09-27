@@ -1,5 +1,7 @@
 # 整併前後重複敘事並確認 section 排序
 
+GitHub issue：[#47](https://github.com/skyhong2002/2027-cfs/issues/47)。
+
 回饋：海鷗、Yoru。狀態：現況已截圖；資訊架構待決策。
 
 ## 重現／查看步驟

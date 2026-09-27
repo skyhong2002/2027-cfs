@@ -1,5 +1,7 @@
 # 評估手機贊助方案預設收合與展開入口
 
+GitHub issue：[#49](https://github.com/skyhong2002/2027-cfs/issues/49)。
+
 回饋：海鷗。狀態：設計提案；現況已量測。
 
 ## 重現／查看步驟

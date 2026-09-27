@@ -1,5 +1,7 @@
 # 追查品項切換後樣式不一致的觸發條件
 
+GitHub issue：[#54](https://github.com/skyhong2002/2027-cfs/issues/54)。
+
 回饋：tang yu。狀態：未重現外觀失真；分類文案情境有落差。
 
 ## 重現／查看步驟

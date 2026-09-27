@@ -1,0 +1,86 @@
+{
+  "evidence_commit": "f47c15e6321dd081b0daae7d691d723467a60188",
+  "milestone": 1,
+  "issues": {
+    "cta": {
+      "number": 40,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/40"
+    },
+    "news": {
+      "number": 41,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/41"
+    },
+    "chair": {
+      "number": 42,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/42"
+    },
+    "nav": {
+      "number": 43,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/43"
+    },
+    "contact": {
+      "number": 44,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/44"
+    },
+    "venue": {
+      "number": 45,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/45"
+    },
+    "dark": {
+      "number": 46,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/46"
+    },
+    "structure": {
+      "number": 47,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/47"
+    },
+    "schedule": {
+      "number": 48,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/48"
+    },
+    "collapse": {
+      "number": 49,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/49"
+    },
+    "pdf": {
+      "number": 50,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/50"
+    },
+    "review": {
+      "number": 51,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/51"
+    },
+    "stats": {
+      "number": 52,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/52"
+    },
+    "order": {
+      "number": 53,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/53"
+    },
+    "style": {
+      "number": 54,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/54"
+    },
+    "arrows": {
+      "number": 55,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/55"
+    },
+    "scroll": {
+      "number": 56,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/56"
+    },
+    "sticky": {
+      "number": 57,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/57"
+    },
+    "copy": {
+      "number": 58,
+      "url": "https://github.com/skyhong2002/2027-cfs/issues/58"
+    }
+  },
+  "parent": {
+    "number": 39,
+    "url": "https://github.com/skyhong2002/2027-cfs/issues/39"
+  }
+}

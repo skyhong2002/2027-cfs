@@ -1,5 +1,7 @@
 # 手機長文彈窗斜向下滑會誤切到下一個品項
 
+GitHub issue：[#56](https://github.com/skyhong2002/2027-cfs/issues/56)。
+
 回饋：tang yu。狀態：已重現。
 
 ## 重現／查看步驟

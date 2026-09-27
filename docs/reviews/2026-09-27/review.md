@@ -1,5 +1,7 @@
 # 改善「回顧 2026 年」手機數字與說明換行
 
+GitHub issue：[#51](https://github.com/skyhong2002/2027-cfs/issues/51)。
+
 回饋：NT。狀態：現況已重現。
 
 ## 重現／查看步驟

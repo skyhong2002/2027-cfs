@@ -1,5 +1,7 @@
 # 品項彈窗左右切換未沿用目前分類排序
 
+GitHub issue：[#53](https://github.com/skyhong2002/2027-cfs/issues/53)。
+
 回饋：tang yu。狀態：已重現。
 
 ## 重現／查看步驟

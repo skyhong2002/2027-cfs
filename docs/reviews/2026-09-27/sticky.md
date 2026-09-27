@@ -1,5 +1,7 @@
 # 評估手機方案固定表頭／品項欄並同時比較兩方案
 
+GitHub issue：[#57](https://github.com/skyhong2002/2027-cfs/issues/57)。
+
 回饋：tang yu。狀態：新設計提案；目前行為已重現。
 
 ## 重現／查看步驟

@@ -1,5 +1,7 @@
 # 改善「受眾與統計」手機彈窗的圖表與閱讀密度
 
+GitHub issue：[#52](https://github.com/skyhong2002/2027-cfs/issues/52)。
+
 回饋：NT。狀態：現況已截圖；改善目標待確認。
 
 ## 重現／查看步驟

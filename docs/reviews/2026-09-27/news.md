@@ -1,5 +1,7 @@
 # 精簡新聞截圖數量與文字密度
 
+GitHub issue：[#41](https://github.com/skyhong2002/2027-cfs/issues/41)。
+
 回饋：阿六、Neko。狀態：現況已重現；內容取捨待決策。
 
 ## 重現／查看步驟

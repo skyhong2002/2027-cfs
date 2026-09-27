@@ -1,5 +1,7 @@
 # 手機活動時程文字被截斷，需要橫向捲動才能讀完
 
+GitHub issue：[#48](https://github.com/skyhong2002/2027-cfs/issues/48)。
+
 回饋：海鷗。狀態：已重現。
 
 ## 重現／查看步驟

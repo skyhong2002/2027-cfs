@@ -1,5 +1,7 @@
 # 合作方向 CTA 跳到品項並自動選取對應分類
 
+GitHub issue：[#40](https://github.com/skyhong2002/2027-cfs/issues/40)。
+
 回饋：Denny。狀態：已重現。
 
 ## 重現／查看步驟

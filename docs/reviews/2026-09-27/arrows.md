@@ -1,5 +1,7 @@
 # 品項彈窗加入明確的上一項／下一項箭頭
 
+GitHub issue：[#55](https://github.com/skyhong2002/2027-cfs/issues/55)。
+
 回饋：tang yu。狀態：已重現。
 
 ## 重現／查看步驟

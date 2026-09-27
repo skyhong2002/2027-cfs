@@ -1,5 +1,7 @@
 # 將活動／場地詳情入口提前到方案選購之前
 
+GitHub issue：[#45](https://github.com/skyhong2002/2027-cfs/issues/45)。
+
 回饋：Yoru。狀態：已重現。
 
 ## 重現／查看步驟

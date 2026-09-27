@@ -1,5 +1,7 @@
 # 椅套品項就近說明 R0／R1／R2 容量與場地差異
 
+GitHub issue：[#42](https://github.com/skyhong2002/2027-cfs/issues/42)。
+
 回饋：NT。狀態：已重現。
 
 ## 重現／查看步驟

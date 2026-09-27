@@ -1,5 +1,7 @@
 # 聯絡入口改為 mailto 並調整 Contact 的位置
 
+GitHub issue：[#44](https://github.com/skyhong2002/2027-cfs/issues/44)。
+
 回饋：Yoru。狀態：現況已重現；表單保留方式待決策。
 
 ## 重現／查看步驟

@@ -1,5 +1,7 @@
 # 精簡 Navbar 並調整導覽順序
 
+GitHub issue：[#43](https://github.com/skyhong2002/2027-cfs/issues/43)。
+
 回饋：Bonnie、Yoru。狀態：現況已重現；會議要求已列明。
 
 ## 重現／查看步驟
